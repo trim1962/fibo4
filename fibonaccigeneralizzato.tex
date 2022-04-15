@@ -1,0 +1,359 @@
+% !TeX root = appuntifibo.tex
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+\chapter{Fibonacci valori iniziali qualunque}
+\section{Definizione}
+\begin{defn}[Fibonacci, valori Iniziali 
+qualunque]\index{Fibonacci!generalizzati!definizione}
+	\begin{align}
+		\Gib{0}={}&h\notag\\
+		\Gib{1}={}&k\notag\\
+		\Gib{n}={}&\Gib{n-1}+\Gib{n-2}\quad n>2\label{eqn:FiboGendef}
+	\end{align}
+\end{defn}
+\section{Formula di Binet generalizzata}
+\begin{thm}[Formula di Binet generalizzata]\index{Formula!Binet!generalizzata}
+Se $\Gib{0}={}h$ e $\Gib{1}={}k$ allora \begin{equation}
+	\Gib{n}={}\dfrac{k-bh}{a-b}a^n+\dfrac{ah-k}{a-b}b^n
+\end{equation}\label{eqn:FormulaBinetgeneralizzata}
+\end{thm}
+\begin{proof}
+Poniamo che \begin{equation}
+	\Gib{n}=xa^n+yb^n
+\end{equation} Se
+\begin{equation*}
+	\left\{
+	\begin{array}{l}
+		a^0x+b^0y=h\\ a^1x+b^1y=k
+	\end{array}
+	\right.
+\end{equation*}
+che risolto porta
+\begin{equation*}
+	\left\{
+	\begin{array}{l}
+		x=\dfrac{k-bh}{a-b}\\y=\dfrac{ah-k}{a-b}\\
+	\end{array}
+	\right.
+\end{equation*}
+Riassumendo
+ \begin{equation*}
+	\Gib{n}={}\dfrac{k-bh}{a-b}a^n+\dfrac{ah-k}{a-b}b^n
+\end{equation*}
+Da cui la tesi.
+\end{proof}
+\begin{commento}
+	Se $\Gib{0}={}2h$ e $\Gib{1}={}2k$ allora \begin{equation}
+		\Gib{n}={}2\dfrac{k-bh}{a-b}a^n+2\dfrac{k-ah}{a-b}b^n
+	\end{equation}
+La somma di due pari è sempre pari quindi la successione è $PPPPPP$
+\end{commento}
+\begin{commento}
+	Se $\Gib{0}={}2h$ e $\Gib{1}={}2k+1$ allora \begin{equation}
+		\Gib{n}={}\dfrac{1+2k-2bh}{a-b}a^n+\dfrac{2ah-2k-1}{a-b }b^n
+	\end{equation}
+La somma è fra un numero pari e un dispari è dispari. Segue la somma tra due dispari che è pari e quello che segue è un dispari. La successione che otteniamo  è $PDDPDDP$
+\end{commento}
+\begin{commento}
+	Se $\Gib{1}={}2h+1$ e $\Gib{2}={}2k$ allora \begin{equation}
+		\Gib{n}={}\dfrac{2k-b(2h+1)}{a-b}a^n+\dfrac{a(2h+1)-2k}{a-b}b^n
+	\end{equation}
+La somma è tra un numero dispari e un pari. In questo caso otteniamo $DPDDPDDP$
+\end{commento}
+\begin{commento}
+	Se $\Gib{0}={}2h+1$ e $\Gib{1}={}2k+1$ allora \begin{equation}
+		\Gib{n}={}\dfrac{2k-b(2h+1)}{a-b}a^n-\dfrac{a(2h+1)-2k-1}{a-b}b^n
+	\end{equation}
+\end{commento}
+La tabella \vref{tab:seqnumpar} riassume quanto detto.
+\begin{commento}
+	Se $\Gib{0}={}h$ e $\Gib{1}={}h$ allora \begin{equation}
+		\Gib{n}={}h\dfrac{a}{a-b}a^n-h\dfrac{b}{a-b}b^n
+	\end{equation}
+\end{commento}
+\begin{commento}
+	Se $\Gib{0}={}2h$ e $\Gib{1}={}h$ allora \begin{equation}
+		\Gib{n}={}ha^n+hb^n
+	\end{equation}
+\end{commento}
+\begin{table}
+	\centering
+	\begin{tabular}{ccc}
+\toprule
+$h$&$k$&\\
+\midrule
+	$P$& $P$ &$PPPPPPPPP$ \\
+	$P$& $D$ &$PDDPPDDPD$  \\
+	$D$& $P$ &$DPDDPDDPD$  \\
+	$D$& $D$ &$DDPDDPDDP$  \\
+\bottomrule
+\end{tabular}
+	\caption{Sequenze pari e dispari}
+	\label{tab:seqnumpar}
+\end{table}
+\section{Proprietà}
+Possiamo con qualche calcolo, verificare che
+\begin{align*}
+\Gib{0}={}&h\\
+\Gib{1}={}&k\\
+\Gib{2}={}&k+h=\Fib{2}k+\Fib{1}h\\
+\Gib{3}={}&2k+h=\Fib{3}k+\Fib{2}h\\
+\Gib{4}={}&3k+2h=\Fib{4}k+\Fib{3}h\\
+\Gib{5}={}&5k+3h=\Fib{5}k+\Fib{4}h                                              
+\end{align*} 
+\begin{thm}[Derivazione]
+	Se $\Gib{n}$ è una successione di Fibonacci generalizzata  con $\Gib{0}=h$ 
+	e $\Gib{1}=k $ allora
+	\begin{equation}
+		\Gib{n}=k\Fib{n}+h\Fib{n-1}
+	\end{equation}\label{thm:FibGenDer}
+	Dove $\Fib{n}$ è la successione di Fibonacci
+\end{thm}
+\begin{proof}
+Per induzione
+\begin{align*}
+\intertext{proviamola per n+1}
+		\Gib{n+1}={}&\Gib{n}+\Gib{n-1}\\
+\intertext{per ipotesi induttiva}
+\Gib{n}={}&\Fib{n}k+\Fib{n-1}h\\
+\Gib{n}={}&\Fib{n-1}k+\Fib{n-2}h\\
+\Gib{n}+\Gib{n-1}={}&\Fib{n}k+\Fib{n-1}h+\Fib{n-1}k+\Fib{n-2}h\\
+={}&(\Fib{n}+\Fib{n-1})k+(\Fib{n-1}+\Fib{n-2})h\\
+={}&\Fib{n+1}k+\Fib{n}h\\
+\end{align*}
+cvd.
+\end{proof}
+\begin{thm}[Limite successione]
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	\begin{equation}
+		\lim_{n\to\infty}\dfrac{\Gib{n+1}}{\Gib{n}}=\varphi
+	\end{equation}\label{eqn:FibLimRapGen}
+\end{thm}
+\begin{proof}
+	\begin{align*}
+		\lim_{n\to\infty}\dfrac{\Gib{n+1}}{\Gib{n}}={}&ab\lim_{n\to\infty}\dfrac{a^n(bh-k)+b^n(k-ah)}{ba^n(bh-k)+ab^n(k-ah)}\\
+		={}&ab\lim_{n\to\infty}\dfrac{a^n[(bh-k)+\dfrac{b^n}{a^n}(k-ah)]}{a^n[b(bh-k)+a\dfrac{b^n}{a^n}(k-ah)]}\\
+		\intertext{ma}
+	\lim_{n\to\infty}\left(\dfrac{b}{a}\right)^n={}&0\\
+={}&ab\lim_{n\to\infty}\dfrac{bh-k}{b(bh-k)}\\
+={}&ab\dfrac{1}{b}=a=\varphi\\
+	\end{align*}
+ \end{proof}
+\begin{thm}[Limite rapporto]
+	Se $\Fib{n}$ è la successione di Fibonacci e $\Gib{n}$ è quella generalizzata allora 
+	\begin{equation}
+		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Fib{n}}=k-bh
+	\end{equation}\label{eqn:FibLimFibGib}
+\end{thm}~\cite{Horadam_1961}
+\begin{proof}
+	\begin{align*}
+		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Fib{n}}={}&\lim_{n\to\infty}\dfrac{a^n(k-bh)+b^n(ah-k)}{a^n-b^n}\\
+		={}&\lim_{n\to\infty}\dfrac{a^n\left[k-bh+\left(\dfrac{b}{a}\right)^n(ak-k)\right]}{a^n\left[1-\left(\dfrac{b}{a}\right)^n\right]}\\
+		={}&k-bh\\
+		\intertext{Dato che}
+		\lim_{n\to\infty}\left(\dfrac{b}{a}\right)^{n}={}&0\\
+	\end{align*}
+	Come si voleva dimostrare.
+\end{proof}
+\begin{thm}[Limite rapporto]
+	Se  $\Gib{n}$ è la successione generalizzata allora 
+	\begin{equation}
+		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Gib{n-i}}=a^i
+	\end{equation}\label{eqn:GibLimdif}
+\end{thm}~\cite{Horadam_1961}
+\begin{proof}
+	\begin{align*}
+		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Gib{n-i}}={}&	\lim_{n\to\infty}-\dfrac{a^ib^i[a^n(bh-k)+b^n(k-ah)]}{a^ib^n(ah-k)+a^nb^i(k-bh)}\\
+		={}&\lim_{n\to\infty}-\dfrac{a^n\left\{a^ib^i\left[bh-k\right]\left(\dfrac{b}{a}\right)^n(k-ah)\right\}}{a^n\left\{a^i\left(\dfrac{b}{a}\right)^n(bh-k)+b^i(k-ah)\right\}}\\
+		={}&\dfrac{a^ib^i(k-bh)}{b^i(k-bh)}\\
+		={}&a^i
+		\intertext{Dato che}
+		\lim_{n\to\infty}\left(\dfrac{b}{a}\right)^{n}={}&0\\
+	\end{align*}
+\end{proof}
+\begin{lem}\label{lem:PropPhiGen}
+	\begin{equation}
+		(k-bh)(k-ak)=k^2-hk-h^2
+	\end{equation}
+\end{lem}
+\begin{proof}
+	\begin{align*}
+			(k-bh)(k-ak)=&abh^2-(a+b)hk+k^2
+		\intertext{per~\vref{lem:FibpropPhi}}
+		=&k^2-hk-h^2
+	\end{align*}
+cvd.
+\end{proof}
+\begin{thm}[Identità di Cassini generalizzata]\label{thm:fibQuadratoGen}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	\begin{equation}
+		\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=(-1)^n(k^2-hk-h^2)
+	\end{equation}\label{eqn:FibQuadratoGen}
+\end{thm}\index{Fibonacci!identità!Cassini generalizzata}
+\begin{proof}
+\begin{align*}
+\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
+\Gib{n-1}=&{}\dfrac{k-bh}{a(a-b)}a^{n-1}+\dfrac{ah-k}{b(a-b)}b^{n-1}\\
+\Gib{n+1}=&{}\dfrac{k-bh}{a(a-b)}a^{n+1}+\dfrac{ah-k}{b(a-b)}b^{n+1}\\
+\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=&a^{n-1}b^{n-1}(k-bh)(ah-k)\\
+	\intertext{per~\vref{lem:FibpropPhi}}
+	=&(-1)^{n}(k-bh)(k-ah)
+	\intertext{per~\vref{lem:PropPhiGen}}
+	=&(-1)^n(k^2-hk-h^2)
+\end{align*}
+cvd.
+\end{proof}
+\begin{thm}[Identità di Catalan generalizzata]\label{thm:fibCatalanGen}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	\begin{equation}
+		\Gib{n-r}\cdot\Gib{n+r}-\Gib{n}^2=(-1)^{n-r+1}(k^2-hk-h^2)\Gib{r}^2
+	\end{equation}\label{eqn:fibCatalanGen}
+\end{thm}\index{Fibonacci!identità!Catalan generalizzata}
+\begin{proof}
+	\begin{align*}
+		\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
+		\Gib{n-r}=&{}\dfrac{k-bh}{a(a-b)}a^{n-r}+\dfrac{ah-k}{b(a-b)}b^{n-r}\\
+		\Gib{n+r}=&{}\dfrac{k-bh}{a(a-b)}a^{n+r}+\dfrac{ah-k}{b(a-b)}b^{n+r}\\
+		\Gib{n-r}\cdot\Gib{n+r}-\Gib{n}^2=&a^{n-r}b^{n+r}(k-bh)(ah-k)\dfrac{a^{2r}-2a^rb^r+b^{2r}}{(a-b)^2}\\
+		=&a^{n-r}b^{n+r}(k-bh)(ah-k)\Gib{r}^2\\
+		\intertext{per~\vref{lem:FibpropPhi}}
+		=&(-1)^{n-r+1}(k-bh)(k-ah)\Gib{r}^2\\
+		\intertext{per~\vref{lem:PropPhiGen}}
+		=&(-1)^{n-r+1}(k^2-hk-h^2)\Gib{r}^2
+	\end{align*}
+	cvd.
+\end{proof}
+\begin{thm}[Identità di Vajda generalizzata]\label{thm:fibVajdaGen}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	\begin{equation}
+		\Gib{n+i}\cdot\Gib{n+j}-\Gib{n}\cdot\Gib{n+i+j}=(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}
+	\end{equation}\label{eqn:fibVajdaGen}
+\end{thm}\index{Fibonacci!identità!Vajda generalizzata}
+\begin{proof}
+	\begin{align*}
+		\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
+		\Gib{n+i}=&{}\dfrac{k-bh}{a(a-b)}a^{n+i}+\dfrac{ah-k}{b(a-b)}b^{n+i}\\
+		\Gib{n+j}=&{}\dfrac{k-bh}{a(a-b)}a^{n+j}+\dfrac{ah-k}{b(a-b)}b^{n+j}\\
+		\Gib{n+i+j}=&{}\dfrac{k-bh}{a(a-b)}a^{n+i+j}+\dfrac{ah-k}{b(a-b)}b^{n+i+j}\\
+		\Gib{n+i}\cdot\Gib{n+j}-\Gib{n}\cdot\Gib{n+i+j}=&\dfrac{a^nb^n(a^i-b^i)(a^j-b^j)(k-ah)(k-bh)}{(a-b)^2}\\
+		\intertext{per~\vref{lem:FibpropPhi}}
+		=&(-1)^{n}(k-bh)(k-ah)\Gib{i}\cdot\Gib{j}\\
+		\intertext{per~\vref{lem:PropPhiGen}}
+		=&(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}\\
+	\end{align*}
+	cvd.
+\end{proof}
+\section{Proprietà esclusive successione di Fibonacci}
+\begin{thm}[Sistema caratteristico]\label{thm:FibSistCaratteristico}
+Se $\Gib{n}$ è una generica successione di Fibonacci con
+\[\begin{cases}
+\Gib{0}=h\\
+\Gib{1}=k\\
+\end{cases}\] il sistema 
+\begin{equation*}
+	\left\{
+\begin{array}{l}
+	(a^2+1)(k-bh)(k-bh-1)=0\\
+	(b^2+1)(ah-k)(ah-k+1)=0
+\end{array}
+\right.
+\end{equation*}
+ha come soluzione intera solo \[\begin{cases}
+	h=0\\
+	k=1\\
+\end{cases}\]
+\end{thm}
+\begin{proof}
+Questo sistema ammette quattro soluzioni che sono
+\begin{enumerate}
+	\item $\left\{
+	\begin{array}{l}
+		h=0\\
+		k=0
+	\end{array}
+	\right.$
+	\item $\left\{
+	\begin{array}{l}
+		h=0\\
+		k=1
+	\end{array}
+	\right.$
+	\item $\left\{
+	\begin{array}{l}
+		h=\dfrac{1}{a-b}\\
+		k=\dfrac{a}{a-b}
+	\end{array}
+	\right.$
+	\item $\left\{
+	\begin{array}{l}
+		h=-\dfrac{1}{a-b}\\
+		k=-\dfrac{b}{a-b}
+	\end{array}
+	\right.$
+\end{enumerate}
+Discutiamo le soluzioni. La prima non è accettabile. La seconda sono i valori iniziali della successione di Fibonacci.
+La terza e la quarta non sono accettabili perché non intere. 
+\end{proof}
+\begin{thm}[Dispari]\label{thm:FibdispariGen}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata e vale 
+	\begin{equation}
+		\Gib{n}^2+\Gib{n+1}^2-\Gib{2n+1}=0 
+	\end{equation}\label{eqn:FibDispariGen} allora 
+\[\begin{cases}
+	h=0\\
+	k=1\\
+\end{cases}\]
+\end{thm}
+\begin{proof}
+\begin{align*}
+\Gib{n}^2+\Gib{n+1}^2-\Gib{2n+1}={}&a^{2n}\dfrac{(a^2+1)(bh-k)(bh-k+1)}{\left(a-b\right)^2}\\
++&b^{2n}\dfrac{(b^2+1)(ah-k)(ah-k+1)}{\left(a-b\right)^2}\\
+\intertext{l'uguaglianza precedente vale zero se $h$ e $k$ sono soluzioni del sistema seguente }
+&	\left\{
+\begin{array}{l}
+	(a^2+1)(k-bh)(k-bh-1)=0\\
+	(b^2+1)(ah-k)(ah-k+1)=0
+\end{array}
+\right.\\
+\end{align*}
+Quindi per~\vref{thm:FibSistCaratteristico} è la successione di Fibonacci ordinaria.
+\end{proof}
+Utilizzando il~\vref{thm:FibdispariGen} e il~\vref{thm:Fibdispari} otteniamo
+\begin{thm}[Unicità]
+	\begin{equation}
+		\Gib{n}^2+\Gib{n+1}^2=\Gib{2n+1} 
+	\end{equation} se e solo la successione è quella ordinaria di Fibonacci. 
+\end{thm}
+\begin{thm}[Proprietà]
+	Se $\Gib{n}$ è una  successione di Fibonacci generalizzata
+	\begin{equation}
+		\Gib{n+2}-2\Gib{n}-\Gib{n-1}=0 
+	\end{equation} 
+\begin{equation}
+	\Gib{n+1}-2\Gib{n}-\Gib{n-2}=0 
+\end{equation} 
+\end{thm}~\cite{Horadam_1961}
+\begin{proof}
+	\begin{align*}
+		\Gib{n+2}-2\Gib{n}-\Gib{n-1}=&\\
+		=&\dfrac{a^{n-1}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-1}(b^3-2b-1)(ah-k)}{a-b}
+		\intertext{per~\vref{lem:FibpropPhi}}
+		a^3-2a-1=&\\
+		=&aa^2-2a-1	\\
+		=&a(a+1)-2a-1\\
+		=&a^2+a-2a-1\\
+		=&a^2-a-1\\
+		=&0
+		\intertext{Analogamente}
+		b^3-2b-1=&0\\
+	\end{align*}
+Quindi la tesi. Come prima si dimostra che
+	\begin{align*}
+	\Gib{n+2}-2\Gib{n}-\Gib{n-1}=&\\
+	=&\dfrac{a^{n-2}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-2}(b^3-2b-1)(ah-k)}{a-b}
+\end{align*}
+e procedendo in maniera analoga otteniamo la tesi.
+
+Cvd.
+\end{proof}

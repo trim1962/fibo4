@@ -1,0 +1,199 @@
+% !TeX root = appuntifibo.tex
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+\chapter{Matrici}
+\section{Successioni di Fibonacci }
+\begin{thm}[Forma vettoriale]\index{Fibonacci!vettore}
+	Se $\Fib{n}$ è la successione di Fibonacci allora avremo:
+	\begin{equation}
+		\begin{bmatrix}
+			\Fib{n}\\\Fib{n+1}
+		\end{bmatrix}=\begin{bmatrix}
+			0&1\\ 1&1\\
+		\end{bmatrix}^n\begin{bmatrix}
+		\Fib{0}\\\Fib{1}
+	\end{bmatrix}
+	\end{equation}
+\end{thm}
+\begin{thm}[Forma matriciale]\index{Fibonacci!matrice}
+Se $\Fib{n}$ è la successione di Fibonacci allora avremo:
+\begin{equation}
+Q^n=\begin{bmatrix}
+	\Fib{n+1}&\Fib{n}\\\Fib{n}&\Fib{n-1}
+\end{bmatrix}=\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^n
+\end{equation}
+\end{thm}\cite{Gould1981}
+\begin{proof}
+	Dimostriamola per induzione su  $n$.
+	
+	Per $n=1$
+	\[Q^1=\begin{bmatrix}
+		\Fib{2}&\Fib{1}\\\Fib{1}&\Fib{0}
+	\end{bmatrix}=\begin{bmatrix}
+		1&1\\ 1&0\\
+	\end{bmatrix}^1\\
+	\]
+	
+	Supponiamola vera per $n=k$ proviamola per $n=k+1$
+	\begin{align*}
+		Q^k=\begin{bmatrix}
+		\Fib{k+1}&\Fib{k}\\\Fib{k}&\Fib{k-1}
+	\end{bmatrix}=&\begin{bmatrix}
+		1&1\\ 1&0\\
+	\end{bmatrix}^k\\
+\intertext{Moltiplicando}
+	\begin{bmatrix}
+	\Fib{k+1}&\Fib{k}\\\Fib{k}&\Fib{k-1}
+\end{bmatrix}\begin{bmatrix}
+1&1\\ 1&0\\
+\end{bmatrix}=&\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^k\begin{bmatrix}
+1&1\\ 1&0\\
+\end{bmatrix}\\
+	\begin{bmatrix}
+	\Fib{k}+\Fib{k+1}&\Fib{k+1}\\\Fib{k+1}&\Fib{k}
+\end{bmatrix}=&\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{k+1}\\
+	\begin{bmatrix}
+	\Fib{k+2}&\Fib{k+1}\\\Fib{k+1}&\Fib{k}
+\end{bmatrix}=&\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{k+1}=G^{k+1}\\
+	\end{align*}
+Cvd.
+\end{proof}
+Possiamo dimostrare nuovamente l'identità Cassini~\vref{thm:FibCassini}
+\begin{thm}[Identità di 
+Cassini]\index{Fibonacci!identità!Cassini}
+	Se $\Fib{n}$ è la successione di Fibonacci allora avremo:
+\[\Fib{n+1}\Fib{n-1}-\Fib{n}^2=(-1)^n\]
+\end{thm}
+\begin{proof}
+\begin{align*}
+\begin{vmatrix}
+	\Fib{n+1}&\Fib{n}\\\Fib{n}&\Fib{n-1}
+\end{vmatrix}=&\Fib{n+1}\Fib{n-1}-\Fib{n}^2\\
+\intertext{ma}
+\abs{Q^n}=&\abs{Q}^n\\
+\intertext{quindi, dato che}
+\begin{vmatrix}
+	1&1\\ 1&0\\
+\end{vmatrix}=&-1
+\end{align*}
+Abbiamo la tesi.
+\end{proof}
+\section{Successioni generalizzate}
+\begin{defn}[Successioni generalizzate]\index{Successione!generalizzata!matrice}
+Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora avremo:
+\begin{equation}
+H^n=\begin{bmatrix}
+	\Gib{n+1}&\Gib{n}\\\Gib{n}&\Gib{n-1}
+\end{bmatrix}
+\end{equation}
+\end{defn}
+\begin{thm}[Forma matriciale 
+generalizzata]\label{thm:Formamatricialegeneralizzata}\index{Fibonacci!generalizzata!matrice}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora avremo:
+	\begin{align*}
+		H^n=&\begin{bmatrix}
+			\Gib{2}&\Gib{1}\\\Gib{1}&\Gib{0}
+		\end{bmatrix}\begin{bmatrix}
+			1&1\\ 1&0\\
+		\end{bmatrix}^{n-1}\\
+	=&\begin{bmatrix}
+		h+k&k\\k&h\\
+	\end{bmatrix}\begin{bmatrix}
+		1&1\\ 1&0\\
+	\end{bmatrix}^{n-1}\\
+	\end{align*}
+\end{thm}
+\begin{proof}
+Proviamolo per induzione su $n$
+\begin{align*}
+\intertext{Per $n=1$ è vero infatti:}
+\begin{bmatrix}
+	\Gib{2}&\Gib{1}\\\Gib{1}&\Gib{0}
+\end{bmatrix}=&\begin{bmatrix}
+		h+k&k\\k&h\\
+	\end{bmatrix}\begin{bmatrix}
+		1&1\\ 1&0\\
+	\end{bmatrix}^{0}\\
+=&\begin{bmatrix}
+	h+k&k\\k&h\\
+\end{bmatrix}\begin{bmatrix}
+	1&0\\ 0&1\\
+\end{bmatrix}\\
+\intertext{Supponiamolo vero per $n$, proviamolo per $n+1$}
+\begin{bmatrix}
+	\Gib{n+1}&\Gib{n}\\\Gib{n}&\Gib{n-1}
+\end{bmatrix}=&\begin{bmatrix}
+	h+k&k\\k&h\\
+\end{bmatrix}\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{n-1}\\
+\intertext{Moltiplico ambo i lati}
+\begin{bmatrix}
+	\Gib{n+1}&\Gib{n}\\\Gib{n}&\Gib{n-1}
+\end{bmatrix}\begin{bmatrix}
+1&1\\ 1&0\\
+\end{bmatrix}=&\begin{bmatrix}
+	h+k&k\\k&h\\
+\end{bmatrix}\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{n-1}\begin{bmatrix}
+1&1\\ 1&0\\
+\end{bmatrix}\\
+\begin{bmatrix}
+	\Gib{n+1}+\Gib{n}&\Gib{n+1}\\\Gib{n}+\Gib{n-1}&\Gib{n}
+\end{bmatrix}=&\begin{bmatrix}
+	h+k&k\\k&h\\
+\end{bmatrix}\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{n}\\
+\begin{bmatrix}
+	\Gib{n+2}&\Gib{n+1}\\\Gib{n+1}&\Gib{n}
+\end{bmatrix}=&\begin{bmatrix}
+	h+k&k\\k&h\\
+\end{bmatrix}\begin{bmatrix}
+	1&1\\ 1&0\\
+\end{bmatrix}^{n}\\
+\end{align*}
+cvd.
+\end{proof}
+\begin{cor}[Derivazione]
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora avremo:
+\begin{equation}
+	H^n=\begin{bmatrix}
+		h+k&k\\k&h\\
+	\end{bmatrix}Q^{n-1}
+\end{equation}
+\end{cor}
+Anche in questo caso è possibile dimostrare di nuovo 
+il~\vref{thm:identitàCassinigeneralizzata} 
+\begin{thm}[Identità di Cassini 
+generalizzata]\label{thm:identitàCassinigeneralizzatamatrici}
+	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	\begin{equation}
+		\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=(-1)^n(k^2-hk-h^2)
+	\end{equation}
+\end{thm}\index{Fibonacci!identità!Cassini generalizzata}
+\begin{proof}
+Dal~\vref{thm:Formamatricialegeneralizzata} abbiamo:
+\begin{align*}
+	\det H^n=\begin{vmatrix}
+		\Gib{n+1}&\Gib{n}\\\Gib{n}&\Gib{n-1}
+	\end{vmatrix}=&\begin{vmatrix}
+		h+k&k\\k&h\\
+	\end{vmatrix}\begin{vmatrix}
+		1&1\\ 1&0\\
+	\end{vmatrix}^{n-1}\\
+\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=&(h^2+hk-k^2)(-1)^{n-1}\\
+=&(k^2-h^2-kh)(-1)^{n}\\
+\end{align*}
+cvd.
+\end{proof}

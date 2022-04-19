@@ -1,0 +1,53 @@
+% !TeX root = appuntifibo.tex
+% !BIB TS-program = biber
+% !TeX encoding = UTF-8
+% !TeX spellcheck = it_IT
+% !TeX program = lualatex
+\chapter{Successioni generalizzate}
+\section{Definizioni}
+\begin{defn}[Successioni di Fibonacci generalizzata]
+	Diremo successione di Fibonacci generalizzata la successione definita
+	\begin{equation}
+		\begin{cases}
+			\Fg{0}=0\\
+			\Fg{1}=1\\
+			\Fg{n}=p\Fg{n-1}+\Fg{n-2}\quad n>1\\
+		\end{cases}
+	\end{equation} 
+\end{defn}\cite{Yalciner2013}
+\begin{defn}[Successioni di Lucas generalizzata]
+Diremo successione di Lucas generalizzata la successione definita
+\begin{equation}
+	\begin{cases}
+		\Lg{0}=2\\
+		\Lg{1}=p\\
+		\Lg{n}=p\Lg{n-1}+\Lg{n-2}\quad n>1\\
+	\end{cases}
+\end{equation}
+\end{defn}\cite{Yalciner2013} 
+\begin{thm}[Formula di Binet generalizzata]
+	Se $\alpha$ e $\beta$ sono le soluzioni dell'equazione \begin{equation}
+		x^2-px-1=0
+	\end{equation} allora la formula di Binet per la successione
+ generalizzata 
+	di Fibonacci è \begin{equation}
+	\Fg{n}=\dfrac{\alpha^n-\beta^n}{\alpha-\beta}
+\end{equation}
+mentre \begin{equation}
+	\Lg{n}=\alpha^n+\beta^n
+\end{equation}
+è la formula di Binet per la successione generalizzata di Lucas 
+\end{thm}\index{Formula!Binet!Fibonacci 
+generalizzata}\index{Formula!Binet!Lucas generalizzata}\cite{Yalciner2013} 
+\begin{lem}[Proprietà]
+	Se $\alpha$ e $\beta$ sono le soluzioni dell'equazione \begin{equation}
+	x^2-px-1=0
+\end{equation} allora:
+\begin{align*}
+	\alpha\beta=&-1\\
+	\alpha+\beta=&p\\
+	\alpha-\beta=&\sqrt{p^2+4}\\
+	p-2\beta=&\sqrt{p^2+4}\\
+	2\alpha-p =&\sqrt{p^2+4}\\
+\end{align*}
+\end{lem}

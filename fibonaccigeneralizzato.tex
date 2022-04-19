@@ -6,16 +6,18 @@
 \chapter{Fibonacci valori iniziali qualunque}
 \section{Definizione}
 \begin{defn}[Fibonacci, valori Iniziali 
-qualunque]\index{Fibonacci!generalizzati!definizione}
+qualunque]\index{Fibonacci!iniziali qualunque!definizione}
 	\begin{align}
 		\Gib{0}={}&h\notag\\
 		\Gib{1}={}&k\notag\\
 		\Gib{n}={}&\Gib{n-1}+\Gib{n-2}\quad n>2\label{eqn:FiboGendef}
 	\end{align}
 \end{defn}
-\section{Formula di Binet generalizzata}
+\section{Formula di Binet per valori iniziali qualunque}
 \begin{thm}[Formula di Binet 
-generalizzata]\label{thm:FormulaBinetgeneralizzata}\index{Formula!Binet!generalizzata}
+per valori iniziali 
+qualunque]\label{thm:FormulaBinetgeneralizzata}\index{Formula!Binet!per valori 
+iniziali qualunque}
 Se $\Gib{0}={}h$ e $\Gib{1}={}k$ allora \begin{equation}
 	\Gib{n}={}\dfrac{k-bh}{a-b}a^n+\dfrac{ah-k}{a-b}b^n
 \end{equation}\label{eqn:FormulaBinetgeneralizzata}
@@ -105,7 +107,8 @@ Possiamo con qualche calcolo, verificare che
 \Gib{5}={}&5k+3h=\Fib{5}k+\Fib{4}h                                              
 \end{align*} 
 \begin{thm}[Derivazione]
-	Se $\Gib{n}$ è una successione di Fibonacci generalizzata  con $\Gib{0}=h$ 
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque  
+	con $\Gib{0}=h$ 
 	e $\Gib{1}=k $ allora
 	\begin{equation}
 		\Gib{n}=k\Fib{n}+h\Fib{n-1}
@@ -127,7 +130,8 @@ Per induzione
 cvd.
 \end{proof}
 \begin{thm}[Limite successione]
-	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque 
+	allora 
 	\begin{equation}
 		\lim_{n\to\infty}\dfrac{\Gib{n+1}}{\Gib{n}}=\varphi
 	\end{equation}\label{eqn:FibLimRapGen}
@@ -143,7 +147,8 @@ cvd.
 	\end{align*}
  \end{proof}
 \begin{thm}[Limite rapporto]
-	Se $\Fib{n}$ è la successione di Fibonacci e $\Gib{n}$ è quella generalizzata allora 
+	Se $\Fib{n}$ è la successione di Fibonacci e $\Gib{n}$ è quella per valori 
+	iniziali qualunque allora 
 	\begin{equation}
 		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Fib{n}}=k-bh
 	\end{equation}\label{eqn:FibLimFibGib}
@@ -159,7 +164,7 @@ cvd.
 	Come si voleva dimostrare.
 \end{proof}
 \begin{thm}[Limite rapporto]
-	Se  $\Gib{n}$ è la successione generalizzata allora 
+	Se  $\Gib{n}$ è la successione per valori iniziali qualunque allora 
 	\begin{equation}
 		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Gib{n-i}}=a^i
 	\end{equation}\label{eqn:GibLimdif}
@@ -188,12 +193,14 @@ cvd.
 cvd.
 \end{proof}
 \begin{thm}[Identità di Cassini 
-generalizzata]\label{thm:identitàCassinigeneralizzata}
-	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+per valori iniziali qualunque]\label{thm:identitàCassiniper valori iniziali 
+qualunque}
+	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque 
+	allora 
 	\begin{equation}
 		\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=(-1)^n(k^2-hk-h^2)
 	\end{equation}\label{eqn:FibQuadratoGen}
-\end{thm}\index{Fibonacci!identità!Cassini generalizzata}
+\end{thm}\index{Fibonacci!identità!Cassini per valori iniziali qualunque}
 \begin{proof}
 \begin{align*}
 \Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
@@ -207,12 +214,14 @@ generalizzata]\label{thm:identitàCassinigeneralizzata}
 \end{align*}
 cvd.
 \end{proof}
-\begin{thm}[Identità di Catalan generalizzata]\label{thm:fibCatalanGen}
-	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+\begin{thm}[Identità di Catalan per valori iniziali 
+qualunque]\label{thm:fibCatalanGen}
+	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque 
+	allora 
 	\begin{equation}
 		\Gib{n-r}\cdot\Gib{n+r}-\Gib{n}^2=(-1)^{n-r+1}(k^2-hk-h^2)\Gib{r}^2
 	\end{equation}\label{eqn:fibCatalanGen}
-\end{thm}\index{Fibonacci!identità!Catalan generalizzata}
+\end{thm}\index{Fibonacci!identità!Catalan per valori iniziali qualunque}
 \begin{proof}
 	\begin{align*}
 		\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
@@ -227,12 +236,14 @@ cvd.
 	\end{align*}
 	cvd.
 \end{proof}
-\begin{thm}[Identità di Vajada generalizzata]\label{thm:fibVajdaGen}
-	Se $\Gib{n}$ è la successione di Fibonacci generalizzata allora 
+\begin{thm}[Identità di Vajada per valori iniziali 
+qualunque]\label{thm:fibVajdaGen}
+	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque 
+	allora 
 	\begin{equation}
 		\Gib{n+i}\cdot\Gib{n+j}-\Gib{n}\cdot\Gib{n+i+j}=(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}
 	\end{equation}\label{eqn:fibVajdaGen}
-\end{thm}\index{Fibonacci!identità!Vajada generalizzata}
+\end{thm}\index{Fibonacci!identità!Vajada per valori iniziali qualunque}
 \begin{proof}
 	\begin{align*}
 		\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
@@ -299,7 +310,8 @@ Discutiamo le soluzioni. La prima non è accettabile. La seconda sono i valori i
 La terza e la quarta non sono accettabili perché non intere. 
 \end{proof}
 \begin{thm}[Dispari]\label{thm:FibdispariGen}
-	Se $\Gib{n}$ è la successione di Fibonacci generalizzata e vale 
+	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque e 
+	vale 
 	\begin{equation}
 		\Gib{n}^2+\Gib{n+1}^2-\Gib{2n+1}=0 
 	\end{equation}\label{eqn:FibDispariGen} allora 
@@ -329,7 +341,7 @@ Utilizzando il~\vref{thm:FibdispariGen} e il~\vref{thm:Fibdispari} otteniamo
 	\end{equation} se e solo la successione è quella ordinaria di Fibonacci. 
 \end{thm}
 \begin{thm}[Proprietà]
-	Se $\Gib{n}$ è una  successione di Fibonacci generalizzata
+	Se $\Gib{n}$ è una  successione di Fibonacci per valori iniziali qualunque
 	\begin{equation}
 		\Gib{n+2}-2\Gib{n}-\Gib{n-1}=0 
 	\end{equation} 

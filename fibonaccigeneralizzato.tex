@@ -18,8 +18,9 @@ qualunque]\index{Fibonacci!iniziali qualunque!definizione}
 per valori iniziali 
 qualunque]\label{thm:FormulaBinetgeneralizzata}\index{Formula!Binet!per valori 
 iniziali qualunque}
-Se $\Gib{0}={}h$ e $\Gib{1}={}k$ allora \begin{equation}
-	\Gib{n}={}\dfrac{k-bh}{a-b}a^n+\dfrac{ah-k}{a-b}b^n
+Se $\Gib{0}={}h$ e $\Gib{1}={}k$ allora
+\begin{equation}
+\Gib{n}={}\dfrac{k-bh}{a-b}a^n+\dfrac{ah-k}{a-b}b^n
 \end{equation}\label{eqn:FormulaBinetgeneralizzata}
 \end{thm}
 \begin{proof}
@@ -96,6 +97,24 @@ $h$&$k$&\\
 	\caption{Sequenze pari e dispari}
 	\label{tab:seqnumpar}
 \end{table}
+\begin{thm}[Formula di Binet 
+	per valori iniziali 
+	qualunque]\label{thm:FormulaBinetgeneralizzata2}\index{Formula!Binet!per 
+	valori iniziali qualunque}
+	Se $\Gib{0}={}h$ e $\Gib{1}={}k$ e
+	\begin{equation}
+		\Gib{n}={}\dfrac{1}{a-b}\left[(k-bh)a^n-(k-ah)b^n\right]
+	\end{equation}\label{eqn:FormulaBinetgeneralizzata2}
+posto
+\begin{align*}
+	l=&k-bh\\
+	m=&k-ah
+	\intertext{allora}
+	lm=&k^2-hk-h^2\\
+	l+m=&2k-h\\
+	l-m=&h(a-b)\\
+\end{align*}
+\end{thm}
 \section{Proprietà}
 Possiamo con qualche calcolo, verificare che
 \begin{align*}

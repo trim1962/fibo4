@@ -208,7 +208,7 @@ cvd.
 	\intertext{Per il~\vref{lem:FibpropPhi}}
 	={}&\dfrac{a^{n+m}[5+5]}{5}+\dfrac{b^{n+m}[5+5]}{5}\\
 	={}&2(a^{n+m}+b^{n+m})\\
-={}&{}2\Luc{n+m}\\ 
+={}&2\Luc{n+m}\\ 
 \end{align*}
 cvd.
 \end{proof}
@@ -609,8 +609,8 @@ b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
 	allora:\begin{equation}
 		\left\{\begin{aligned}
-				a^n={}&{}\dfrac{\Luc{n}+(a-b)\Fib{n}}{2}\\
-				b^n={}&{}\dfrac{\Luc{n}-(a-b)\Fib{n}}{2}\\
+				a^n={}&\dfrac{\Luc{n}+(a-b)\Fib{n}}{2}\\
+				b^n={}&\dfrac{\Luc{n}-(a-b)\Fib{n}}{2}\\
 			\end{aligned}
 			\right.
 	\end{equation}
@@ -621,8 +621,8 @@ b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
 	\begin{equation*}
 		\left\{
 		\begin{aligned}
-			\Fib{n}={}&{}\dfrac{1}{a-b}\left(a^n-b^n\right)\\
-			\Luc{n}={}&{}a^n+b^n
+			\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)\\
+			\Luc{n}={}&a^n+b^n
 		\end{aligned}
 		\right.
 	\end{equation*}
@@ -710,22 +710,22 @@ Cassini]\label{thm:FibCassini}\index{Fibonacci!identità!Cassini}
 	cvd.
 	\proofpart{Seconda dimostrazione}
 	\begin{align*}
-\Fib{n-1}\Fib{n+1}={}&{}{}\\ 
+\Fib{n-1}\Fib{n+1}={}&\\ 
 \intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-\Fib{n+m}={}&{}{}\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-\Fib{n-1}={}&{}{}\dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}\\
+\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
+\Fib{n-1}={}&\dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}\\
 \intertext{Per il~\vref{thm:FibLucNeg}}
 \Fib{-1}={}&(-1)^{-1+1}\Fib{1}=\Fib{1}\\	
 \Luc{-1}={}&(-1)^{1}\Luc{1}=-	\Luc{1}\\
-={}&{}{}\dfrac{\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}\\
-={}&{}{}\dfrac{\Luc{n}-\Fib{n}}{2}\\
-\Fib{n+1}={}&{}{}\dfrac{\Luc{n}+\Fib{n}}{2}\\
+={}&\dfrac{\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}\\
+={}&\dfrac{\Luc{n}-\Fib{n}}{2}\\
+\Fib{n+1}={}&\dfrac{\Luc{n}+\Fib{n}}{2}\\
 \intertext{Quindi}
-={}&{}{}\dfrac{(\Luc{n}-\Fib{n})(\Luc{n}+\Fib{n})}{2}\\
-={}&{}{}\dfrac{\Luc{n}^2-\Fib{n}^2}{4}\\
+={}&\dfrac{(\Luc{n}-\Fib{n})(\Luc{n}+\Fib{n})}{2}\\
+={}&\dfrac{\Luc{n}^2-\Fib{n}^2}{4}\\
 \intertext{Per il~\vref{thm:FibLucFondamentale}}
-={}&{}{}\dfrac{5\Fib{n}^2+4(-1)^{n}-\Fib{n}^2}{4}\\
-={}&{}{}\Fib{n}^2+(-1)^{n}
+={}&\dfrac{5\Fib{n}^2+4(-1)^{n}-\Fib{n}^2}{4}\\
+={}&\Fib{n}^2+(-1)^{n}
 	\end{align*}
 cvd.
 \end{proof}

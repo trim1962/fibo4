@@ -103,7 +103,7 @@ $h$&$k$&\\
 	valori iniziali qualunque}
 	Se $\Gib{0}={}h$ e $\Gib{1}={}k$ e
 	\begin{equation}
-		\Gib{n}={}\dfrac{1}{a-b}\left[(k-bh)a^n-(k-ah)b^n\right]
+		\Gib{n}={}\dfrac{1}{a-b}\left[l a^n-m b^n\right]
 	\end{equation}\label{eqn:FormulaBinetgeneralizzata2}
 posto
 \begin{align*}
@@ -115,6 +115,19 @@ posto
 	l-m=&h(a-b)\\
 \end{align*}
 \end{thm}
+\begin{lem}\label{lem:PropPhiGen}
+	\begin{equation}
+		(k-bh)(k-ak)=k^2-hk-h^2
+	\end{equation}
+\end{lem}
+\begin{proof}
+	\begin{align*}
+		(k-bh)(k-ak)=&{}abh^2-(a+b)hk+k^2
+		\intertext{per~\vref{lem:FibpropPhi}}
+		=&{}k^2-hk-h^2
+	\end{align*}
+	cvd.
+\end{proof}
 \section{Proprietà}
 Possiamo con qualche calcolo, verificare che
 \begin{align*}
@@ -125,7 +138,7 @@ Possiamo con qualche calcolo, verificare che
 \Gib{4}={}&3k+2h=\Fib{4}k+\Fib{3}h\\
 \Gib{5}={}&5k+3h=\Fib{5}k+\Fib{4}h                                              
 \end{align*} 
-\begin{thm}[Derivazione]
+\begin{thm}[Derivazione da Fibonacci]
 	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque  
 	con $\Gib{0}=h$ 
 	e $\Gib{1}=k $ allora
@@ -141,13 +154,151 @@ Per induzione
 		\Gib{n+1}={}&\Gib{n}+\Gib{n-1}\\
 \intertext{per ipotesi induttiva}
 \Gib{n}={}&\Fib{n}k+\Fib{n-1}h\\
-\Gib{n}={}&\Fib{n-1}k+\Fib{n-2}h\\
+\Gib{n-1s}={}&\Fib{n-1}k+\Fib{n-2}h\\
 \Gib{n}+\Gib{n-1}={}&\Fib{n}k+\Fib{n-1}h+\Fib{n-1}k+\Fib{n-2}h\\
 ={}&(\Fib{n}+\Fib{n-1})k+(\Fib{n-1}+\Fib{n-2})h\\
 ={}&\Fib{n+1}k+\Fib{n}h\\
 \end{align*}
 cvd.
 \end{proof}
+\begin{thm}[Derivazione da Lucas]
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque  
+	con $\Gib{0}=h$ 
+	e $\Gib{1}=k $ allora
+	\begin{equation}
+		\Gib{n}=\dfrac{2h+k}{5}\Luc{n}+\dfrac{2k-h}{5}\Luc{n-1}
+	\end{equation}\label{thm:LucGenDer}
+	Dove $\Luc{n}$ è la successione di Lucas
+\end{thm}
+Nulla vieta di ottenere dalla successione generalizzata le successioni di Lucas 
+e Fibonacci.
+Possiamo supporre che \begin{equation*}
+	\Fib{n}=x\Gib{n}+y\Gib{n+1}
+\end{equation*}
+con $x$ e $y$ opportuni. Quindi possiamo impostare il sistema:
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+		\Fib{0}=&x\Gib{0}+y\Gib{1}\\
+		\Fib{1}=&x\Gib{1}+y\Gib{2}\\
+	\end{array}
+	\right.
+\end{equation*}
+Quindi
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+	0=&xh+yk\\
+	1=&xk+y(h+k)\\
+	\end{array}
+	\right.
+\end{equation*}
+Otteniamo:
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+		x=&-\dfrac{k}{h^2+hk-k^2}\\
+	y=&\dfrac{h}{h^2+hk-k^2}\\
+	\end{array}
+	\right.
+\end{equation*}
+
+Vale il seguente teorema:
+\begin{thm}[Fibonacci da $\Gib{n}$]
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque  
+	con $\Gib{0}=h$ 
+	e $\Gib{1}=k $ allora
+	\begin{equation}
+		\Fib{n}=-\dfrac{k}{h^2+hk-k^2}\Gib{n}+\dfrac{h}{h^2+hk-k^2}\Gib{n+1}
+	\end{equation}\label{thm:GenDerFib}
+	Dove $\Fib{n}$ è la successione di Fibonacci.
+\end{thm}~\cite{Rabinowitz_1996}
+
+Possiamo supporre che \begin{equation*}
+	\Luc{n}=x\Gib{n}+y\Gib{n+1}
+\end{equation*}
+con $x$ e $y$ opportuni. Quindi possiamo impostare il sistema:
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+		\Luc{0}=&x\Gib{0}+y\Gib{1}\\
+		\Luc{1}=&x\Gib{1}+y\Gib{2}\\
+	\end{array}
+	\right.
+\end{equation*}
+Quindi
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+		2=&xh+yk\\
+		1=&xk+y(h+k)\\
+	\end{array}
+	\right.
+\end{equation*}
+Otteniamo:
+\begin{equation*}
+	\left\{
+	\begin{array}{ll}
+		x=&\dfrac{2h+k}{h^2+hk-k^2}\\
+		y=&-\dfrac{2k-h}{h^2+hk-k^2}\\
+	\end{array}
+	\right.
+\end{equation*}
+
+Vale il seguente teorema:
+\begin{thm}[Lucas da $\Gib{n}$]
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque  
+	con $\Gib{0}=h$ 
+	e $\Gib{1}=k $ allora
+	\begin{equation}
+		\Luc{n}=\dfrac{2h+k}{h^2+hk-k^2}\Gib{n}-\dfrac{2k-h}{h^2+hk-k^2}\Gib{n+1}
+	\end{equation}\label{thm:GenDerLuc}
+	Dove $\Fib{n}$ è la successione di Fibonacci.
+\end{thm}~\cite{Rabinowitz_1996}
+\begin{thm}[Espansione della somma]
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque e
+	$\Fib{n}$ è la successione di Fibonacci allora
+	\begin{equation}
+		\Gib{n+m}=\Fib{m-1}\Gib{n}+\Fib{m}\Gib{n+1}
+	\end{equation}
+\end{thm}~\cite{Rabinowitz_1996}
+\begin{proof}
+\begin{align*}
+\Fib{m-1}\Gib{n}+\Fib{m}\Gib{n+1}=&
+\intertext{Per il~\vref{thm:FormulaBinetgeneralizzata2} e per 
+il~\vref{thm:FibFormulaBinet} otteniamo}
+={}&\dfrac{a^{m-1}-b^{m-1}}{a-b}
+\dfrac{(k-bh)a^{n}+(ah-k)b^{n}}{a-b}+
+\dfrac{a^{m}-b^{m}}{a-b}
+\dfrac{(k-bh)a^{n+1}+(ah-k)b^{n+1}}{a-b}\\
+\intertext{Utilizzando il~\vref{lem:FibpropPhi}}
+=&\dfrac{(k-bh)a^{n+m}+(ah-k)b^{n+m}}{a-b}\\
+\end{align*}
+Cvd.
+\end{proof}
+\begin{thm}[Espansione della somma]
+	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque e
+	$\Fib{n}$ e $\Luc{n}$ sono le successioni di Fibonacci e Lucas allora
+\begin{align*}
+		\Gib{n+m}=&{}\dfrac{1}{2}\left[\Fib{m}\Lh{n}+\Luc{m}\Gib{n}\right]\\
+		\Lh{n}=&{}\Gib{n-1}+\Gib{n+1}
+\end{align*}
+\end{thm}~\cite{Rabinowitz_1996}
+\begin{proof}
+\begin{align*}
+		\Lh{n}=&{}\Gib{n-1}+\Gib{n+1}\\
+	=&{}a^n(k-bh)+b^n(k-ah)\\
+		\intertext{Per il~\vref{thm:FormulaBinetgeneralizzata2}, per 
+			il~\vref{thm:FibFormulaBinet} e per il~\vref{thm:LucFormulaBinet} 
+			otteniamo}
+		\dfrac{1}{2}\left[\Fib{m}\Lh{n}+\Luc{m}\Gib{n}\right]=&\\
+	=&{}\dfrac{1}{2}\left\{\dfrac{a^{m}-b^{m}}{a-b}\left[a^n(k-bh)+b^n(k-ah)\right]+
+		(a^m+b^m)\dfrac{(k-bh)a^{n}+(ah-k)b^{n}}{a-b}\right\}\\
+	=&{}\dfrac{(k-bh)a^{n+m}+(ah-k)b^{n+m}}{a-b}
+\end{align*}
+Cvd.
+\end{proof}
+\section{Limiti}
 \begin{thm}[Limite successione]
 	Se $\Gib{n}$ è la successione di Fibonacci per valori iniziali qualunque 
 	allora 
@@ -163,7 +314,7 @@ cvd.
 	\lim_{n\to\infty}\left(\dfrac{b}{a}\right)^n={}&0\\
 ={}&ab\lim_{n\to\infty}\dfrac{bh-k}{b(bh-k)}\\
 ={}&ab\dfrac{1}{b}=a=\varphi\\
-	\end{align*}
+ 	\end{align*}
  \end{proof}
 \begin{thm}[Limite rapporto]
 	Se $\Fib{n}$ è la successione di Fibonacci e $\Gib{n}$ è quella per valori 
@@ -198,19 +349,7 @@ cvd.
 		\lim_{n\to\infty}\left(\dfrac{b}{a}\right)^{n}={}&0\\
 	\end{align*}
 \end{proof}
-\begin{lem}\label{lem:PropPhiGen}
-	\begin{equation}
-		(k-bh)(k-ak)=k^2-hk-h^2
-	\end{equation}
-\end{lem}
-\begin{proof}
-	\begin{align*}
-			(k-bh)(k-ak)=&abh^2-(a+b)hk+k^2
-		\intertext{per~\vref{lem:FibpropPhi}}
-		=&k^2-hk-h^2
-	\end{align*}
-cvd.
-\end{proof}
+
 \begin{thm}[Identità di Cassini 
 per valori iniziali qualunque]\label{thm:identitàCassiniper valori iniziali 
 qualunque}
@@ -225,11 +364,11 @@ qualunque}
 \Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
 \Gib{n-1}=&{}\dfrac{k-bh}{a(a-b)}a^{n-1}+\dfrac{ah-k}{b(a-b)}b^{n-1}\\
 \Gib{n+1}=&{}\dfrac{k-bh}{a(a-b)}a^{n+1}+\dfrac{ah-k}{b(a-b)}b^{n+1}\\
-\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=&a^{n-1}b^{n-1}(k-bh)(ah-k)\\
+\Gib{n-1}\cdot\Gib{n+1}-\Gib{n}^2=&{}a^{n-1}b^{n-1}(k-bh)(ah-k)\\
 	\intertext{per~\vref{lem:FibpropPhi}}
-	=&(-1)^{n}(k-bh)(k-ah)
+=&{}(-1)^{n}(k-bh)(k-ah)
 	\intertext{per~\vref{lem:PropPhiGen}}
-	=&(-1)^n(k^2-hk-h^2)
+=&{}(-1)^n(k^2-hk-h^2)
 \end{align*}
 cvd.
 \end{proof}
@@ -247,11 +386,11 @@ qualunque]\label{thm:fibCatalanGen}
 		\Gib{n-r}=&{}\dfrac{k-bh}{a(a-b)}a^{n-r}+\dfrac{ah-k}{b(a-b)}b^{n-r}\\
 		\Gib{n+r}=&{}\dfrac{k-bh}{a(a-b)}a^{n+r}+\dfrac{ah-k}{b(a-b)}b^{n+r}\\
 		\Gib{n-r}\cdot\Gib{n+r}-\Gib{n}^2=&a^{n-r}b^{n+r}(k-bh)(ah-k)\dfrac{a^{2r}-2a^rb^r+b^{2r}}{(a-b)^2}\\
-		=&a^{n-r}b^{n+r}(k-bh)(ah-k)\Gib{r}^2\\
+	=&{}a^{n-r}b^{n+r}(k-bh)(ah-k)\Gib{r}^2\\
 		\intertext{per~\vref{lem:FibpropPhi}}
-		=&(-1)^{n-r+1}(k-bh)(k-ah)\Gib{r}^2\\
+	=&{}(-1)^{n-r+1}(k-bh)(k-ah)\Gib{r}^2\\
 		\intertext{per~\vref{lem:PropPhiGen}}
-		=&(-1)^{n-r+1}(k^2-hk-h^2)\Gib{r}^2
+	=&{}(-1)^{n-r+1}(k^2-hk-h^2)\Gib{r}^2
 	\end{align*}
 	cvd.
 \end{proof}
@@ -271,9 +410,9 @@ qualunque]\label{thm:fibVajdaGen}
 		\Gib{n+i+j}=&{}\dfrac{k-bh}{a(a-b)}a^{n+i+j}+\dfrac{ah-k}{b(a-b)}b^{n+i+j}\\
 		\Gib{n+i}\cdot\Gib{n+j}-\Gib{n}\cdot\Gib{n+i+j}=&\dfrac{a^nb^n(a^i-b^i)(a^j-b^j)(k-ah)(k-bh)}{(a-b)^2}\\
 		\intertext{per~\vref{lem:FibpropPhi}}
-		=&(-1)^{n}(k-bh)(k-ah)\Gib{i}\cdot\Gib{j}\\
+	=&{}(-1)^{n}(k-bh)(k-ah)\Gib{i}\cdot\Gib{j}\\
 		\intertext{per~\vref{lem:PropPhiGen}}
-		=&(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}\\
+	=&{}(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}\\
 	\end{align*}
 	cvd.
 \end{proof}
@@ -371,21 +510,21 @@ Utilizzando il~\vref{thm:FibdispariGen} e il~\vref{thm:Fibdispari} otteniamo
 \begin{proof}
 	\begin{align*}
 		\Gib{n+2}-2\Gib{n}-\Gib{n-1}=&\\
-		=&\dfrac{a^{n-1}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-1}(b^3-2b-1)(ah-k)}{a-b}
+	=&{}\dfrac{a^{n-1}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-1}(b^3-2b-1)(ah-k)}{a-b}
 		\intertext{per~\vref{lem:FibpropPhi}}
 		a^3-2a-1=&\\
-		=&aa^2-2a-1	\\
-		=&a(a+1)-2a-1\\
-		=&a^2+a-2a-1\\
-		=&a^2-a-1\\
-		=&0
+	=&{}aa^2-2a-1	\\
+	=&{}a(a+1)-2a-1\\
+	=&{}a^2+a-2a-1\\
+	=&{}a^2-a-1\\
+	=&{}0
 		\intertext{Analogamente}
 		b^3-2b-1=&0\\
 	\end{align*}
 Quindi la tesi. Come prima si dimostra che
 	\begin{align*}
 	\Gib{n+2}-2\Gib{n}-\Gib{n-1}=&\\
-	=&\dfrac{a^{n-2}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-2}(b^3-2b-1)(ah-k)}{a-b}
+=&{}\dfrac{a^{n-2}(a^3-2a-1)(k-bh)}{a-b}+\dfrac{b^{n-2}(b^3-2b-1)(ah-k)}{a-b}
 \end{align*}
 e procedendo in maniera analoga otteniamo la tesi.
 

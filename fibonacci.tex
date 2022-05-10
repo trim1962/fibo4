@@ -130,19 +130,19 @@ Altra dimostrazione
 		\intertext{Poniamo:}
 		&\Fib{n}={}xa^n+yb^n\\
 		&\left\{
-		\begin{array}{l}
+		\begin{aligned}
 			a^0x+b^0y=0\\ a^1y+b^1y=1
-		\end{array}\right.
+		\end{aligned}\right.
 	\intertext{Otteniamo}
 	&\left\{
-	\begin{array}{l}
-	x=\dfrac{1}{a-b}\\ y=-\dfrac{1}{a-b}
-	\end{array}\right.\\
+	\begin{aligned}
+	x={}&\dfrac{1}{a-b}\\ y={}&-\dfrac{1}{a-b}
+	\end{aligned}\right.\\
 %\intertext{Per il~\vref{lem:FibpropPhi}}
 %&\left\{
-%	\begin{array}{l}
+%	\begin{aligned}
 %	x=\dfrac{a}{a-b}\\ y=-\dfrac{b}{a-b}
-%\end{array}\right.\\ 
+%\end{aligned}\right.\\ 
 	&\Fib{n}={}\dfrac{a^n-b^n}{a-b}
 	\end{align*}
 quindi
@@ -163,19 +163,19 @@ Lucas]\label{thm:LucFormulaBinet}\index{Formula!Binet!Lucas}
 		\intertext{Poniamo:}
 		&\Luc{n}={}xa^n+yb^n\\
 		&\left\{
-		\begin{array}{l}
+		\begin{aligned}
 			a^0x+b^0y=2\\ a^1y+b^1y=1
-		\end{array}\right.
+		\end{aligned}\right.
 		\intertext{Otteniamo}
 		&\left\{
-		\begin{array}{l}
+		\begin{aligned}
 			x=\dfrac{1-2b}{a-b}\\ y=\dfrac{2a-1}{a-b}
-		\end{array}\right.
+		\end{aligned}\right.
 		\intertext{Per il~\vref{lem:FibpropPhi}}
 		&\left\{
-		\begin{array}{l}
+		\begin{aligned}
 			x=1\\ y=1
-		\end{array}\right.\\ 
+		\end{aligned}\right.\\ 
 		&\Luc{n}={}a^{n}+b^{n}
 	\end{align*}
 	quindi
@@ -604,6 +604,7 @@ Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allo
 \end{align*}
 cvd.
 \end{proof}
+\section{Radici}
 \begin{thm}[Algoritmo per rimuovere a e 
 b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
@@ -627,6 +628,57 @@ b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
 		\right.
 	\end{equation*}
 che risolto rispetto $a^n$ e $b^n$ da la tesi.
+\end{proof}
+\begin{thm}[Potenze di a e 	b]~\cite{Rabinowitz_1996}
+	\label{thm:FibRimuovipotab
+	}
+	Se $\Fib{n}$ è la successione di Fibonacci allora:
+	\begin{align*}
+		a^n={}&a\Fib{n}+\Fib{n-1}\\
+		b^n={}&b\Fib{n}+\Fib{n-1}\\
+	\end{align*}
+\end{thm}
+\begin{proof}
+	\proofpart{Prima dimostrazione}
+Utilizzando il~\vref{thm:FibFormulaBinet} possiamo scrivere:
+\begin{align*}
+	a\Fib{n}+\Fib{n-1}={}&\\
+={}&a\dfrac{1}{a-b}\left(a^n-b^n\right)
++\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)\\
+={}&\dfrac{ba^n(a^2+1)-ab^n(ab+1)}{ab(a-b)}\\
+={}&\dfrac{a^{n-1}(a^2+1)}{a-b}\\
+={}&\dfrac{a^{n-1}a(a-b)}{a-b}\\
+={}&a^n\\
+	b\Fib{n}+\Fib{n-1}={}&\\
+={}&b\dfrac{1}{a-b}\left(a^n-b^n\right)
++\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)\\
+={}&\dfrac{ba^n(ab+1)-ab^n(b^2+1)}{ab(a-b)}\\
+={}&\dfrac{b^{n-1}(b^2+1)}{b-a}\\
+={}&\dfrac{b^{n-1}b(b-a)}{b-a}\\
+={}&b^n
+\end{align*}
+	\proofpart{Seconda dimostrazione}
+	
+Poniamo che
+\begin{align*}
+&\left\{
+\begin{aligned}
+	a^1={}&x\Fib{1}+y\Fib{0}\\
+	a^2={}&x\Fib{2}+y\Fib{1}\\
+\end{aligned}
+\right.\\
+&\left\{
+\begin{aligned}
+	x=&a\\
+	y=&a^2-a
+\end{aligned}
+\right.\\
+a^n={}&a\Fib{n}+(a^2-a)\Fib{n-1}\\
+={}&a\Fib{n}+\Fib{n-1}\\
+\end{align*}
+Analogamente l'altra relazione.
+
+Cvd.
 \end{proof}
 \section{Formule di sottrazione}
 \begin{thm}[Formule di 
@@ -683,7 +735,7 @@ cvd.
 \end{proof}
 \section{Identità}
 \begin{thm}[Identità di 
-Cassini]\label{thm:FibCassini}\index{Fibonacci!identità!Cassini}
+Cassini]\label{thm:FibCassini}\index{Fibonacci!identità!Cassini}\index{Cassini}
 	Se $\Fib{n}$ è la successione di Fibonacci allora 
 	\begin{equation}
 		\Fib{n-1}\Fib{n+1}=\Fib{n}^2+(-1)^n
@@ -735,7 +787,7 @@ cvd.
 	\begin{equation}
 		\Fib{n}^2-\Fib{n-r}\Fib{n+r}=(-1)^{n-r}\Fib{r}^2
 	\end{equation}\label{eqn:FibCatalan}
-\end{thm}\index{Fibonacci!identità!Catalan}
+\end{thm}\index{Fibonacci!identità!Catalan}\index{Catalan}
 \begin{proof}
 	
 	\proofpart{Prima dimostrazione}
@@ -798,7 +850,7 @@ cvd.
 	\begin{equation}
 		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}=(-1)^{n}\Fib{i}\Fib{j}
 	\end{equation}
-\end{thm}\index{Fibonacci!identità!Vajada}
+\end{thm}\index{Fibonacci!identità!Vajada}\index{Vajada}
 \begin{proof}
 	
 	\proofpart{Prima dimostrazione}
@@ -838,7 +890,7 @@ cvd.
 cvd.
 \end{proof}
 \begin{thm}[Identità di 
-	d'Ocagne]\label{thm:FibdOcagne}\index{Fibonacci!identità!d'Ocagne}
+	d'Ocagne]\label{thm:FibdOcagne}\index{Fibonacci!identità!D'Ocagne}\index{D'Ocagne}
 	Se $\Fib{n}$ è la successione di Fibonacci allora 
 	\begin{equation}
 		\Fib{m}\Fib{n+1}-\Fib{n}\Fib{m+1}=(-1)^n\Fib{m-n}
@@ -861,7 +913,7 @@ cvd.
 cvd.
 \end{proof}
 \begin{thm}[Identità di 
-	Honsberger]\label{thm:FibHonsberger}\index{Fibonacci!identità!Honsberger}
+	Honsberger]\label{thm:FibHonsberger}\index{Fibonacci!identità!Honsberger}\index{Honsberger}
 	Se $\Fib{n}$ è la successione di Fibonacci allora 
 	\begin{equation}
 		\Fib{k-1}\Fib{n}+\Fib{k}\Fib{n+1}=\Fib{n+k}
@@ -884,7 +936,8 @@ cvd.
 cvd.
 \end{proof}
 \begin{thm}[Identità di Gelin 
-Cesàro]\label{thm:FibGelinCesaro}\index{Fibonacci!identità!Gelin Cesàro}
+Cesàro]\label{thm:FibGelinCesaro}\index{Fibonacci!identità!Gelin 
+Cesàro}\index{Gelin Cesàro}
 	Se $\Fib{n}$ è la successione di Fibonacci allora 
 	\begin{equation}
 	\Fib{n}^4-\Fib{n-2}\Fib{n-1}\Fib{n+1}\Fib{n+2}=1
@@ -1173,3 +1226,30 @@ Dato che $\Fib{3n}$ è pari per ipotesi induttiva $\Fib{3n+3}$ è pari.
 	Se $\Fib{n}$ è la successione di Fibonacci allora:
 	$\Fib{6n+1}$ e $\Fib{6n-1}$ sono della forma $4k+1$
 \end{thm}\index{Fibonacci!Valori multipli}
+\begin{thm}[Due termini successivi sono coprimi]\label{thm:FibonacciCoPrimi}
+	Se $\Fib{n}$ è la successione di Fibonacci allora:
+	$\Fib{n}$ e $\Fib{n+1}$ sono coprimi.
+\end{thm}\index{Fibonacci!Coprimi}\index{Coprimi}\cite{Gregorio2022}
+\begin{proof}
+Abbiamo
+\begin{align*}
+	\Fib{0}={}&0\\
+	\Fib{1}={}&1\\
+	\Fib{n+2}={}&\Fib{n+1}+\Fib{n}\\ 
+	\intertext{Poniamo che $\Fib{n+1}$ e $\Fib{n}$ siano coprimi e che $n$ sia 
+	il valore minimo. Abbiamo che}
+	n>&1\\
+	\intertext{Perché $\Fib{0}$ e $\Fib{1}$ sono coprimi fra di loro come anche 
+	$\Fib{1}$ e $\Fib{2}$ }
+\intertext{Per ipotesi quindi}
+\Fib{n+1}={}&ad\\
+\Fib{n}&=bd
+\intertext{con $a,b,d$ interi e $d>1$}
+\Fib{n-1}={}&\Fib{n+1}-\Fib{n}\\
+={}&ad-bd\\
+={}&(a-b)d\\
+\intertext{Quindi $\Fib{n-1}$ e $\Fib{n}$ non sono coprimi m $n$ era il valore 
+minimo per cui $\Fib{n+1}$ e $\Fib{n}$ erano coprimi.}
+\end{align*}
+Cvd.
+\end{proof}

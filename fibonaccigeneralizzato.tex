@@ -3,7 +3,7 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = it_IT
 % !TeX program = lualatex
-\chapter{Fibonacci valori iniziali qualunque}
+ \chapter{Fibonacci valori iniziali qualunque}
 \section{Definizione}
 \begin{defn}[Fibonacci, valori Iniziali 
 qualunque]\index{Fibonacci!iniziali qualunque!definizione}
@@ -29,17 +29,17 @@ Poniamo che \begin{equation}
 \end{equation} Se
 \begin{equation*}
 	\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		a^0x+b^0y=h\\ a^1x+b^1y=k
-	\end{array}
+	\end{aligned}
 	\right.
 \end{equation*}
 che risolto porta
 \begin{equation*}
 	\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		x=\dfrac{k-bh}{a-b}\\y=\dfrac{ah-k}{a-b}\\
-	\end{array}
+	\end{aligned}
 	\right.
 \end{equation*}
 Riassumendo
@@ -58,7 +58,9 @@ La somma di due pari è sempre pari quindi la successione è $PPPPPP$
 	Se $\Gib{0}={}2h$ e $\Gib{1}={}2k+1$ allora \begin{equation}
 		\Gib{n}={}\dfrac{1+2k-2bh}{a-b}a^n+\dfrac{2ah-2k-1}{a-b }b^n
 	\end{equation}
-La somma è fra un numero pari e un dispari è dispari. Segue la somma tra due dispari che è pari e quello che segue è un dispari. La successione che otteniamo  è $PDDPDDP$
+La somma è fra un numero pari e un dispari è dispari. Segue la somma tra due 
+dispari che è pari e quello che segue è un dispari. La successione che 
+otteniamo  è $PDDPDDP$
 \end{commento}
 \begin{commento}
 	Se $\Gib{1}={}2h+1$ e $\Gib{2}={}2k$ allora \begin{equation}
@@ -82,6 +84,13 @@ La tabella \vref{tab:seqnumpar} riassume quanto detto.
 		\Gib{n}={}ha^n+hb^n
 	\end{equation}
 \end{commento}
+\begin{commento}
+	Se $\Gib{0}={}pr$ e $\Gib{1}={}qr$ allora \begin{equation}
+		\Gib{n}={}p\dfrac{t-br}{a-b}a^n+p\dfrac{ar-t}{a-b}b^n
+	\end{equation}
+Quindi qui non vale il~\vref{thm:FibonacciCoPrimi} dato che ogni coppia di 
+numeri di Fibonacci ha un divisore comune.
+\end{commento}\index{Coprimi}
 \begin{table}
 	\centering
 	\begin{tabular}{ccc}
@@ -178,28 +187,28 @@ Possiamo supporre che \begin{equation*}
 con $x$ e $y$ opportuni. Quindi possiamo impostare il sistema:
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
+	\begin{aligned}
 		\Fib{0}=&x\Gib{0}+y\Gib{1}\\
 		\Fib{1}=&x\Gib{1}+y\Gib{2}\\
-	\end{array}
+	\end{aligned}
 	\right.
 \end{equation*}
 Quindi
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
+	\begin{aligned}
 	0=&xh+yk\\
 	1=&xk+y(h+k)\\
-	\end{array}
+	\end{aligned}
 	\right.
 \end{equation*}
 Otteniamo:
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
+	\begin{aligned}
 		x=&-\dfrac{k}{h^2+hk-k^2}\\
 	y=&\dfrac{h}{h^2+hk-k^2}\\
-	\end{array}
+	\end{aligned}
 	\right.
 \end{equation*}
 
@@ -220,28 +229,28 @@ Possiamo supporre che \begin{equation*}
 con $x$ e $y$ opportuni. Quindi possiamo impostare il sistema:
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
-		\Luc{0}=&x\Gib{0}+y\Gib{1}\\
-		\Luc{1}=&x\Gib{1}+y\Gib{2}\\
-	\end{array}
+	\begin{aligned}
+		\Luc{0}={}&x\Gib{0}+y\Gib{1}\\
+		\Luc{1}={}&x\Gib{1}+y\Gib{2}\\
+	\end{aligned}
 	\right.
 \end{equation*}
 Quindi
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
-		2=&xh+yk\\
-		1=&xk+y(h+k)\\
-	\end{array}
+	\begin{aligned}
+		2={}&xh+yk\\
+		1={}&xk+y(h+k)\\
+	\end{aligned}
 	\right.
 \end{equation*}
 Otteniamo:
 \begin{equation*}
 	\left\{
-	\begin{array}{ll}
-		x=&\dfrac{2h+k}{h^2+hk-k^2}\\
-		y=&-\dfrac{2k-h}{h^2+hk-k^2}\\
-	\end{array}
+	\begin{aligned}
+		x={}&\dfrac{2h+k}{h^2+hk-k^2}\\
+		y={}&-\dfrac{2k-h}{h^2+hk-k^2}\\
+	\end{aligned}
 	\right.
 \end{equation*}
 
@@ -264,7 +273,7 @@ Vale il seguente teorema:
 \end{thm}~\cite{Rabinowitz_1996}
 \begin{proof}
 \begin{align*}
-\Fib{m-1}\Gib{n}+\Fib{m}\Gib{n+1}=&
+\Fib{m-1}\Gib{n}+\Fib{m}\Gib{n+1}={}&
 \intertext{Per il~\vref{thm:FormulaBinetgeneralizzata2} e per 
 il~\vref{thm:FibFormulaBinet} otteniamo}
 ={}&\dfrac{a^{m-1}-b^{m-1}}{a-b}
@@ -272,7 +281,7 @@ il~\vref{thm:FibFormulaBinet} otteniamo}
 \dfrac{a^{m}-b^{m}}{a-b}
 \dfrac{(k-bh)a^{n+1}+(ah-k)b^{n+1}}{a-b}\\
 \intertext{Utilizzando il~\vref{lem:FibpropPhi}}
-=&\dfrac{(k-bh)a^{n+m}+(ah-k)b^{n+m}}{a-b}\\
+={}&\dfrac{(k-bh)a^{n+m}+(ah-k)b^{n+m}}{a-b}\\
 \end{align*}
 Cvd.
 \end{proof}
@@ -280,23 +289,56 @@ Cvd.
 	Se $\Gib{n}$ è una successione di Fibonacci per valori iniziali qualunque e
 	$\Fib{n}$ e $\Luc{n}$ sono le successioni di Fibonacci e Lucas allora
 \begin{align*}
-		\Gib{n+m}=&{}\dfrac{1}{2}\left[\Fib{m}\Lh{n}+\Luc{m}\Gib{n}\right]\\
-		\Lh{n}=&{}\Gib{n-1}+\Gib{n+1}
+		\Gib{n+m}={}&\dfrac{1}{2}\left[\Fib{m}\LH{n}+\Luc{m}\Gib{n}\right]\\
+		\LH{n}=&{}\Gib{n-1}+\Gib{n+1}
 \end{align*}
 \end{thm}~\cite{Rabinowitz_1996}
 \begin{proof}
 \begin{align*}
-		\Lh{n}=&{}\Gib{n-1}+\Gib{n+1}\\
+		\LH{n}=&{}\Gib{n-1}+\Gib{n+1}\\
 	=&{}a^n(k-bh)+b^n(k-ah)\\
 		\intertext{Per il~\vref{thm:FormulaBinetgeneralizzata2}, per 
 			il~\vref{thm:FibFormulaBinet} e per il~\vref{thm:LucFormulaBinet} 
 			otteniamo}
-		\dfrac{1}{2}\left[\Fib{m}\Lh{n}+\Luc{m}\Gib{n}\right]=&\\
+		\dfrac{1}{2}\left[\Fib{m}\LH{n}+\Luc{m}\Gib{n}\right]=&\\
 	=&{}\dfrac{1}{2}\left\{\dfrac{a^{m}-b^{m}}{a-b}\left[a^n(k-bh)+b^n(k-ah)\right]+
 		(a^m+b^m)\dfrac{(k-bh)a^{n}+(ah-k)b^{n}}{a-b}\right\}\\
 	=&{}\dfrac{(k-bh)a^{n+m}+(ah-k)b^{n+m}}{a-b}
 \end{align*}
 Cvd.
+\end{proof}
+\section{Radici}
+\begin{thm}[Potenze di $a$ e $b$]
+	\label{thm:FibRimuovipotab
+	}
+	Se $\Gib{n}$  è la successione di Fibonacci per valori iniziali qualunque 
+	allora 
+	\begin{align*}
+		(k-bh)a^n={}&a\Gib{n}+\Gib{n-1}\\
+		(k-ah)b^n={}&b\Gib{n}+\Gib{n-1}\\
+	\end{align*}
+\end{thm}
+\begin{proof}
+	Per il~\vref{thm:FormulaBinetgeneralizzata} possiamo dire
+	\begin{align*}
+		a\Gib{n}+\Gib{n-1}=&\\
+	=&a\dfrac{k-bh}{a-b}a^{n}+\dfrac{ah-k}{a-b}b^{n}+
+	\dfrac{k-bh}{a-b}a^{n-1}+\dfrac{ah-k}{a-b}b^{n-1}\\
+	=&\dfrac{ba^n(a^2+1)(bh-k)+ab^n(k-ah)(ab+1)}{ab(b-a)}\\
+	=&\dfrac{a^{n-1}(a^2+1)(k-bh)}{a-b}\\
+	=&\dfrac{a^{n-1}a(a-b)(k-bh)}{a-b}\\
+	=&a^{n}(k-bh)\\
+	\end{align*}
+\begin{align*}
+	b\Gib{n}+\Gib{n-1}=&\\
+	=&b\dfrac{k-bh}{a-b}a^{n}+\dfrac{ah-k}{a-b}b^{n}+
+	\dfrac{k-bh}{a-b}a^{n-1}+\dfrac{ah-k}{a-b}b^{n-1}\\
+	=&\dfrac{ba^n(ab+1)(bh-k)+ab^n(k-ah)(b^2+1)}{ab(b-a)}\\
+	=&\dfrac{b^{n-1}(ah-k)(b^2+1)}{a-b}\\
+	=&\dfrac{b^{n-1}(ah-k)b(b-a)}{a-b}\\
+	=&b^{n}(k-ah)\\
+\end{align*}
+cvd.
 \end{proof}
 \section{Limiti}
 \begin{thm}[Limite successione]
@@ -341,7 +383,8 @@ Cvd.
 \end{thm}~\cite{Horadam_1961}
 \begin{proof}
 	\begin{align*}
-		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Gib{n-i}}={}&	\lim_{n\to\infty}-\dfrac{a^ib^i[a^n(bh-k)+b^n(k-ah)]}{a^ib^n(ah-k)+a^nb^i(k-bh)}\\
+		\lim_{n\to\infty}\dfrac{\Gib{n}}{\Gib{n-i}}={}&	
+		\lim_{n\to\infty}-\dfrac{a^ib^i[a^n(bh-k)+b^n(k-ah)]}{a^ib^n(ah-k)+a^nb^i(k-bh)}\\
 		={}&\lim_{n\to\infty}-\dfrac{a^n\left\{a^ib^i\left[bh-k\right]\left(\dfrac{b}{a}\right)^n(k-ah)\right\}}{a^n\left\{a^i\left(\dfrac{b}{a}\right)^n(bh-k)+b^i(k-ah)\right\}}\\
 		={}&\dfrac{a^ib^i(k-bh)}{b^i(k-bh)}\\
 		={}&a^i
@@ -401,7 +444,8 @@ qualunque]\label{thm:fibVajdaGen}
 	\begin{equation}
 		\Gib{n+i}\cdot\Gib{n+j}-\Gib{n}\cdot\Gib{n+i+j}=(-1)^{n}(k^2-hk-h^2)\Gib{i}\cdot\Gib{j}
 	\end{equation}\label{eqn:fibVajdaGen}
-\end{thm}\index{Fibonacci!identità!Vajada per valori iniziali qualunque}
+\end{thm}\index{Fibonacci!identità!Vajada per valori iniziali 
+qualunque}\index{Vajada}
 \begin{proof}
 	\begin{align*}
 		\Gib{n}=&{}\dfrac{k-bh}{a(a-b)}a^n+\dfrac{ah-k}{b(a-b)}b^n\\
@@ -425,10 +469,10 @@ Se $\Gib{n}$ è una generica successione di Fibonacci con
 \end{cases}\] il sistema 
 \begin{equation*}
 	\left\{
-\begin{array}{l}
+\begin{aligned}
 	(a^2+1)(k-bh)(k-bh-1)=0\\
 	(b^2+1)(ah-k)(ah-k+1)=0
-\end{array}
+\end{aligned}
 \right.
 \end{equation*}
 ha come soluzione intera solo \[\begin{cases}
@@ -440,31 +484,32 @@ ha come soluzione intera solo \[\begin{cases}
 Questo sistema ammette quattro soluzioni che sono
 \begin{enumerate}
 	\item $\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		h=0\\
 		k=0
-	\end{array}
+	\end{aligned}
 	\right.$
 	\item $\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		h=0\\
 		k=1
-	\end{array}
+	\end{aligned}
 	\right.$
 	\item $\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		h=\dfrac{1}{a-b}\\
 		k=\dfrac{a}{a-b}
-	\end{array}
+	\end{aligned}
 	\right.$
 	\item $\left\{
-	\begin{array}{l}
+	\begin{aligned}
 		h=-\dfrac{1}{a-b}\\
 		k=-\dfrac{b}{a-b}
-	\end{array}
+	\end{aligned}
 	\right.$
 \end{enumerate}
-Discutiamo le soluzioni. La prima non è accettabile. La seconda sono i valori iniziali della successione di Fibonacci.
+Discutiamo le soluzioni. La prima non è accettabile. La seconda sono i valori 
+iniziali della successione di Fibonacci.
 La terza e la quarta non sono accettabili perché non intere. 
 \end{proof}
 \begin{thm}[Dispari]\label{thm:FibdispariGen}
@@ -482,15 +527,17 @@ La terza e la quarta non sono accettabili perché non intere.
 \begin{align*}
 \Gib{n}^2+\Gib{n+1}^2-\Gib{2n+1}={}&a^{2n}\dfrac{(a^2+1)(bh-k)(bh-k+1)}{\left(a-b\right)^2}\\
 +&b^{2n}\dfrac{(b^2+1)(ah-k)(ah-k+1)}{\left(a-b\right)^2}\\
-\intertext{l'uguaglianza precedente vale zero se $h$ e $k$ sono soluzioni del sistema seguente }
+\intertext{l'uguaglianza precedente vale zero se $h$ e $k$ sono soluzioni del 
+sistema seguente }
 &	\left\{
-\begin{array}{l}
+\begin{aligned}
 	(a^2+1)(k-bh)(k-bh-1)=0\\
 	(b^2+1)(ah-k)(ah-k+1)=0
-\end{array}
+\end{aligned}
 \right.\\
 \end{align*}
-Quindi per~\vref{thm:FibSistCaratteristico} è la successione di Fibonacci ordinaria.
+Quindi per~\vref{thm:FibSistCaratteristico} è la successione di Fibonacci 
+ordinaria.
 \end{proof}
 Utilizzando il~\vref{thm:FibdispariGen} e il~\vref{thm:Fibdispari} otteniamo
 \begin{thm}[Unicità]

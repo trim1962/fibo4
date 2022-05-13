@@ -11,7 +11,7 @@
 		\begin{cases}
 			\FG{0}=0\\
 			\FG{1}=1\\
-			\FG{n}=p\FG{n-1}+\FG{n-2}\quad n>1\\
+			\FG{n}=P\FG{n-1}+\FG{n-2}\quad n>1\\
 		\end{cases}
 	\end{equation} 
 \end{defn}\cite{Yalciner2013}
@@ -20,26 +20,26 @@ Diremo successione di Lucas generalizzata la successione definita
 \begin{equation}
 	\begin{cases}
 		\LG{0}=2\\
-		\LG{1}=p\\
-		\LG{n}=p\LG{n-1}+\LG{n-2}\quad n>1\\
+		\LG{1}=P\\
+		\LG{n}=P\LG{n-1}+\LG{n-2}\quad n>1\\
 	\end{cases}
 \end{equation}
 \end{defn}\cite{Yalciner2013} 
 \begin{lem}[Proprietà]
 	Se $\alpha$ e $\beta$ sono le soluzioni dell'equazione \begin{equation}
-		x^2-px-1=0
+		x^2-Px-1=0
 	\end{equation} allora:
 	\begin{align*}
 		\alpha\beta=&{}-1\\
-		\alpha+\beta=&{}p\\
-		\alpha-\beta=&{}\sqrt{p^2+4}\\
-		p-2\beta=&{}\sqrt{p^2+4}\\
-		2\alpha-p =&{}\sqrt{p^2+4}\\
+		\alpha+\beta=&{}P\\
+		\alpha-\beta=&{}\sqrt{P^2+4}\\
+		P-2\beta=&{}\sqrt{P^2+4}\\
+		2\alpha-P =&{}\sqrt{P^2+4}\\
 	\end{align*}
 \end{lem}  
 \begin{thm}[Formula di Binet generalizzata]
 	Se $\alpha$ e $\beta$ sono le soluzioni dell'equazione \begin{equation}
-		x^2-px-1=0
+		x^2-Px-1=0
 	\end{equation} allora la formula di Binet per la successione
  generalizzata 
 	di Fibonacci è \begin{equation}
@@ -87,7 +87,7 @@ generalizzata}\index{Formula!Binet!Lucas generalizzata}\cite{Yalciner2013}
 		\begin{cases}
 			\Fg{0}=0\\
 			\Fg{1}=1\\
-			\Fg{n}=p\Fg{n-1}-q\Fg{n-2}\quad n>1\\
+			\Fg{n}=P\Fg{n-1}-Q\Fg{n-2}\quad n>1\\
 		\end{cases}
 	\end{equation} 
 \end{defn}\cite{Rabinowitz_1996}
@@ -96,27 +96,27 @@ generalizzata}\index{Formula!Binet!Lucas generalizzata}\cite{Yalciner2013}
 	\begin{equation}
 		\begin{cases}
 			\Lg{0}=2\\
-			\Lg{1}=p\\
-			\Lg{n}=p\Lg{n-1}-q\Lg{n-2}\quad n>1\\
+			\Lg{1}=P\\
+			\Lg{n}=P\Lg{n-1}-Q\Lg{n-2}\quad n>1\\
 		\end{cases}
 	\end{equation}
 \end{defn}\cite{Rabinowitz_1996}
 \begin{lem}[Proprietà]
 	Se $r_{1}$ e $r_{2}$ sono le soluzioni dell'equazione \begin{equation}
-		x^2-px+q=0
+		x^2-Px+Q=0
 	\end{equation} allora:
 	\begin{align*}
-		r_{1}r_{2}=&{}q\\
-		r_{1}+r_{2}=&{}p\\
-		r_{1}-r_{2}=&{}\sqrt{p^2-4q}\\
-		p-2r_{2}=&{}\sqrt{p^2-4q}\\
-		2r_{1}-p =&{}\sqrt{p^2-4q}\\
+		r_{1}r_{2}=&{}Q\\
+		r_{1}+r_{2}=&{}P\\
+		r_{1}-r_{2}=&{}\sqrt{P^2-4Q}\\
+		P-2r_{2}=&{}\sqrt{P^2-4Q}\\
+		2r_{1}-P=&{}\sqrt{P^2-4Q}\\
 	\end{align*}
 \end{lem}  
 \begin{thm}[Formula di Binet 
 generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
-	Se $r_{1}$ e $r_{2}$ sono le soluzioni dell'equazione \begin{equation}
-		x^2-px+q=0
+	Se $r_{1}$ e 	$r_{2}$ sono le soluzioni dell'equazione \begin{equation}
+		x^2-Px+Q=0
 	\end{equation} allora la formula di Binet per la successione
 	generalizzata 
 	di Fibonacci è \begin{equation}
@@ -153,9 +153,9 @@ generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
 		\end{align*}
 		quindi
 		\begin{equation}
-			\Fg{n}=\dfrac{1}{\sqrt{p^2-4q}}
-			\left[\left(\dfrac{p+\sqrt{p^2-4q}}{2}\right)^n
-			-\left(\dfrac{p-\sqrt{p^2-4q}}{2}\right)^n\right]
+			\Fg{n}=\dfrac{1}{\sqrt{P^2-4Q}}
+			\left[\left(\dfrac{P+\sqrt{P^2-4Q}}{2}\right)^n
+			-\left(\dfrac{p-\sqrt{P^2-4Q}}{2}\right)^n\right]
 		\end{equation}
 			\proofpart{Seconda dimostrazione}
 				\begin{align*}
@@ -164,13 +164,13 @@ generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
 				&\left\{
 				\begin{aligned}
 					r_{1}^0x+r_{2}^0y=2\\ 
-					r_{1}^1y+r_{2}^1y=p
+					r_{1}^1y+r_{2}^1y=P
 				\end{aligned}\right.
 				\intertext{Otteniamo}
 				&\left\{
 				\begin{aligned}
-					x=&\dfrac{p-2r_{2}}{r_{1}-r_{2}}=1\\ 
-					y=&-\dfrac{2r_{1}-p}{r_{1}-r_{2}}=1
+					x=&\dfrac{P-2r_{2}}{r_{1}-r_{2}}=1\\ 
+					y=&-\dfrac{2r_{1}-P}{r_{1}-r_{2}}=1
 				\end{aligned}\right.\\
 				%\intertext{Per il~\vref{lem:FibpropPhi}}
 				%&\left\{
@@ -182,8 +182,8 @@ generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
 		quindi
 		\begin{equation}
 			\Lg{n}=
-		\left(\dfrac{p+\sqrt{p^2-4q}}{2}\right)^n
-			+\left(\dfrac{p-\sqrt{p^2-4q}}{2}\right)^n
+		\left(\dfrac{P+\sqrt{P^2-4Q}}{2}\right)^n
+			+\left(\dfrac{P-\sqrt{P^2-4Q}}{2}\right)^n
 		\end{equation}
 	\end{proof}
 \begin{thm}[Algoritmo per rimuovere $r_1$ e 
@@ -191,8 +191,8 @@ $r_2$]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuovirr}
 	Se $\Fg{n}$ è la successione di Fibonacci e  $\Lg{n}$ è quella di Lucas 
 	allora:\begin{equation}
 		\left\{\begin{aligned}
-			r_1^n={}&\dfrac{\Lg{n}+(\sqrt{p^2-4q})\Fg{n}}{2}\\
-			r_2^n={}&\dfrac{\Lg{n}-(\sqrt{p^2-4q})\Fg{n}}{2}\\
+			r_1^n={}&\dfrac{\Lg{n}+(\sqrt{P^2-4Q})\Fg{n}}{2}\\
+			r_2^n={}&\dfrac{\Lg{n}-(\sqrt{P^2-4Q})\Fg{n}}{2}\\
 		\end{aligned}
 		\right.
 	\end{equation}
@@ -210,3 +210,37 @@ $r_2$]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuovirr}
 	\end{equation*}
 	che risolto rispetto $r_1^n$ e $r_2^n$ da la tesi.
 \end{proof}
+\begin{thm}[Algoritmo per rimuovere potenze di $r_1$ e 
+	$r_2$]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuovirrpotenze}
+	Se $\Fg{n}$ è la successione di Fibonacci 
+	allora:
+		\begin{align}
+		r_1^n={}&r_1\Fg{n}-Q\Fg{n-1}\\
+		r_2^n={}&r_2\Fg{n}-Q\Fg{n-1}\\
+		\end{align}
+\end{thm}
+\begin{proof}
+	Dimostriamo la prima relazione per induzione su n
+	\begin{align*}
+	r_1^1={}&r_1\Fg{1}-Q\Fg{0}\\
+	r_1^1={}&r_1\\
+	\intertext{Poniamo che sia vera per $n-1$ e proviamolo per $n$}
+	r_1^{n-1}={}&r_1\Fg{n-1}-Q\Fg{n-2}\\
+	r_1^{n}={}&r_1^2\Fg{n-1}-Qr_1\Fg{n-2}\\
+	={}&(Pr_1-Q)\Fg{n-1}-Qr_1\Fg{n-2}\\
+	={}&Pr_1\Fg{n-1}-Qr_1\Fg{n-2}-Q\Fg{n-1}\\
+	={}&r_1(P\Fg{n-1}-Q\Fg{n-2})-Q\Fg{n-1}\\
+	={}&r_1P\Fg{n}-Q\Fg{n-1}\\
+	\end{align*}
+da cui la tesi. La seconda è analoga.
+\end{proof}
+\begin{thm}[Successioni indici 
+negativi]\label{thm:FormulaBinetgeneralizzatavalneg}
+	Se $\Fg{n}$ è la successione di Fibonacci e  $\Lg{n}$ è quella di Lucas 
+	allora : \begin{equation}
+		\Fg{-n}=-\dfrac{1}{Q^n}	\Fg{n}
+	\end{equation}
+	mentre \begin{equation}
+		\Lg{-n}=\dfrac{1}{Q^n}	\Lg{n}
+	\end{equation}
+\end{thm}

@@ -7,87 +7,87 @@
 \section{Definizione}
 \begin{defn}[Numeri di Fibonacci]\index{Fibonacci!definizione}
 	\begin{align}
-		\Fib{0}={}&0\notag\\
-		\Fib{1}={}&1\notag\\
-		\Fib{n}={}&\Fib{n-1}+\Fib{n-2}\quad n>2\label{eqn:Fibodef}
+		\Fib{0}={} & 0\notag                                         \\
+		\Fib{1}={} & 1\notag                                         \\
+		\Fib{n}={} & \Fib{n-1}+\Fib{n-2}\quad n>2\label{eqn:Fibodef}
 	\end{align}
 \end{defn}\citaoeis{A000045}
 \begin{defn}[Numeri di Lucas]\index{Lucas!definizione}
 	\begin{align}
-		\Luc{0}={}&2\notag\\
-		\Luc{1}={}&1\notag\\
-		\Luc{n}={}&\Luc{n-1}+\Luc{n-2}\quad n>2\label{eqn:Lucadef}
+		\Luc{0}={} & 2\notag                                         \\
+		\Luc{1}={} & 1\notag                                         \\
+		\Luc{n}={} & \Luc{n-1}+\Luc{n-2}\quad n>2\label{eqn:Lucadef}
 	\end{align}
 \end{defn}\citaoeis{A000032}
 \section{Sezione aurea}
 \begin{defn}[Sezione aurea]
 	Date due quantità $a$ e $b$ con $a>b>0$ diremo sezione aurea il rapporto
 	\begin{equation}
-	a+b:a=a:b=\varphi	
+		a+b:a=a:b=\varphi
 	\end{equation}\label{eqn:FibAureaDef}\index{Sezione!aurea}
 \end{defn}
 \begin{prop}
 	Dall'~\vref{eqn:FibAureaDef} abbiamo
 	\begin{align}
-		\dfrac{a}{b}={}&\dfrac{a+b}{a}\notag\\
-		={}&1+\dfrac{b}{a}\notag\\
-		={}&1+\dfrac{1}{\frac{a}{b}}\notag\\
+		\dfrac{a}{b}={} & \dfrac{a+b}{a}\notag                       \\
+		={}             & 1+\dfrac{b}{a}\notag                       \\
+		={}             & 1+\dfrac{1}{\frac{a}{b}}\notag             \\
 		\intertext{Quindi}
-		\varphi={}&1+\dfrac{1}{\varphi}\label{eqn:FibPhiProp}\\
-		\varphi^2={}&\varphi+1\notag
+		\varphi={}      & 1+\dfrac{1}{\varphi}\label{eqn:FibPhiProp} \\
+		\varphi^2={}    & \varphi+1\notag
 	\end{align}
 \end{prop}
-	Dall'~\vref{eqn:FibPhiProp} segue
-	\begin{prop}
+Dall'~\vref{eqn:FibPhiProp} segue
+\begin{prop}
 	\begin{align}
-		\varphi^2={}&\varphi+1\notag\\
-		\varphi^2-\varphi-1={}&0\notag\\
-		x^2-x-1={}&0\label{eqn:FibValPhiEqua}\\
-		x_1={}&\dfrac{1+\sqrt{5}}{2}\label{eqn:FibValPhi}\\
-		x_1={}&\dfrac{1-\sqrt{5}}{2}\notag
+		\varphi^2={}           & \varphi+1\notag                            \\
+		\varphi^2-\varphi-1={} & 0\notag                                    \\
+		x^2-x-1={}             & 0\label{eqn:FibValPhiEqua}                 \\
+		x_1={}                 & \dfrac{1+\sqrt{5}}{2}\label{eqn:FibValPhi} \\
+		x_1={}                 & \dfrac{1-\sqrt{5}}{2}\notag
 	\end{align}
 \end{prop}
 L'~\vref{eqn:FibValPhi} permette di scrivere la seguente definizione
 \begin{defn}[Sezione aurea]
-Diremo sezione aurea il numero
-\begin{align*}
-	\varphi={}&\dfrac{1+\sqrt{5}}{2}\\
-\intertext{inoltre vale}
-	1-	\varphi={}&\dfrac{1-\sqrt{5}}{2}\\
-\end{align*}
+	Diremo sezione aurea il numero
+	\begin{align*}
+		\varphi={}    & \dfrac{1+\sqrt{5}}{2} \\
+		\intertext{inoltre vale}
+		1-	\varphi={} & \dfrac{1-\sqrt{5}}{2} \\
+	\end{align*}
 \end{defn}\index{Sezione!aurea!valore}
 \begin{lem}[Proprietà]\label{lem:FibpropPhi}
 	Se $a=\varphi$ e  $b=1-\varphi$ allora
 	\begin{align*}
-		ab={}&-1\\
-		a+b={}&1\\
-		a-b={}&\sqrt{5}\\
-		a^2+1={}&(a-b)a\\
-		b^2+1={}&(b-a)b\\
-		a^2={}&a+1\\
-		b^2={}&b+1\\
-		a^3={}&a^2+a\\
-		b^3={}&b^2+b\\
-		a^2+b^2={}&a+b+2\\
-	a^2b+b={}&-a+b\\
-	-b^2a-a={}&b-a\\
-		\end{align*}
+		ab={}      & -1       \\
+		a+b={}     & 1        \\
+		a-b={}     & \sqrt{5} \\
+		a^2+1={}   & (a-b)a   \\
+		b^2+1={}   & (b-a)b   \\
+		a^2={}     & a+1      \\
+		b^2={}     & b+1      \\
+		a^3={}     & a^2+a    \\
+		b^3={}     & b^2+b    \\
+		a^2+b^2={} & a+b+2    \\
+		a^2b+b={}  & -a+b     \\
+		-b^2a-a={} & b-a      \\
+	\end{align*}
 \end{lem}
 \begin{proof}
 	\begin{align*}
-		ab={}&\dfrac{1+\sqrt{5}}{2}\dfrac{1-\sqrt{5}}{2}\\
-		={}&\dfrac{1-5}{4}\\
-		={}&-1
+		ab={} & \dfrac{1+\sqrt{5}}{2}\dfrac{1-\sqrt{5}}{2} \\
+		={}   & \dfrac{1-5}{4}                             \\
+		={}   & -1
 	\end{align*}
 	\begin{align*}
-		(a-b)a={}&a^2-ab=a^2+1\\
-		(b-a)b={}&b^2-ab=b^2+1\\
+		(a-b)a={} & a^2-ab=a^2+1 \\
+		(b-a)b={} & b^2-ab=b^2+1 \\
 	\end{align*}
 	cvd.
 \end{proof}
 \section{Formula di Binet}
-\begin{thm}[Formula di 
-Binet]~\cite{Conti2020}\label{thm:FibFormulaBinet}\index{Formula!Binet!Fibonacci}
+\begin{thm}[Formula di
+		Binet]~\cite{Conti2020}\label{thm:FibFormulaBinet}\index{Formula!Binet!Fibonacci}
 	Se $\Fib{n}$ è la successione di Fibonacci allora avremo:
 	\begin{equation}
 		\Fib{n}=\dfrac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^n-\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]
@@ -97,62 +97,56 @@ Binet]~\cite{Conti2020}\label{thm:FibFormulaBinet}\index{Formula!Binet!Fibonacci
 	Poniamo $a=\varphi$ e con $b=1-\varphi$ allora
 	\begin{align*}
 		\intertext{Poniamo}
-		a^1={}&a\Fib{1}+\Fib{0}\\
-%		a^3={}&a^2a\\
-%		={}&a(a+1)\\
-%		={}&a^2+a\\
-%		={}&a+1+a\\
-%		={}&2a+1\\
-%		={}&a\Fib{3}+\Fib{2}\\
+		a^1={}      & a\Fib{1}+\Fib{0}                 \\
 		\intertext{Per induzione su $n$}
-		a^{n-1}={}&a\Fib{n-1}+\Fib{n-2}\\
-		a^{n-1}a={}&a^2\Fib{n-1}+a\Fib{n-2}\\
-		a^{n}={}&(a+1)\Fib{n-1}+a\Fib{n-2}\\
-		a^{n}={}&a\Fib{n-1}+\Fib{n-1}+a\Fib{n-2}\\
-		a^{n}={}&a(\Fib{n-1}+\Fib{n-2})+\Fib{n-1}\\
-		a^{n}={}&a\Fib{n}+\Fib{n-1}\\
+		a^{n-1}={}  & a\Fib{n-1}+\Fib{n-2}             \\
+		a^{n-1}a={} & a^2\Fib{n-1}+a\Fib{n-2}          \\
+		a^{n}={}    & (a+1)\Fib{n-1}+a\Fib{n-2}        \\
+		a^{n}={}    & a\Fib{n-1}+\Fib{n-1}+a\Fib{n-2}  \\
+		a^{n}={}    & a(\Fib{n-1}+\Fib{n-2})+\Fib{n-1} \\
+		a^{n}={}    & a\Fib{n}+\Fib{n-1}               \\
 		\intertext{Analogamente si dimostra}
-		b^{n}={}&b\Fib{n}+\Fib{n-1}\\
+		b^{n}={}    & b\Fib{n}+\Fib{n-1}               \\
 		\intertext{Sottraendo}
-		a^n-b^n={}&a\Fib{n}-b\Fib{n}\\
-		a^n-b^n={}&\Fib{n}(a-b)\\
-		\Fib{n}={}&\dfrac{a^n-b^n}{a-b}
+		a^n-b^n={}  & a\Fib{n}-b\Fib{n}                \\
+		a^n-b^n={}  & \Fib{n}(a-b)                     \\
+		\Fib{n}={}  & \dfrac{a^n-b^n}{a-b}
 	\end{align*}
-quindi
-\begin{equation}
-\Fib{n}=\dfrac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^n-\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]
-\end{equation}
-cvd.
+	quindi
+	\begin{equation}
+		\Fib{n}=\dfrac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^n-\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]
+	\end{equation}
+	cvd.
 \end{proof}
 Altra dimostrazione
 \begin{proof}
 	\begin{align*}
 		\intertext{Poniamo:}
-		&\Fib{n}={}xa^n+yb^n\\
-		&\left\{
+		 & \Fib{n}={}xa^n+yb^n                       \\
+		 & \left\{
 		\begin{aligned}
-			a^0x+b^0y=0\\ a^1y+b^1y=1
+			a^0x+b^0y=0 \\ a^1y+b^1y=1
 		\end{aligned}\right.
-	\intertext{Otteniamo}
-	&\left\{
-	\begin{aligned}
-	x={}&\dfrac{1}{a-b}\\ y={}&-\dfrac{1}{a-b}
-	\end{aligned}\right.\\
-%\intertext{Per il~\vref{lem:FibpropPhi}}
-%&\left\{
-%	\begin{aligned}
-%	x=\dfrac{a}{a-b}\\ y=-\dfrac{b}{a-b}
-%\end{aligned}\right.\\ 
-	&\Fib{n}={}\dfrac{a^n-b^n}{a-b}
+		\intertext{Otteniamo}
+		 & \left\{
+		\begin{aligned}
+			x={} & \dfrac{1}{a-b} \\ y={}&-\dfrac{1}{a-b}
+		\end{aligned}\right. \\
+		%\intertext{Per il~\vref{lem:FibpropPhi}}
+		%&\left\{
+		%	\begin{aligned}
+		%	x=\dfrac{a}{a-b}\\ y=-\dfrac{b}{a-b}
+		%\end{aligned}\right.\\ 
+		 & \Fib{n}={}\dfrac{a^n-b^n}{a-b}
 	\end{align*}
-quindi
-\begin{equation}
-	\Fib{n}=\dfrac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^n-\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]
-\end{equation}
-cvd.
+	quindi
+	\begin{equation}
+		\Fib{n}=\dfrac{1}{\sqrt{5}}\left[\left(\dfrac{1+\sqrt{5}}{2}\right)^n-\left(\dfrac{1-\sqrt{5}}{2}\right)^n\right]
+	\end{equation}
+	cvd.
 \end{proof}
-\begin{thm}[Formula di Binet per 
-Lucas]\label{thm:LucFormulaBinet}\index{Formula!Binet!Lucas}
+\begin{thm}[Formula di Binet per
+		Lucas]\label{thm:LucFormulaBinet}\index{Formula!Binet!Lucas}
 	Se $\Luc{n}$ è la successione di Lucas allora avremo:
 	\begin{equation}
 		\Luc{n}=\left(\dfrac{1+\sqrt{5}}{2}\right)^{n}+\left(\dfrac{1-\sqrt{5}}{2}\right)^{n}
@@ -161,760 +155,760 @@ Lucas]\label{thm:LucFormulaBinet}\index{Formula!Binet!Lucas}
 \begin{proof}
 	\begin{align*}
 		\intertext{Poniamo:}
-		&\Luc{n}={}xa^n+yb^n\\
-		&\left\{
+		 & \Luc{n}={}xa^n+yb^n   \\
+		 & \left\{
 		\begin{aligned}
-			a^0x+b^0y=2\\ a^1y+b^1y=1
+			a^0x+b^0y=2 \\ a^1y+b^1y=1
 		\end{aligned}\right.
 		\intertext{Otteniamo}
-		&\left\{
+		 & \left\{
 		\begin{aligned}
-			x=\dfrac{1-2b}{a-b}\\ y=\dfrac{2a-1}{a-b}
+			x=\dfrac{1-2b}{a-b} \\ y=\dfrac{2a-1}{a-b}
 		\end{aligned}\right.
 		\intertext{Per il~\vref{lem:FibpropPhi}}
-		&\left\{
+		 & \left\{
 		\begin{aligned}
-			x=1\\ y=1
-		\end{aligned}\right.\\ 
-		&\Luc{n}={}a^{n}+b^{n}
+			x=1 \\ y=1
+		\end{aligned}\right.     \\
+		 & \Luc{n}={}a^{n}+b^{n}
 	\end{align*}
 	quindi
 	\begin{equation}
 		\Luc{n}=\left(\dfrac{1+\sqrt{5}}{2}\right)^n+\left(\dfrac{1-\sqrt{5}}{2}\right)^n
 	\end{equation}
-cvd.
+	cvd.
 \end{proof}
 \section{Formule di addizione}
 \begin{thm}[Formule di addizione]~\cite{Rabinowitz_1996}\label{thm:LucFibSommaprodotto}
-	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
 	allora:
 	\begin{align}
-\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\label{eqn:FibLucSommaprodotto}\\
-\Luc{n+m}={}&\dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}\label{eqn:LucFibSommaprodotto}
+		\Fib{n+m}={} & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\label{eqn:FibLucSommaprodotto}  \\
+		\Luc{n+m}={} & \dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}\label{eqn:LucFibSommaprodotto}
 	\end{align}
 \end{thm}
 \begin{proof}
-		\proofpart{Fibonacci}
+	\proofpart{Fibonacci}
 	\begin{align*}
-	\Fib{m}\Luc{n}+\Luc{m}\Fib{n}={}&\dfrac{1}{a-b}[a^m-b^m][a^n+b^n]+[a^m+b^m]\dfrac{1}{a-b}[a^n-b^n]\\
-	={}&\dfrac{2}{a-b}[a^{n+m}-b^{n+m}]\\
-	={}&2\Fib{m+n}\\
+		\Fib{m}\Luc{n}+\Luc{m}\Fib{n}={} & \dfrac{1}{a-b}[a^m-b^m][a^n+b^n]+[a^m+b^m]\dfrac{1}{a-b}[a^n-b^n] \\
+		={}                              & \dfrac{2}{a-b}[a^{n+m}-b^{n+m}]                                   \\
+		={}                              & 2\Fib{m+n}                                                        \\
 	\end{align*}
 	\proofpart{Lucas}
-\begin{align*}
-	5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}=
-	&\dfrac{a^{n+m}[(a-b)^2+5]}{(a-b)^2}+\dfrac{a^{m}b^{n}[(a-b)^2-5]}{(a-b)^2}\\
-	+&\dfrac{a^{n}b^{m}[(a-b)^2-5]}{(a-b)^2}+\dfrac{b^{n+m}[(a-b)^2+5]}{(a-b)^2}
-	\intertext{Per il~\vref{lem:FibpropPhi}}
-	={}&\dfrac{a^{n+m}[5+5]}{5}+\dfrac{b^{n+m}[5+5]}{5}\\
-	={}&2(a^{n+m}+b^{n+m})\\
-={}&2\Luc{n+m}\\ 
-\end{align*}
-cvd.
+	\begin{align*}
+		5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}=
+		    & \dfrac{a^{n+m}[(a-b)^2+5]}{(a-b)^2}+\dfrac{a^{m}b^{n}[(a-b)^2-5]}{(a-b)^2}\\%
+		+   & \dfrac{a^{n}b^{m}[(a-b)^2-5]}{(a-b)^2}+\dfrac{b^{n+m}[(a-b)^2+5]}{(a-b)^2}
+		\intertext{Per il~\vref{lem:FibpropPhi}}
+		={} & \dfrac{a^{n+m}[5+5]}{5}+\dfrac{b^{n+m}[5+5]}{5}                            \\
+		={} & 2(a^{n+m}+b^{n+m})                                                         \\
+		={} & 2\Luc{n+m}                                                                 \\
+	\end{align*}
+	cvd.
 \end{proof}
 Dal~\vref{thm:LucFibSommaprodotto} possiamo ottenere il seguente risultato
-\begin{cor}[Formule di 
-traslazione]~\cite{Rabinowitz_1996}\label{cor:Formuleditraslazione}
-Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
-allora:
-\begin{align*}
-	\Fib{n}={}&\dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}
-	\left[\Fib{a}\Luc{n+b}-\Luc{b}\Fib{n+a}\right]\\
-	\Luc{n}={}&\dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}
-	\left[5\Fib{n+a}\Fib{b}-\Luc{n+b}\Luc{a}\right]\\
-\end{align*}
+\begin{cor}[Formule di
+		traslazione]~\cite{Rabinowitz_1996}\label{cor:Formuleditraslazione}
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
+	allora:
+	\begin{align*}
+		\Fib{n}={} & \dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}
+		\left[\Fib{a}\Luc{n+b}-\Luc{b}\Fib{n+a}\right]         \\
+		\Luc{n}={} & \dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}
+		\left[5\Fib{n+a}\Fib{b}-\Luc{n+b}\Luc{a}\right]        \\
+	\end{align*}
 \end{cor}
 \begin{proof}
 	\begin{align*}
 		\intertext{Utilizzando il~\vref{thm:LucFibSommaprodotto}}
-		\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-		\Luc{n+m}={}&\dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}\\
+		\Fib{n+m}={}                      & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}                                                \\
+		\Luc{n+m}={}                      & \dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}                                               \\
 		\intertext{Ottengo}
-		\Fib{n+a}={}&\dfrac{\Fib{a}\Luc{n}+\Luc{a}\Fib{n}}{2}\\
-		\Luc{n+b}={}&\dfrac{5\Fib{b}\Fib{n}+\Luc{b}\Luc{n}}{2}\\
+		\Fib{n+a}={}                      & \dfrac{\Fib{a}\Luc{n}+\Luc{a}\Fib{n}}{2}                                                \\
+		\Luc{n+b}={}                      & \dfrac{5\Fib{b}\Fib{n}+\Luc{b}\Luc{n}}{2}                                               \\
 		\intertext{Da cui}
-		\Fib{a}\Luc{n}+\Luc{a}\Fib{n}={}&2\Fib{n+a}\\
-		\Luc{b}\Luc{n}+5\Fib{b}\Fib{n}={}&2\Luc{n+b}\\
+		\Fib{a}\Luc{n}+\Luc{a}\Fib{n}={}  & 2\Fib{n+a}                                                                              \\
+		\Luc{b}\Luc{n}+5\Fib{b}\Fib{n}={} & 2\Luc{n+b}                                                                              \\
 		\intertext{Risolvendo il sistema rispetto $\Fib{n}$ e $\Luc{n}$ ottengo}
-		D ={}& \begin{vmatrix}
-			\Fib{a} & \Luc{a}  \\
-			\Luc{b} & 5\Fib{b}
-		\end{vmatrix}\\ ={}& 5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}\\
-	D_{\Luc{n}} ={}& \begin{vmatrix}
-		2\Fib{n+a} & \Luc{a}  \\
-		2\Luc{n+b} & 5\Fib{b}
-	\end{vmatrix}\\ ={}& 2\Fib{n+a}\Fib{b}-2\Luc{n+b}\Luc{a}\\
-	D_{\Fib{n}} ={}& \begin{vmatrix}
-	\Fib{a} & 2\Fib{n+a}  \\
-	\Luc{b} & 2\Luc{n+b}
-\end{vmatrix}\\ ={}& 2\Fib{a}\Luc{n+b}-2\Luc{b}\Fib{n+a}\\
-\Fib{n}={}&\dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}\left( 
-\Fib{a}\Luc{n+b}-\Luc{b}\Fib{n+a}\right)\\
-\Luc{n}={}&\dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}\left(\Fib{n+a}\Fib{b}-\Luc{n+b}\Luc{a}\right)\\
+		D ={}                             & \begin{vmatrix}
+			                                    \Fib{a} & \Luc{a}  \\
+			                                    \Luc{b} & 5\Fib{b}
+		                                    \end{vmatrix}                                                                      \\ ={}& 5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}\\
+		D_{\Luc{n}} ={}                   & \begin{vmatrix}
+			                                    2\Fib{n+a} & \Luc{a}  \\
+			                                    2\Luc{n+b} & 5\Fib{b}
+		                                    \end{vmatrix}                                                                   \\ ={}& 2\Fib{n+a}\Fib{b}-2\Luc{n+b}\Luc{a}\\
+		D_{\Fib{n}} ={}                   & \begin{vmatrix}
+			                                    \Fib{a} & 2\Fib{n+a} \\
+			                                    \Luc{b} & 2\Luc{n+b}
+		                                    \end{vmatrix}                                                                    \\ ={}& 2\Fib{a}\Luc{n+b}-2\Luc{b}\Fib{n+a}\\
+		\Fib{n}={}                        & \dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}\left(
+		\Fib{a}\Luc{n+b}-\Luc{b}\Fib{n+a}\right)                                                                                    \\
+		\Luc{n}={}                        & \dfrac{2}{5\Fib{a}\Fib{b}-\Luc{a}\Luc{b}}\left(\Fib{n+a}\Fib{b}-\Luc{n+b}\Luc{a}\right) \\
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
 Una conseguenza del~\vref{thm:LucFibSommaprodotto} è il seguente
 \begin{cor}[Formule moltiplicazione scalare]~\cite{Rabinowitz_1996}\label{cor:LucFibmoltscalare}
-	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
 	allora:
 	\begin{align*}
-		\Fib{kn}={}&\dfrac{\Fib{(k-1)n}\Luc{n}+
-			\Luc{(k-1)n}\Fib{n}}{2}\label{eqn:Fibmoltiplicazionescalare}\\
-			\Luc{kn}={}&\dfrac{5\Fib{(k-1)n}\Fib{n}+\Luc{(k-1)n}\Luc{n}}{2}\\
+		\Fib{kn}={} & \dfrac{\Fib{(k-1)n}\Luc{n}+
+		\Luc{(k-1)n}\Fib{n}}{2}\label{eqn:Fibmoltiplicazionescalare}      \\
+		\Luc{kn}={} & \dfrac{5\Fib{(k-1)n}\Fib{n}+\Luc{(k-1)n}\Luc{n}}{2} \\
 	\end{align*}
 \end{cor}
 \begin{proof}
 	\begin{align*}
 		\intertext{Utilizzando il~\vref{thm:LucFibSommaprodotto}}
-		\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-		\Luc{n+m}={}&\dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}
+		\Fib{n+m}={} & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}            \\
+		\Luc{n+m}={} & \dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}
 		\intertext{Ponendo}
-		kn={}&kn-n+n=n(k-1)+n\\
-		m={}&n(k-1)\\
-		n={}&n\\
-		\Fib{kn}={}&\dfrac{\Fib{n(k-1)}\Luc{n}+\Luc{n(k-1)}\Fib{n}}{2}\\
-		\Luc{kn}={}&\dfrac{5\Fib{n(k-1)}\Fib{n}+\Luc{n(k-1)}\Luc{n}}{2}
+		kn={}        & kn-n+n=n(k-1)+n                                     \\
+		m={}         & n(k-1)                                              \\
+		n={}         & n                                                   \\
+		\Fib{kn}={}  & \dfrac{\Fib{n(k-1)}\Luc{n}+\Luc{n(k-1)}\Fib{n}}{2}  \\
+		\Luc{kn}={}  & \dfrac{5\Fib{n(k-1)}\Fib{n}+\Luc{n(k-1)}\Luc{n}}{2}
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
-\begin{thm}[Relazione fondamentale fra Lucas e 
-Fibonacci]\label{thm:FibLucFondamentale}~\cite{Rabinowitz_1996}
+\begin{thm}[Relazione fondamentale fra Lucas e
+		Fibonacci]\label{thm:FibLucFondamentale}~\cite{Rabinowitz_1996}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
 	\begin{equation}
 		\Luc{n}^2-5\Fib{n}^2=4(-1)^{n}
 	\end{equation}\label{eqn:FibLucFondamentale}
 \end{thm}
 \begin{proof}
-\begin{align*}
-	\Luc{n}^2={}&a^{2n}+2a^nb^n+b^{2n}\\
-	\Fib{n}^2={}&\dfrac{a^{2n}}{(a-b)^2}+\dfrac{2a^{n}b^{n}}{(a-b)^2}+\dfrac{b^{2n}}{(a-b)^2}\\
-	\Luc{n}^2-5\Fib{n}^2={}&\dfrac{(a^2-2ab+b^2-5)}{(a-b)^2}\\
-	={}&\dfrac{(a^2-2ab+b^2-5)(a^{2n}+b^{2n})+2a^nb^n(a^2+2ab+b^2+5)}{(a-b)^2}\\
-	={}&\dfrac{[(a-b)^2-5](a^{2n}+b^{2n})+2a^nb^n[(a-b)^2+5]}{(a-b)^2}\\
-	\intertext{Per il~\vref{lem:FibpropPhi}}
-	={}&\dfrac{2(-1)^n[5+5]}{5}\\
-	={}&4(-1)^n\\
-\end{align*}
-Da cui la tesi.
+	\begin{align*}
+		\Luc{n}^2={}            & a^{2n}+2a^nb^n+b^{2n}                                                        \\
+		\Fib{n}^2={}            & \dfrac{a^{2n}}{(a-b)^2}+\dfrac{2a^{n}b^{n}}{(a-b)^2}+\dfrac{b^{2n}}{(a-b)^2} \\
+		\Luc{n}^2-5\Fib{n}^2={} & \dfrac{(a^2-2ab+b^2-5)}{(a-b)^2}                                             \\
+		={}                     & \dfrac{(a^2-2ab+b^2-5)(a^{2n}+b^{2n})+2a^nb^n(a^2+2ab+b^2+5)}{(a-b)^2}       \\
+		={}                     & \dfrac{[(a-b)^2-5](a^{2n}+b^{2n})+2a^nb^n[(a-b)^2+5]}{(a-b)^2}               \\
+		\intertext{Per il~\vref{lem:FibpropPhi}}
+		={}                     & \dfrac{2(-1)^n[5+5]}{5}                                                      \\
+		={}                     & 4(-1)^n                                                                      \\
+	\end{align*}
+	Da cui la tesi.
 \end{proof}
 \section{Formule di conversione}
-\begin{thm}[Fibonacci e Lucas 
-	negativo]~\cite{Rabinowitz_1996}\label{thm:FibLucNeg}
-	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
+\begin{thm}[Fibonacci e Lucas
+		negativo]~\cite{Rabinowitz_1996}\label{thm:FibLucNeg}
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
 	allora:
 	\begin{align}
-		\Fib{-n}={}&(-1)^{n+1}\Fib{n}\label{eqn:FibNegate}\\
-		\Luc{-n}={}&(-1)^{n}\Luc{n}\label{eqn:LucNegate}
+		\Fib{-n}={} & (-1)^{n+1}\Fib{n}\label{eqn:FibNegate} \\
+		\Luc{-n}={} & (-1)^{n}\Luc{n}\label{eqn:LucNegate}
 	\end{align}
 \end{thm}
 \begin{proof}
 	\proofpart{Fibonacci}
 	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)\\
-		\Fib{-n}={}&\dfrac{1}{a-b}\left(a^{-n}-b^{-n}\right)\\
-		={}&\dfrac{(ab)^{-n}}{b-a}[a^n-b^n]
+		\Fib{n}={}  & \dfrac{1}{a-b}\left(a^n-b^n\right)       \\
+		\Fib{-n}={} & \dfrac{1}{a-b}\left(a^{-n}-b^{-n}\right) \\
+		={}         & \dfrac{(ab)^{-n}}{b-a}[a^n-b^n]
 		\intertext{Per il~\vref{lem:FibpropPhi}}
-		={}&\dfrac{(-1)^{n+1}}{a-b}[a^n-b^n]\\
-		={}&(-1)^{n+1}\Fib{n}
+		={}         & \dfrac{(-1)^{n+1}}{a-b}[a^n-b^n]         \\
+		={}         & (-1)^{n+1}\Fib{n}
 	\end{align*}
 	\proofpart{Lucas}
 	Riscriviamo il risultato dell'~\vref{eqn:LucBinet}
 	\begin{align*}
-		\Luc{n}={}&a^{n}+b^{n}\\
-		\Luc{-n}={}&a^{-n}-b^{-n}\\
-		={}&(ab)^{-n}[a^n-b^n]
+		\Luc{n}={}  & a^{n}+b^{n}         \\
+		\Luc{-n}={} & a^{-n}-b^{-n}       \\
+		={}         & (ab)^{-n}[a^n-b^n]
 		\intertext{Per il~\vref{lem:FibpropPhi}}
-		={}&(-1)^{n+1}[a^n-b^n]\\
-		={}&(-1)^{n}\Luc{n}
+		={}         & (-1)^{n+1}[a^n-b^n] \\
+		={}         & (-1)^{n}\Luc{n}
 	\end{align*}
-cvd.
-\end{proof}  
-\begin{thm}[Converti in Fibonacci o in 
-Lucas]\label{thm:LucasToFibFibToLuc}~\cite{Rabinowitz_1996}
+	cvd.
+\end{proof}
+\begin{thm}[Converti in Fibonacci o in
+		Lucas]\label{thm:LucasToFibFibToLuc}~\cite{Rabinowitz_1996}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
 	\begin{align}
-		\Luc{n}={}&\Fib{n+1}+\Fib{n-1}\label{eqn:LucasConvertiinFib}\\
-			\Fib{n}={}&\dfrac{\Luc{n+1}+\Luc{n-1}}{5}\label{eqn:FibConvertiinLucas}
+		\Luc{n}={} & \Fib{n+1}+\Fib{n-1}\label{eqn:LucasConvertiinFib}            \\
+		\Fib{n}={} & \dfrac{\Luc{n+1}+\Luc{n-1}}{5}\label{eqn:FibConvertiinLucas}
 	\end{align}
 \end{thm}
 \begin{proof}
-		\proofpart{Fibonacci}
-		\begin{align*}
-			\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-			\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-			\Fib{n+1}={}&\dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}}{2}\\
-			\Fib{n-1}={}&\dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}\\
-				\Fib{n+1}+\Fib{n-1}={}&\dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}+\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}\\
-				\intertext{Per il~\vref{thm:FibLucNeg}}
-		\Fib{-1}={}&(-1)^{-1+1}\Fib{1}=\Fib{1}\\	
-		\Luc{-1}={}&(-1)^{1}\Luc{1}=-	\Luc{1}
+	\proofpart{Fibonacci}
+	\begin{align*}
+		\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
+		\Fib{n+m}={}           & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}                                 \\
+		\Fib{n+1}={}           & \dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}}{2}                                 \\
+		\Fib{n-1}={}           & \dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}                               \\
+		\Fib{n+1}+\Fib{n-1}={} & \dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}+\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2} \\
+		\intertext{Per il~\vref{thm:FibLucNeg}}
+		\Fib{-1}={}            & (-1)^{-1+1}\Fib{1}=\Fib{1}                                               \\
+		\Luc{-1}={}            & (-1)^{1}\Luc{1}=-	\Luc{1}
 		\intertext{Quindi}
-		={}&\dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}+\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}\\
-		={}&\dfrac{\Fib{1}\Luc{n}+\Fib{1}\Luc{n}}{2}\\
-		={}&\Luc{n}
-		\end{align*}
+		={}                    & \dfrac{\Fib{1}\Luc{n}+\Luc{1}\Fib{n}+\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}   \\
+		={}                    & \dfrac{\Fib{1}\Luc{n}+\Fib{1}\Luc{n}}{2}                                 \\
+		={}                    & \Luc{n}
+	\end{align*}
 	\proofpart{Lucas}
 	\begin{align*}
 		\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-		\Luc{n+m}={}&\dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}\\
-		\Luc{n+1}={}&\dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}}{2}\\
-		\Luc{n-1}={}&\dfrac{5\Fib{-1}\Fib{n}+\Luc{-1}\Luc{n}}{2}\\
-		\Luc{n+1}+\Luc{n-1}={}&\dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}+5\Fib{-1}\Fib{n}+\Luc{-1}\Luc{n}}{2}\\
-			\intertext{Per il~\vref{thm:FibLucNeg}}
-		\Fib{-1}={}&(-1)^{-1+1}\Fib{1}=\Fib{1}\\	
-		\Luc{-1}={}&(-1)^{1}\Luc{1}=-	\Luc{1}
+		\Luc{n+m}={}           & \dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}                                  \\
+		\Luc{n+1}={}           & \dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}}{2}                                  \\
+		\Luc{n-1}={}           & \dfrac{5\Fib{-1}\Fib{n}+\Luc{-1}\Luc{n}}{2}                                \\
+		\Luc{n+1}+\Luc{n-1}={} & \dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}+5\Fib{-1}\Fib{n}+\Luc{-1}\Luc{n}}{2} \\
+		\intertext{Per il~\vref{thm:FibLucNeg}}
+		\Fib{-1}={}            & (-1)^{-1+1}\Fib{1}=\Fib{1}                                                 \\
+		\Luc{-1}={}            & (-1)^{1}\Luc{1}=-	\Luc{1}
 		\intertext{Quindi}
-		={}&\dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}+5\Fib{1}\Fib{n}-\Luc{1}\Luc{n}}{2}\\
-		={}&\dfrac{5\Fib{1}\Fib{n}+5\Fib{1}\Fib{n}}{2}\\
-		={}&\dfrac{10\Fib{1}\Fib{n}}{2}\\
-		={}&5\Fib{n}
+		={}                    & \dfrac{5\Fib{1}\Fib{n}+\Luc{1}\Luc{n}+5\Fib{1}\Fib{n}-\Luc{1}\Luc{n}}{2}   \\
+		={}                    & \dfrac{5\Fib{1}\Fib{n}+5\Fib{1}\Fib{n}}{2}                                 \\
+		={}                    & \dfrac{10\Fib{1}\Fib{n}}{2}                                                \\
+		={}                    & 5\Fib{n}
 	\end{align*}
 	Da cui la tesi.
 \end{proof}
 \begin{thm}[Prodotto in somma]~\cite{Rabinowitz_1996}\label{thm:FibProdSomma}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
 	\begin{align}
-	\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\label{eqn:FibProdSomma}\\
-	\Luc{m}\Luc{n}={}&\Luc{n+m}+(-1)^n\Luc{m-n}\label{eqn:LucProdSomma}\\
-	\Fib{m}\Luc{n}={}&\Fib{n+m}+(-1)^n\Fib{m-n}\label{eqn:LucFibProdSomma}
+		\Fib{m}\Fib{n}={} & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\label{eqn:FibProdSomma} \\
+		\Luc{m}\Luc{n}={} & \Luc{n+m}+(-1)^n\Luc{m-n}\label{eqn:LucProdSomma}            \\
+		\Fib{m}\Luc{n}={} & \Fib{n+m}+(-1)^n\Fib{m-n}\label{eqn:LucFibProdSomma}
 	\end{align}
 \end{thm}
 \begin{proof}
-		\proofpart{Fibonacci}
-\begin{align*}
-	\Fib{m}\Fib{n}={}&\dfrac{a^{m+n}}{(a-b)^2}-\dfrac{a^mb^n}{(a-b)^2}-\dfrac{a^nb^m}{(a-b)^2}+\dfrac{b^{m+n}}{(a-b)^2}\\
-	={}&\dfrac{a^{m+n}}{(a-b)^2}+\dfrac{b^{m+n}}{(a-b)^2}-\dfrac{a^mb^n}{(a-b)^2}-\dfrac{a^nb^m}{(a-b)^2}\\
-	={}&\dfrac{\Luc{m+n}}{(a-b)^2}-\dfrac{a^mb^n+a^nb^m}{(a-b)^2}\\
-	\Luc{m-n}={}&a^{m-n}-b^{m-n}=a^{-n}b^{-n}(a^mb^n+a^nb^m)\\
-	\intertext{Ma}
-	a^mb^n+a^nb^m={}&a^{n}b^{n}\Luc{m-n}\\
-	\intertext{Quindi}
-	={}&\dfrac{\Luc{m+n}}{(a-b)^2}-\dfrac{a^{n}b^{n}\Luc{m-n}}{(a-b)^2}\\
-	\intertext{Per il~\vref{lem:FibpropPhi}}
-	={}&\dfrac{\Luc{m+n}+(-1)^{n}\Luc{m-n}}{5}
-\end{align*}
+	\proofpart{Fibonacci}
+	\begin{align*}
+		\Fib{m}\Fib{n}={} & \dfrac{a^{m+n}}{(a-b)^2}-\dfrac{a^mb^n}{(a-b)^2}-\dfrac{a^nb^m}{(a-b)^2}+\dfrac{b^{m+n}}{(a-b)^2} \\
+		={}               & \dfrac{a^{m+n}}{(a-b)^2}+\dfrac{b^{m+n}}{(a-b)^2}-\dfrac{a^mb^n}{(a-b)^2}-\dfrac{a^nb^m}{(a-b)^2} \\
+		={}               & \dfrac{\Luc{m+n}}{(a-b)^2}-\dfrac{a^mb^n+a^nb^m}{(a-b)^2}                                         \\
+		\Luc{m-n}={}      & a^{m-n}-b^{m-n}=a^{-n}b^{-n}(a^mb^n+a^nb^m)                                                       \\
+		\intertext{Ma}
+		a^mb^n+a^nb^m={}  & a^{n}b^{n}\Luc{m-n}                                                                               \\
+		\intertext{Quindi}
+		={}               & \dfrac{\Luc{m+n}}{(a-b)^2}-\dfrac{a^{n}b^{n}\Luc{m-n}}{(a-b)^2}                                   \\
+		\intertext{Per il~\vref{lem:FibpropPhi}}
+		={}               & \dfrac{\Luc{m+n}+(-1)^{n}\Luc{m-n}}{5}
+	\end{align*}
 	\proofpart{Lucas}
-\begin{align*}
-	\Luc{m}\Luc{n}={}&a^{m+n}+a^mb^n+a^nb^m+b^{m+n}\\
-	={}&a^{m+n}+b^{m+n}+a^mb^n+a^nb^m\\
-	={}&\Luc{m+n}+(a^mb^n+a^nb^m)\\
-	\Luc{m-n}={}&a^{m-n}-b^{m-n}=a^{-n}b^{-n}(a^mb^n+a^nb^m)\\
-	\intertext{Ma}
-	a^mb^n+a^nb^m={}&a^{n}b^{n}\Luc{m-n}\\
-	\intertext{Quindi}
-	={}&\Luc{m+n}+a^{n}b^{n}\Luc{m-n}\\
-	\intertext{Per il~\vref{lem:FibpropPhi}}
-	={}&\Luc{m+n}+(-1)^{n}\Luc{m-n}
-\end{align*}
+	\begin{align*}
+		\Luc{m}\Luc{n}={} & a^{m+n}+a^mb^n+a^nb^m+b^{m+n}               \\
+		={}               & a^{m+n}+b^{m+n}+a^mb^n+a^nb^m               \\
+		={}               & \Luc{m+n}+(a^mb^n+a^nb^m)                   \\
+		\Luc{m-n}={}      & a^{m-n}-b^{m-n}=a^{-n}b^{-n}(a^mb^n+a^nb^m) \\
+		\intertext{Ma}
+		a^mb^n+a^nb^m={}  & a^{n}b^{n}\Luc{m-n}                         \\
+		\intertext{Quindi}
+		={}               & \Luc{m+n}+a^{n}b^{n}\Luc{m-n}               \\
+		\intertext{Per il~\vref{lem:FibpropPhi}}
+		={}               & \Luc{m+n}+(-1)^{n}\Luc{m-n}
+	\end{align*}
 	\proofpart{Fibonacci Lucas}
-\begin{align*}
-	\Fib{m}\Luc{n}={}&\dfrac{a^{m+n}}{a-b}+\dfrac{a^mb^n}{a-b}+\dfrac{a^nb^m}{b-a}+\dfrac{b^{m+n}}{b-a}\\
-	={}&\dfrac{a^{m+n}}{a-b}+\dfrac{b^{m+n}}{b-a}+\dfrac{a^mb^n}{a-b}+\dfrac{a^nb^m}{b-a}\\
-	={}&\Fib{m+n}+\dfrac{a^mb^n-a^nb^m}{a-b}\\
-	\Fib{m-n}={}&\dfrac{a^{m-n}}{a-b}+\dfrac{b^{m-n}}{b-a}=a^{-n}b^{-n}\left(\dfrac{a^mb^n+a^nb^m}{a-b}\right)\\
-	\intertext{Ma}
-	\dfrac{a^mb^n+a^nb^m}{a-b}={}&a^{n}b^{n}\Fib{m-n}\\
-	\intertext{Quindi}
-	={}&\Fib{m+n}+a^{n}b^{n}\Fib{m-n}\\
-	\intertext{Per il~\vref{lem:FibpropPhi}}
-	={}&\Fib{m+n}+(-1)^{n}\Fib{m-n}
-\end{align*}
-cvd.
+	\begin{align*}
+		\Fib{m}\Luc{n}={}             & \dfrac{a^{m+n}}{a-b}+\dfrac{a^mb^n}{a-b}+\dfrac{a^nb^m}{b-a}+\dfrac{b^{m+n}}{b-a}             \\
+		={}                           & \dfrac{a^{m+n}}{a-b}+\dfrac{b^{m+n}}{b-a}+\dfrac{a^mb^n}{a-b}+\dfrac{a^nb^m}{b-a}             \\
+		={}                           & \Fib{m+n}+\dfrac{a^mb^n-a^nb^m}{a-b}                                                          \\
+		\Fib{m-n}={}                  & \dfrac{a^{m-n}}{a-b}+\dfrac{b^{m-n}}{b-a}=a^{-n}b^{-n}\left(\dfrac{a^mb^n+a^nb^m}{a-b}\right) \\
+		\intertext{Ma}
+		\dfrac{a^mb^n+a^nb^m}{a-b}={} & a^{n}b^{n}\Fib{m-n}                                                                           \\
+		\intertext{Quindi}
+		={}                           & \Fib{m+n}+a^{n}b^{n}\Fib{m-n}                                                                 \\
+		\intertext{Per il~\vref{lem:FibpropPhi}}
+		={}                           & \Fib{m+n}+(-1)^{n}\Fib{m-n}
+	\end{align*}
+	cvd.
 \end{proof}
 Conseguenza del~\vref{thm:FibProdSomma} è il seguente
 \begin{cor}[Potenze in somma]~\cite{Rabinowitz_1996}\label{cor:FibpotSomma}
 	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
 	\begin{align}
-		\Fib{n}^2={}&\dfrac{\Luc{2n}-2(-1)^n}{5}\label{eqn:FibQuadSomma}\\
-		\Luc{n}^2={}&\Luc{2n}+2(-1)^n\label{eqn:LucQuadSomma}
+		\Fib{n}^2={} & \dfrac{\Luc{2n}-2(-1)^n}{5}\label{eqn:FibQuadSomma} \\
+		\Luc{n}^2={} & \Luc{2n}+2(-1)^n\label{eqn:LucQuadSomma}
 	\end{align}
 \end{cor}
 \begin{proof}
-		\proofpart{Fibonacci}
-\begin{align*}
-\intertext{Per il~\vref{thm:FibProdSomma}}
-\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}
-\intertext{posto}
-m={}&n\\
-\Fib{n}\Fib{n}={}&\dfrac{\Luc{n+n}-(-1)^n\Luc{n-n}}{5}\\
-\Fib{n}^2={}&\dfrac{\Luc{2n}-(-1)^n\Luc{0}}{5}\\
-\Fib{n}^2={}&\dfrac{\Luc{2n}-2(-1)^n}{5}\\
-\end{align*}
+	\proofpart{Fibonacci}
+	\begin{align*}
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Fib{m}\Fib{n}={} & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}
+		\intertext{posto}
+		m={}              & n                                    \\
+		\Fib{n}\Fib{n}={} & \dfrac{\Luc{n+n}-(-1)^n\Luc{n-n}}{5} \\
+		\Fib{n}^2={}      & \dfrac{\Luc{2n}-(-1)^n\Luc{0}}{5}    \\
+		\Fib{n}^2={}      & \dfrac{\Luc{2n}-2(-1)^n}{5}          \\
+	\end{align*}
 	\proofpart{Lucas }
-\begin{align*}
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-\Luc{m}\Luc{n}={}&\Luc{n+m}+(-1)^n\Luc{m-n}
-	\intertext{posto}
-	m={}&n\\
-	\Luc{n}\Luc{n}={}&\Luc{n+n}+(-1)^n\Luc{n-n}\\
-	\Luc{n}^2={}&\Luc{2n}+(-1)^n\Luc{0}\\
-	\Luc{n}^2={}&\Luc{2n}+2(-1)^n\\
-\end{align*}
-cvd.
+	\begin{align*}
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Luc{m}\Luc{n}={} & \Luc{n+m}+(-1)^n\Luc{m-n}
+		\intertext{posto}
+		m={}              & n                         \\
+		\Luc{n}\Luc{n}={} & \Luc{n+n}+(-1)^n\Luc{n-n} \\
+		\Luc{n}^2={}      & \Luc{2n}+(-1)^n\Luc{0}    \\
+		\Luc{n}^2={}      & \Luc{2n}+2(-1)^n          \\
+	\end{align*}
+	cvd.
 \end{proof}
 Simili al precedente sono  i seguenti risultati
 \begin{thm}[Potenze in somma]~\cite{Rabinowitz_1996}\label{thm:FibpotSommadue}
-Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
-\begin{align}
-\Fib{n}^3={}&\dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}\label{eqn:FibCubSomma}\\
-\Luc{n}^3={}&\Luc{3n}+3(-1)^n\Luc{n}\label{eqn:LucCubSomma}\\
-	\Fib{n}^4={}&\dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\label{eqn:FibQuartaSomma}\\
-	\Luc{n}^4={}&\Luc{4n}+4(-1)^n\Luc{2n}+6\label{eqn:LucQuartaSomma}\\
-	\Fib{n}^5={}&\dfrac{\Fib{5n}-5(-1)^n\Fib{3n}+10\Fib{n}}{25}\label{eqn:FibQuintaSomma}\\
-	\Luc{n}^5={}&\Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}\label{eqn:LucQuintaSomma}\\
-	\Fib{n}^6={}&\dfrac{\Luc{6n}-6(-1)^n\Luc{4n}+15\Luc{2n}-20(-1)^n}{125}\label{eqn:FibSestsaSomma}\\
-	\Luc{n}^6={}&\Luc{6n}+6(-1)^n\Luc{4n}+15\Luc{2n}+20(-1)^n\label{eqn:LucSestsaSomma}
-\end{align} 
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas allora:
+	\begin{align}
+		\Fib{n}^3={} & \dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}\label{eqn:FibCubSomma}                           \\
+		\Luc{n}^3={} & \Luc{3n}+3(-1)^n\Luc{n}\label{eqn:LucCubSomma}                                      \\
+		\Fib{n}^4={} & \dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\label{eqn:FibQuartaSomma}                    \\
+		\Luc{n}^4={} & \Luc{4n}+4(-1)^n\Luc{2n}+6\label{eqn:LucQuartaSomma}                                \\
+		\Fib{n}^5={} & \dfrac{\Fib{5n}-5(-1)^n\Fib{3n}+10\Fib{n}}{25}\label{eqn:FibQuintaSomma}            \\
+		\Luc{n}^5={} & \Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}\label{eqn:LucQuintaSomma}                        \\
+		\Fib{n}^6={} & \dfrac{\Luc{6n}-6(-1)^n\Luc{4n}+15\Luc{2n}-20(-1)^n}{125}\label{eqn:FibSestsaSomma} \\
+		\Luc{n}^6={} & \Luc{6n}+6(-1)^n\Luc{4n}+15\Luc{2n}+20(-1)^n\label{eqn:LucSestsaSomma}
+	\end{align}
 \end{thm}
 \begin{proof}
-		\proofpart{Cubo Fibonacci}
-\begin{align*}
-	\Fib{n}^3={}&\Fib{n}^2\Fib{n}\\
-	\intertext{Per il~\vref{cor:FibpotSomma}}
-	={}&\dfrac{\Luc{2n}-2(-1)^n}{5}\Fib{n}\\
-	={}&\dfrac{\Luc{2n}\Fib{n}-2(-1)^n\Fib{n}}{5}\\
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Fib{m}\Luc{n}={}&\Fib{n+m}+(-1)^n\Fib{m-n}
-	\intertext{Quindi}
-		\Fib{n}\Luc{2n}={}&\Fib{n+2n}+(-1)^{2n}\Fib{n-2n}\\
-		={}&\Fib{3n}+\Fib{-n}\\
-	\intertext{Per il~\vref{thm:FibLucNeg}}
-	={}&\Fib{3n}+(-1)^{n+1}\Fib{-n}\\
-	={}&\Fib{3n}-(-1)^{n}\Fib{n}\\
-\intertext{Quindi}
-={}&\dfrac{\Fib{3n}-(-1)^{n}\Fib{n} -2(-1)^n\Fib{n}}{5}\\
-={}&\dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}\\
-\end{align*}
+	\proofpart{Cubo Fibonacci}
+	\begin{align*}
+		\Fib{n}^3={}       & \Fib{n}^2\Fib{n}                                    \\
+		\intertext{Per il~\vref{cor:FibpotSomma}}
+		={}                & \dfrac{\Luc{2n}-2(-1)^n}{5}\Fib{n}                  \\
+		={}                & \dfrac{\Luc{2n}\Fib{n}-2(-1)^n\Fib{n}}{5}           \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Fib{m}\Luc{n}={}  & \Fib{n+m}+(-1)^n\Fib{m-n}
+		\intertext{Quindi}
+		\Fib{n}\Luc{2n}={} & \Fib{n+2n}+(-1)^{2n}\Fib{n-2n}                      \\
+		={}                & \Fib{3n}+\Fib{-n}                                   \\
+		\intertext{Per il~\vref{thm:FibLucNeg}}
+		={}                & \Fib{3n}+(-1)^{n+1}\Fib{-n}                         \\
+		={}                & \Fib{3n}-(-1)^{n}\Fib{n}                            \\
+		\intertext{Quindi}
+		={}                & \dfrac{\Fib{3n}-(-1)^{n}\Fib{n} -2(-1)^n\Fib{n}}{5} \\
+		={}                & \dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}                  \\
+	\end{align*}
 	\proofpart{Cubo Lucas}
-\begin{align*}
-	\Luc{n}^3={}&\Luc{n}^2\Luc{n}\\
-	\intertext{Per il~\vref{cor:FibpotSomma}}
-	={}&(\Luc{2n}+2(-1)^n)\Luc{n}\\
-	={}&\Luc{2n}\Luc{n}+2(-1)^n\Luc{n}\\
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Luc{2n}\Luc{n}={}&\Luc{2n+n}+(-1)^n\Luc{2n-n}\\
-	={}&\Luc{3n}+(-1)^n\Luc{n}\\	
-	\intertext{Quindi}	
-	={}&\Luc{3n}+(-1)^n\Luc{n}+2(-1)^n\Luc{n}\\
-={}&\Luc{3n}+3(-1)^n\Luc{n}\\
-\end{align*}
-\proofpart{Fibonacci Quarta}
-\begin{align*}
-\Fib{n}^4={}&\Fib{n}^3\Fib{n}\\
-\intertext{Per l'~\vref{eqn:FibCubSomma}}
-={}&\dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}\Fib{n}\\
-={}&\dfrac{\Fib{3n}\Fib{n}-3(-1)^n\Fib{n}^2}{5}\\
-\intertext{Per il~\vref{thm:FibProdSomma}}
-\Fib{3n}\Fib{n}={}&\dfrac{\Luc{3n+n}-(-1)^n\Luc{3n-n}}{5}\\
-\Fib{3n}\Fib{n}={}&\dfrac{\Luc{4n}-(-1)^n\Luc{2n}}{5}\\
-\Fib{n}^2={}&\dfrac{\Luc{2n}-2(-1)^n}{5}\\
-\intertext{Quindi}
-={}&\dfrac{\Luc{4n}-(-1)^n\Luc{2n}-3(-1)^n[\Luc{2n}-2(-1)^n]}{25}\\
-={}&\dfrac{\Luc{4n}-(-1)^n\Luc{2n}-3(-1)^n\Luc{2n}+6(-1)^{2n}}{25}\\
-={}&\dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\\
-\end{align*}
-\proofpart{Lucas Quarta}
-\begin{align*}
-\Luc{n}^4={}&\Luc{n}^3\Luc{n}\\
-\intertext{Per l'~\vref{eqn:LucCubSomma}}
-={}&[\Luc{3n}+3(-1)^n\Luc{n}]\Luc{n}\\
-={}&\Luc{3n}\Luc{n}+3(-1)^n\Luc{n}^2\\
-\intertext{Per il~\vref{thm:FibProdSomma}}
-\Luc{3n}\Luc{n}={}&\Luc{3n+n}+(-1)^n\Luc{3n-n}\\
-={}&\Luc{4n}+(-1)^n\Luc{2n}\\
-\Luc{n}^2={}&\Luc{2n}+2(-1)^n\\
-\intertext{Quindi}
-={}&\Luc{4n}+(-1)^n\Luc{2n}+3(-1)^n[\Luc{2n}+2(-1)^n]\\
-={}&\Luc{4n}+(-1)^n\Luc{2n}+3(-1)^n\Luc{2n}+6(-1)^{2n}\\
-={}&\Luc{4n}+4(-1)^n\Luc{2n}+6\\
-\end{align*}
-\proofpart{Fibonacci Quinta}
-\begin{align*}
-	\Fib{n}^5={}&\Fib{n}^4\Fib{n}\\
-	\intertext{Per l'~\vref{eqn:FibQuartaSomma}}
-	={}&\dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\Fib{n}\\
-	={}&\dfrac{\Luc{4n}\Fib{n}-4(-1)^n\Luc{2n}\Fib{n}+6\Fib{n}}{25}\\
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Fib{m}\Luc{n}={}&\Fib{n+m}+(-1)^n\Fib{m-n}\\
-	\Fib{n}\Luc{4n}={}&\Fib{4n+n}+(-1)^{4n}\Fib{n-4n}\\
-	={}&\Fib{5n}+\Fib{-3n}\\
-	={}&\Fib{5n}+(-1)^{3n+1}\Fib{3n}\\
-	\Fib{n}\Luc{2n}={}&\Fib{2n+n}+(-1)^{2n}\Fib{n-2n}\\
-	={}&\Fib{3n}+(-1)^{2n}\Fib{n-2n}\\
-	={}&\Fib{3n}+\Fib{-n}\\
-	={}&\Fib{3n}+(-1)^{n+1}\Fib{n}\\
-	\intertext{Quindi}
-	={}&\dfrac{\Fib{5n}+(-1)^{3n+1}\Fib{3n}-4(-1)^n[\Fib{3n}+(-1)^{n+1}\Fib{n}]+6\Fib{n}}{25}\\
-	={}&\dfrac{\Fib{5n}+(-1)^{3n+1}\Fib{3n}-4(-1)^n\Fib{3n}-4(-1)^{2n+1}\Fib{n}+6\Fib{n}}{25}\\
-	={}&\dfrac{\Fib{5n}-(-1)^{n}\Fib{3n}-4(-1)^n\Fib{3n}-4(-1)^{1}\Fib{n}+6\Fib{n}}{25}\\
-	={}&\dfrac{\Fib{5n}-5(-1)^n\Fib{3n}+10\Fib{n}}{25}\\
-\end{align*}
-\proofpart{Lucas Quinta}
-\begin{align*}
-	\Luc{n}^5={}&\Luc{n}^4\Luc{n}\\
-	\intertext{Per l'~\vref{eqn:LucQuartaSomma}}
-	={}&(\Luc{4n}+4(-1)^n\Luc{2n}+6)\Luc{n}\\
-	={}&\Luc{4n}\Luc{n}+4(-1)^n\Luc{2n}\Luc{n}+6\Luc{n}\\
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Luc{m}\Luc{n}={}&\Luc{m+n}+(-1)^{n}\Luc{m-n}\\
-	\Luc{4n}\Luc{n}={}&\Luc{4n+n}+(-1)^{n}\Luc{4n-n}\\
-	={}&\Luc{5n}+(-1)^{n}\Luc{3n}\\
-	\Luc{2n}\Luc{n}={}&\Luc{2n+n}+(-1)^{n}\Luc{2n-n}\\
-	={}&\Luc{3n}+(-1)^{n}\Luc{n}\\
-	\intertext{Quindi}
-	={}&\Luc{5n}+(-1)^{n}\Luc{3n}+4(-1)^n[\Luc{3n}+(-1)^{n}\Luc{n}]+6\Luc{n}\\
-	={}&\Luc{5n}+(-1)^{n}\Luc{3n}+4(-1)^n\Luc{3n}+4(-1)^{2n}\Luc{n}+6\Luc{n}\\
-	={}&\Luc{5n}+5(-1)^n\Luc{3n}+4\Luc{n}+6\Luc{n}\\
-	={}&\Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}\\
-\end{align*}
-\proofpart{Fibonacci Sesta}
-\begin{align*}
-	\Fib{n}^6={}&\Fib{n}^4\Fib{n}\\
-	\intertext{Per l'~\vref{eqn:FibQuintaSomma}}
-	={}&\dfrac{\Fib{5n}\Fib{n}-5(-1)^n\Fib{3n}\Fib{n}+10\Fib{n}^2}{25}\\
-	\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\\
-	\Fib{5m}\Fib{n}={}&\dfrac{\Luc{5n+n}-(-1)^n\Luc{5n-n}}{5}\\
-	={}&\dfrac{\Luc{6n}-(-1)^n\Luc{4n}}{5}\\
-	\Fib{3n}\Fib{n}={}&\dfrac{\Luc{3n+n}-(-1)^n\Luc{3n-n}}{5}\\
-	={}&\dfrac{\Luc{4n}-(-1)^n\Luc{2n}}{5}\\
-	\Luc{n}^2={}&\Luc{2n}+2(-1)^n\\
-	\intertext{Quindi}
-	={}&\dfrac{\Luc{6n}-(-1)^n\Luc{4n}-5(-1)^n\Luc{4n}+5(-1)^{2n}\Luc{2n}+10\Luc{2n}+20(-1)^n}{25}\\
-	={}&\dfrac{\Luc{6n}-6(-1)^n\Luc{4n}+15(-1)^{2n}\Luc{2n}+20(-1)^n}{25}\\
-\end{align*}
-\proofpart{Lucas Sesta}
-\begin{align*}
-\Luc{n}^6={}&\Luc{n}^5\Luc{n}\\
-\intertext{Per l'~\vref{eqn:LucQuintaSomma}}
-={}&[\Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}]\Luc{n}\\
-={}&\Luc{5n}\Luc{n}+5(-1)^n\Luc{3n}\Luc{n}+10\Luc{n}^2\\
-\intertext{Per il~\vref{thm:FibProdSomma}}
-\Luc{m}\Luc{n}={}&\Luc{m+n}+(-1)^{n}\Luc{m-n}\\
-\Luc{5n}\Luc{n}={}&\Luc{5n+n}+(-1)^{n}\Luc{5n-n}\\
-={}&\Luc{4n}+(-1)^{n}\Luc{4n}\\
-\Luc{3n}\Luc{n}={}&\Luc{3n+n}+(-1)^{n}\Luc{3n-n}\\
-={}&\Luc{4n}+(-1)^{n}\Luc{2n}\\
-\Luc{n}^2={}&\Luc{2n}+2(-1)^n
-\intertext{Quindi}
-={}&\Luc{5n}+(-1)^{n}\Luc{4n}+5(-1)^n[\Luc{4n}+(-1)^{n}\Luc{2n}]+10[\Luc{4n}+(-1)^{n}]\\
-={}&\Luc{6n}+(-1)^{n}\Luc{4n}+5(-1)^n\Luc{4n}+5(-1)^{2n}\Luc{2n}+10\Luc{4n}+20(-1)^{n}\\
-={}&\Luc{6n}+6(-1)^{n}\Luc{4n}+15\Luc{2n}+20(-1)^{n}\\
-\end{align*}
-cvd.
+	\begin{align*}
+		\Luc{n}^3={}       & \Luc{n}^2\Luc{n}                      \\
+		\intertext{Per il~\vref{cor:FibpotSomma}}
+		={}                & (\Luc{2n}+2(-1)^n)\Luc{n}             \\
+		={}                & \Luc{2n}\Luc{n}+2(-1)^n\Luc{n}        \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Luc{2n}\Luc{n}={} & \Luc{2n+n}+(-1)^n\Luc{2n-n}           \\
+		={}                & \Luc{3n}+(-1)^n\Luc{n}                \\
+		\intertext{Quindi}
+		={}                & \Luc{3n}+(-1)^n\Luc{n}+2(-1)^n\Luc{n} \\
+		={}                & \Luc{3n}+3(-1)^n\Luc{n}               \\
+	\end{align*}
+	\proofpart{Fibonacci Quarta}
+	\begin{align*}
+		\Fib{n}^4={}       & \Fib{n}^3\Fib{n}                                               \\
+		\intertext{Per l'~\vref{eqn:FibCubSomma}}
+		={}                & \dfrac{\Fib{3n}-3(-1)^n\Fib{n}}{5}\Fib{n}                      \\
+		={}                & \dfrac{\Fib{3n}\Fib{n}-3(-1)^n\Fib{n}^2}{5}                    \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Fib{3n}\Fib{n}={} & \dfrac{\Luc{3n+n}-(-1)^n\Luc{3n-n}}{5}                         \\
+		\Fib{3n}\Fib{n}={} & \dfrac{\Luc{4n}-(-1)^n\Luc{2n}}{5}                             \\
+		\Fib{n}^2={}       & \dfrac{\Luc{2n}-2(-1)^n}{5}                                    \\
+		\intertext{Quindi}
+		={}                & \dfrac{\Luc{4n}-(-1)^n\Luc{2n}-3(-1)^n[\Luc{2n}-2(-1)^n]}{25}  \\
+		={}                & \dfrac{\Luc{4n}-(-1)^n\Luc{2n}-3(-1)^n\Luc{2n}+6(-1)^{2n}}{25} \\
+		={}                & \dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}                         \\
+	\end{align*}
+	\proofpart{Lucas Quarta}
+	\begin{align*}
+		\Luc{n}^4={}       & \Luc{n}^3\Luc{n}                                   \\
+		\intertext{Per l'~\vref{eqn:LucCubSomma}}
+		={}                & [\Luc{3n}+3(-1)^n\Luc{n}]\Luc{n}                   \\
+		={}                & \Luc{3n}\Luc{n}+3(-1)^n\Luc{n}^2                   \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Luc{3n}\Luc{n}={} & \Luc{3n+n}+(-1)^n\Luc{3n-n}                        \\
+		={}                & \Luc{4n}+(-1)^n\Luc{2n}                            \\
+		\Luc{n}^2={}       & \Luc{2n}+2(-1)^n                                   \\
+		\intertext{Quindi}
+		={}                & \Luc{4n}+(-1)^n\Luc{2n}+3(-1)^n[\Luc{2n}+2(-1)^n]  \\
+		={}                & \Luc{4n}+(-1)^n\Luc{2n}+3(-1)^n\Luc{2n}+6(-1)^{2n} \\
+		={}                & \Luc{4n}+4(-1)^n\Luc{2n}+6                         \\
+	\end{align*}
+	\proofpart{Fibonacci Quinta}
+	\begin{align*}
+		\Fib{n}^5={}       & \Fib{n}^4\Fib{n}                                                                      \\
+		\intertext{Per l'~\vref{eqn:FibQuartaSomma}}
+		={}                & \dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\Fib{n}                                         \\
+		={}                & \dfrac{\Luc{4n}\Fib{n}-4(-1)^n\Luc{2n}\Fib{n}+6\Fib{n}}{25}                           \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Fib{m}\Luc{n}={}  & \Fib{n+m}+(-1)^n\Fib{m-n}                                                             \\
+		\Fib{n}\Luc{4n}={} & \Fib{4n+n}+(-1)^{4n}\Fib{n-4n}                                                        \\
+		={}                & \Fib{5n}+\Fib{-3n}                                                                    \\
+		={}                & \Fib{5n}+(-1)^{3n+1}\Fib{3n}                                                          \\
+		\Fib{n}\Luc{2n}={} & \Fib{2n+n}+(-1)^{2n}\Fib{n-2n}                                                        \\
+		={}                & \Fib{3n}+(-1)^{2n}\Fib{n-2n}                                                          \\
+		={}                & \Fib{3n}+\Fib{-n}                                                                     \\
+		={}                & \Fib{3n}+(-1)^{n+1}\Fib{n}                                                            \\
+		\intertext{Quindi}
+		={}                & \dfrac{\Fib{5n}+(-1)^{3n+1}\Fib{3n}-4(-1)^n[\Fib{3n}+(-1)^{n+1}\Fib{n}]+6\Fib{n}}{25} \\
+		={}                & \dfrac{\Fib{5n}+(-1)^{3n+1}\Fib{3n}-4(-1)^n\Fib{3n}-4(-1)^{2n+1}\Fib{n}+6\Fib{n}}{25} \\
+		={}                & \dfrac{\Fib{5n}-(-1)^{n}\Fib{3n}-4(-1)^n\Fib{3n}-4(-1)^{1}\Fib{n}+6\Fib{n}}{25}       \\
+		={}                & \dfrac{\Fib{5n}-5(-1)^n\Fib{3n}+10\Fib{n}}{25}                                        \\
+	\end{align*}
+	\proofpart{Lucas Quinta}
+	\begin{align*}
+		\Luc{n}^5={}       & \Luc{n}^4\Luc{n}                                                     \\
+		\intertext{Per l'~\vref{eqn:LucQuartaSomma}}
+		={}                & (\Luc{4n}+4(-1)^n\Luc{2n}+6)\Luc{n}                                  \\
+		={}                & \Luc{4n}\Luc{n}+4(-1)^n\Luc{2n}\Luc{n}+6\Luc{n}                      \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Luc{m}\Luc{n}={}  & \Luc{m+n}+(-1)^{n}\Luc{m-n}                                          \\
+		\Luc{4n}\Luc{n}={} & \Luc{4n+n}+(-1)^{n}\Luc{4n-n}                                        \\
+		={}                & \Luc{5n}+(-1)^{n}\Luc{3n}                                            \\
+		\Luc{2n}\Luc{n}={} & \Luc{2n+n}+(-1)^{n}\Luc{2n-n}                                        \\
+		={}                & \Luc{3n}+(-1)^{n}\Luc{n}                                             \\
+		\intertext{Quindi}
+		={}                & \Luc{5n}+(-1)^{n}\Luc{3n}+4(-1)^n[\Luc{3n}+(-1)^{n}\Luc{n}]+6\Luc{n} \\
+		={}                & \Luc{5n}+(-1)^{n}\Luc{3n}+4(-1)^n\Luc{3n}+4(-1)^{2n}\Luc{n}+6\Luc{n} \\
+		={}                & \Luc{5n}+5(-1)^n\Luc{3n}+4\Luc{n}+6\Luc{n}                           \\
+		={}                & \Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}                                   \\
+	\end{align*}
+	\proofpart{Fibonacci Sesta}
+	\begin{align*}
+		\Fib{n}^6={}       & \Fib{n}^4\Fib{n}                                                                           \\
+		\intertext{Per l'~\vref{eqn:FibQuintaSomma}}
+		={}                & \dfrac{\Fib{5n}\Fib{n}-5(-1)^n\Fib{3n}\Fib{n}+10\Fib{n}^2}{25}                             \\
+		\Fib{m}\Fib{n}={}  & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}                                                       \\
+		\Fib{5m}\Fib{n}={} & \dfrac{\Luc{5n+n}-(-1)^n\Luc{5n-n}}{5}                                                     \\
+		={}                & \dfrac{\Luc{6n}-(-1)^n\Luc{4n}}{5}                                                         \\
+		\Fib{3n}\Fib{n}={} & \dfrac{\Luc{3n+n}-(-1)^n\Luc{3n-n}}{5}                                                     \\
+		={}                & \dfrac{\Luc{4n}-(-1)^n\Luc{2n}}{5}                                                         \\
+		\Luc{n}^2={}       & \Luc{2n}+2(-1)^n                                                                           \\
+		\intertext{Quindi}
+		={}                & \dfrac{\Luc{6n}-(-1)^n\Luc{4n}-5(-1)^n\Luc{4n}+5(-1)^{2n}\Luc{2n}+10\Luc{2n}+20(-1)^n}{25} \\
+		={}                & \dfrac{\Luc{6n}-6(-1)^n\Luc{4n}+15(-1)^{2n}\Luc{2n}+20(-1)^n}{25}                          \\
+	\end{align*}
+	\proofpart{Lucas Sesta}
+	\begin{align*}
+		\Luc{n}^6={}       & \Luc{n}^5\Luc{n}                                                                   \\
+		\intertext{Per l'~\vref{eqn:LucQuintaSomma}}
+		={}                & [\Luc{5n}+5(-1)^n\Luc{3n}+10\Luc{n}]\Luc{n}                                        \\
+		={}                & \Luc{5n}\Luc{n}+5(-1)^n\Luc{3n}\Luc{n}+10\Luc{n}^2                                 \\
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Luc{m}\Luc{n}={}  & \Luc{m+n}+(-1)^{n}\Luc{m-n}                                                        \\
+		\Luc{5n}\Luc{n}={} & \Luc{5n+n}+(-1)^{n}\Luc{5n-n}                                                      \\
+		={}                & \Luc{4n}+(-1)^{n}\Luc{4n}                                                          \\
+		\Luc{3n}\Luc{n}={} & \Luc{3n+n}+(-1)^{n}\Luc{3n-n}                                                      \\
+		={}                & \Luc{4n}+(-1)^{n}\Luc{2n}                                                          \\
+		\Luc{n}^2={}       & \Luc{2n}+2(-1)^n
+		\intertext{Quindi}
+		={}                & \Luc{5n}+(-1)^{n}\Luc{4n}+5(-1)^n[\Luc{4n}+(-1)^{n}\Luc{2n}]+10[\Luc{4n}+(-1)^{n}] \\
+		={}                & \Luc{6n}+(-1)^{n}\Luc{4n}+5(-1)^n\Luc{4n}+5(-1)^{2n}\Luc{2n}+10\Luc{4n}+20(-1)^{n} \\
+		={}                & \Luc{6n}+6(-1)^{n}\Luc{4n}+15\Luc{2n}+20(-1)^{n}                                   \\
+	\end{align*}
+	cvd.
 \end{proof}
 \section{Radici}
-\begin{thm}[Algoritmo per rimuovere a e 
-b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
-	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
+\begin{thm}[Algoritmo per rimuovere a e
+		b]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuoviab}
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
 	allora:\begin{equation}
 		\left\{\begin{aligned}
-				a^n={}&\dfrac{\Luc{n}+(a-b)\Fib{n}}{2}\\
-				b^n={}&\dfrac{\Luc{n}-(a-b)\Fib{n}}{2}\\
-			\end{aligned}
-			\right.
+			a^n={} & \dfrac{\Luc{n}+(a-b)\Fib{n}}{2} \\
+			b^n={} & \dfrac{\Luc{n}-(a-b)\Fib{n}}{2} \\
+		\end{aligned}
+		\right.
 	\end{equation}
 \end{thm}
 \begin{proof}
-	Utilizzando il~\vref{thm:FibFormulaBinet} e il~\vref{thm:LucFormulaBinet} 
+	Utilizzando il~\vref{thm:FibFormulaBinet} e il~\vref{thm:LucFormulaBinet}
 	possiamo scrivere
 	\begin{equation*}
 		\left\{
 		\begin{aligned}
-			\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)\\
-			\Luc{n}={}&a^n+b^n
+			\Fib{n}={} & \dfrac{1}{a-b}\left(a^n-b^n\right) \\
+			\Luc{n}={} & a^n+b^n
 		\end{aligned}
 		\right.
 	\end{equation*}
-che risolto rispetto $a^n$ e $b^n$ da la tesi.
+	che risolto rispetto $a^n$ e $b^n$ da la tesi.
 \end{proof}
 \begin{thm}[Potenze di a e 	b]~\cite{Rabinowitz_1996}
 	\label{thm:FibRimuovipotab
 	}
 	Se $\Fib{n}$ è la successione di Fibonacci allora:
 	\begin{align*}
-		a^n={}&a\Fib{n}+\Fib{n-1}\\
-		b^n={}&b\Fib{n}+\Fib{n-1}\\
+		a^n={} & a\Fib{n}+\Fib{n-1} \\
+		b^n={} & b\Fib{n}+\Fib{n-1} \\
 	\end{align*}
 \end{thm}
 \begin{proof}
 	\proofpart{Prima dimostrazione}
-Utilizzando il~\vref{thm:FibFormulaBinet} possiamo scrivere:
-\begin{align*}
-	a\Fib{n}+\Fib{n-1}={}&\\
-={}&a\dfrac{1}{a-b}\left(a^n-b^n\right)
-+\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)\\
-={}&\dfrac{ba^n(a^2+1)-ab^n(ab+1)}{ab(a-b)}\\
-={}&\dfrac{a^{n-1}(a^2+1)}{a-b}\\
-={}&\dfrac{a^{n-1}a(a-b)}{a-b}\\
-={}&a^n\\
-	b\Fib{n}+\Fib{n-1}={}&\\
-={}&b\dfrac{1}{a-b}\left(a^n-b^n\right)
-+\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)\\
-={}&\dfrac{ba^n(ab+1)-ab^n(b^2+1)}{ab(a-b)}\\
-={}&\dfrac{b^{n-1}(b^2+1)}{b-a}\\
-={}&\dfrac{b^{n-1}b(b-a)}{b-a}\\
-={}&b^n
-\end{align*}
+	Utilizzando il~\vref{thm:FibFormulaBinet} possiamo scrivere:
+	\begin{align*}
+		a\Fib{n}+\Fib{n-1}={} &                                         \\
+		={}                   & a\dfrac{1}{a-b}\left(a^n-b^n\right)
+		+\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)                     \\
+		={}                   & \dfrac{ba^n(a^2+1)-ab^n(ab+1)}{ab(a-b)} \\
+		={}                   & \dfrac{a^{n-1}(a^2+1)}{a-b}             \\
+		={}                   & \dfrac{a^{n-1}a(a-b)}{a-b}              \\
+		={}                   & a^n                                     \\
+		b\Fib{n}+\Fib{n-1}={} &                                         \\
+		={}                   & b\dfrac{1}{a-b}\left(a^n-b^n\right)
+		+\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)                     \\
+		={}                   & \dfrac{ba^n(ab+1)-ab^n(b^2+1)}{ab(a-b)} \\
+		={}                   & \dfrac{b^{n-1}(b^2+1)}{b-a}             \\
+		={}                   & \dfrac{b^{n-1}b(b-a)}{b-a}              \\
+		={}                   & b^n
+	\end{align*}
 	\proofpart{Seconda dimostrazione}
-	
-Poniamo che
-\begin{align*}
-&\left\{
-\begin{aligned}
-	a^1={}&x\Fib{1}+y\Fib{0}\\
-	a^2={}&x\Fib{2}+y\Fib{1}\\
-\end{aligned}
-\right.\\
-&\left\{
-\begin{aligned}
-	x=&a\\
-	y=&a^2-a
-\end{aligned}
-\right.\\
-a^n={}&a\Fib{n}+(a^2-a)\Fib{n-1}\\
-={}&a\Fib{n}+\Fib{n-1}\\
-\end{align*}
-Analogamente l'altra relazione.
 
-Cvd.
+	Poniamo che
+	\begin{align*}
+		       & \left\{
+		\begin{aligned}
+			a^1={} & x\Fib{1}+y\Fib{0} \\
+			a^2={} & x\Fib{2}+y\Fib{1} \\
+		\end{aligned}
+		\right.                            \\
+		       & \left\{
+		\begin{aligned}
+			x= & a     \\
+			y= & a^2-a
+		\end{aligned}
+		\right.                            \\
+		a^n={} & a\Fib{n}+(a^2-a)\Fib{n-1} \\
+		={}    & a\Fib{n}+\Fib{n-1}        \\
+	\end{align*}
+	Analogamente l'altra relazione.
+
+	Cvd.
 \end{proof}
 \section{Formule di sottrazione}
-\begin{thm}[Formule di 
-sottrazione]~\cite{Rabinowitz_1996}\label{thm:FibLucFormSottazione}
-	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas 
-allora:
-\begin{align}
-	\Fib{m-n}={}&(-1)^n\dfrac{\Fib{m}\Luc{n}-\Luc{m}\Fib{n}}{2}\\
-	\Luc{m-n}={}&(-1)^n\dfrac{\Luc{m}\Luc{n}-5\Fib{m}\Fib{n}}{2}
-\end{align}
+\begin{thm}[Formule di
+		sottrazione]~\cite{Rabinowitz_1996}\label{thm:FibLucFormSottazione}
+	Se $\Fib{n}$ è la successione di Fibonacci e  $\Luc{n}$ è quella di Lucas
+	allora:
+	\begin{align}
+		\Fib{m-n}={} & (-1)^n\dfrac{\Fib{m}\Luc{n}-\Luc{m}\Fib{n}}{2}  \\
+		\Luc{m-n}={} & (-1)^n\dfrac{\Luc{m}\Luc{n}-5\Fib{m}\Fib{n}}{2}
+	\end{align}
 \end{thm}
 \begin{proof}
-\proofpart{Fibonacci}
-Utilizzando l'~\vref{eqn:FibLucSommaprodotto}
-\begin{align*}
-	\Fib{m+n}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-\intertext{Posto}
-n={}&-n\\
-\Fib{m-n}={}&\dfrac{\Fib{m}\Luc{-n}+\Luc{m}\Fib{-n}}{2}\\
-\intertext{Utilizzando il~\vref{thm:FibLucNeg} }
-={}&\dfrac{\Fib{m}(-1)^n\Luc{n}+\Luc{m}(-1)^{n+1}\Fib{n}}{2}\\
-={}&(-1)^n\dfrac{\Fib{m}\Luc{n}-\Luc{m}\Fib{n}}{2}
-\end{align*}
-\proofpart{Lucas}
-Utilizzando l'~\vref{eqn:LucFibSommaprodotto}
-\begin{align*}
-\Luc{m+n}={}&\dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}\\
-\intertext{Posto}
-n={}&-n\\
-\Luc{m-n}={}&\dfrac{5\Fib{m}\Fib{-n}+\Luc{m}\Luc{-n}}{2}\\
-\intertext{Utilizzando il~\vref{thm:FibLucNeg} }
-={}&\dfrac{5\Fib{m}\Fib{n}(-1)^{n+1}+\Luc{m}(-1)^n\Luc{n}}{2}\\
-={}&(\Luc{m}\Luc{n}-1^n)\dfrac{-5\Fib{m}\Fib{n}}{2}\\
-\end{align*}
-cvd.
+	\proofpart{Fibonacci}
+	Utilizzando l'~\vref{eqn:FibLucSommaprodotto}
+	\begin{align*}
+		\Fib{m+n}={} & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}                 \\
+		\intertext{Posto}
+		n={}         & -n                                                       \\
+		\Fib{m-n}={} & \dfrac{\Fib{m}\Luc{-n}+\Luc{m}\Fib{-n}}{2}               \\
+		\intertext{Utilizzando il~\vref{thm:FibLucNeg} }
+		={}          & \dfrac{\Fib{m}(-1)^n\Luc{n}+\Luc{m}(-1)^{n+1}\Fib{n}}{2} \\
+		={}          & (-1)^n\dfrac{\Fib{m}\Luc{n}-\Luc{m}\Fib{n}}{2}
+	\end{align*}
+	\proofpart{Lucas}
+	Utilizzando l'~\vref{eqn:LucFibSommaprodotto}
+	\begin{align*}
+		\Luc{m+n}={} & \dfrac{5\Fib{m}\Fib{n}+\Luc{m}\Luc{n}}{2}                 \\
+		\intertext{Posto}
+		n={}         & -n                                                        \\
+		\Luc{m-n}={} & \dfrac{5\Fib{m}\Fib{-n}+\Luc{m}\Luc{-n}}{2}               \\
+		\intertext{Utilizzando il~\vref{thm:FibLucNeg} }
+		={}          & \dfrac{5\Fib{m}\Fib{n}(-1)^{n+1}+\Luc{m}(-1)^n\Luc{n}}{2} \\
+		={}          & (\Luc{m}\Luc{n}-1^n)\dfrac{-5\Fib{m}\Fib{n}}{2}           \\
+	\end{align*}
+	cvd.
 \end{proof}
 \section{Limiti}
 \begin{thm}[Limite successione]
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\lim_{n\to\infty}\dfrac{\Fib{n+1}}{\Fib{n}}=\varphi
 	\end{equation}\label{eqn:FibLimRap}
 \end{thm}
 \begin{proof}
 	\begin{align*}
-		\lim_{n\to\infty}\dfrac{\Fib{n+1}}{\Fib{n}}={}&\lim_{n\to\infty}\dfrac{\varphi^{n+1}-(1-\varphi)^{n+1}}{\varphi^n-(1-\varphi)^n}\\
-		={}&\lim_{n\to\infty}\dfrac{\varphi^{n+1}\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n+1}\right]}{\varphi^{n}\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n}\right]}\\
-		={}&\lim_{n\to\infty}\dfrac{\varphi\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n+1}\right]}{1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n}}\\
-		={}&\varphi
+		\lim_{n\to\infty}\dfrac{\Fib{n+1}}{\Fib{n}}={}                  & \lim_{n\to\infty}\dfrac{\varphi^{n+1}-(1-\varphi)^{n+1}}{\varphi^n-(1-\varphi)^n}                                                                                         \\
+		={}                                                             & \lim_{n\to\infty}\dfrac{\varphi^{n+1}\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n+1}\right]}{\varphi^{n}\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n}\right]} \\
+		={}                                                             & \lim_{n\to\infty}\dfrac{\varphi\left[1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n+1}\right]}{1-\left(\dfrac{1-\varphi}{\varphi}\right)^{n}}                               \\
+		={}                                                             & \varphi
 		\intertext{dato che}
-		\lim_{n\to\infty}\left(\dfrac{1-\varphi}{\varphi}\right)^{n}={}&0
+		\lim_{n\to\infty}\left(\dfrac{1-\varphi}{\varphi}\right)^{n}={} & 0
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
 \section{Identità}
-\begin{thm}[Identità di 
-Cassini]\label{thm:FibCassini}\index{Fibonacci!identità!Cassini}\index{Cassini}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+\begin{thm}[Identità di
+		Cassini]\label{thm:FibCassini}\index{Fibonacci!identità!Cassini}\index{Cassini}
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{n-1}\Fib{n+1}=\Fib{n}^2+(-1)^n
 	\end{equation}\label{eqn:FibCassini}
 \end{thm}
 \begin{proof}
-	
+
 	\proofpart{Prima dimostrazione}
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}            & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n}^2={}&\dfrac{a^2n}{(a-b)^2}-2\dfrac{a^nb^n}{(a-b)^n}+\dfrac{b^2n}{(a-b)^2}\\
+		\Fib{n}^2={}          & \dfrac{a^2n}{(a-b)^2}-2\dfrac{a^nb^n}{(a-b)^n}+\dfrac{b^2n}{(a-b)^2}                       \\
 		\intertext{Ma}
-		\Fib{n-1}={}&\dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)\\
-		\Fib{n+1}={}&\dfrac{1}{a-b}\left(a^{n+1}-b^{n+1}\right)\\
+		\Fib{n-1}={}          & \dfrac{1}{a-b}\left(a^{n-1}-b^{n-1}\right)                                                 \\
+		\Fib{n+1}={}          & \dfrac{1}{a-b}\left(a^{n+1}-b^{n+1}\right)                                                 \\
 		\intertext{Quindi}
-		\Fib{n-1}\Fib{n+1}={}&\dfrac{a^2n}{(a-b)^2}-2\dfrac{a^nb^n}{(a-b)^n}+\dfrac{b^2n}{(a-b)^2}-a^{n-1}b^{n-1}\\
-		={}&	\Fib{n}^2-a^{n-1}b^{n-1}
+		\Fib{n-1}\Fib{n+1}={} & \dfrac{a^2n}{(a-b)^2}-2\dfrac{a^nb^n}{(a-b)^n}+\dfrac{b^2n}{(a-b)^2}-a^{n-1}b^{n-1}        \\
+		={}                   & \Fib{n}^2-a^{n-1}b^{n-1}
 		\intertext{Ma}
-		-a^{n-1}b^{n-1}={}&-\left(\dfrac{1+\sqrt{5}}{2}\right)^{n-1}\left(\dfrac{1-\sqrt{5}}{2}\right)^{n-1}=(-1)^{n}\\
-		\Fib{n-1}\Fib{n+1}={}&\Fib{n}^2+(-1)^n
+		-a^{n-1}b^{n-1}={}    & -\left(\dfrac{1+\sqrt{5}}{2}\right)^{n-1}\left(\dfrac{1-\sqrt{5}}{2}\right)^{n-1}=(-1)^{n} \\
+		\Fib{n-1}\Fib{n+1}={} & \Fib{n}^2+(-1)^n
 	\end{align*}
 	cvd.
 	\proofpart{Seconda dimostrazione}
 	\begin{align*}
-\Fib{n-1}\Fib{n+1}={}&\\ 
-\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-\Fib{n+m}={}&\dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}\\
-\Fib{n-1}={}&\dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}\\
-\intertext{Per il~\vref{thm:FibLucNeg}}
-\Fib{-1}={}&(-1)^{-1+1}\Fib{1}=\Fib{1}\\	
-\Luc{-1}={}&(-1)^{1}\Luc{1}=-	\Luc{1}\\
-={}&\dfrac{\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}\\
-={}&\dfrac{\Luc{n}-\Fib{n}}{2}\\
-\Fib{n+1}={}&\dfrac{\Luc{n}+\Fib{n}}{2}\\
-\intertext{Quindi}
-={}&\dfrac{(\Luc{n}-\Fib{n})(\Luc{n}+\Fib{n})}{2}\\
-={}&\dfrac{\Luc{n}^2-\Fib{n}^2}{4}\\
-\intertext{Per il~\vref{thm:FibLucFondamentale}}
-={}&\dfrac{5\Fib{n}^2+4(-1)^{n}-\Fib{n}^2}{4}\\
-={}&\Fib{n}^2+(-1)^{n}
+		\Fib{n-1}\Fib{n+1}={} &                                               \\
+		\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
+		\Fib{n+m}={}          & \dfrac{\Fib{m}\Luc{n}+\Luc{m}\Fib{n}}{2}      \\
+		\Fib{n-1}={}          & \dfrac{\Fib{-1}\Luc{n}+\Luc{-1}\Fib{n}}{2}    \\
+		\intertext{Per il~\vref{thm:FibLucNeg}}
+		\Fib{-1}={}           & (-1)^{-1+1}\Fib{1}=\Fib{1}                    \\
+		\Luc{-1}={}           & (-1)^{1}\Luc{1}=-	\Luc{1}                     \\
+		={}                   & \dfrac{\Fib{1}\Luc{n}-\Luc{1}\Fib{n}}{2}      \\
+		={}                   & \dfrac{\Luc{n}-\Fib{n}}{2}                    \\
+		\Fib{n+1}={}          & \dfrac{\Luc{n}+\Fib{n}}{2}                    \\
+		\intertext{Quindi}
+		={}                   & \dfrac{(\Luc{n}-\Fib{n})(\Luc{n}+\Fib{n})}{2} \\
+		={}                   & \dfrac{\Luc{n}^2-\Fib{n}^2}{4}                \\
+		\intertext{Per il~\vref{thm:FibLucFondamentale}}
+		={}                   & \dfrac{5\Fib{n}^2+4(-1)^{n}-\Fib{n}^2}{4}     \\
+		={}                   & \Fib{n}^2+(-1)^{n}
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
 
 \begin{thm}[Identità di Catalan]
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{n}^2-\Fib{n-r}\Fib{n+r}=(-1)^{n-r}\Fib{r}^2
 	\end{equation}\label{eqn:FibCatalan}
 \end{thm}\index{Fibonacci!identità!Catalan}\index{Catalan}
 \begin{proof}
-	
+
 	\proofpart{Prima dimostrazione}
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}            & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n}^2={}&\dfrac{a^{2n}-2a^nb^n+b^{2n}}{(a-b)^2}\\\Fib{n-r}={}&\dfrac{1}{a-b}\left(a^{n-r}-b^{n-r}\right)\\
-		\Fib{n+r}={}&\dfrac{1}{a-b}\left(a^{n+r}-b^{n+r}\right)\\
-		\Fib{n}^2-	
-		\Fib{n-r}\Fib{n+r}={}&\dfrac{a^{n+r}b^{n-r}}{(a-b)^2}+\dfrac{a^{n-r}b^{n+r}}{(a-b)^2}-\dfrac{2a^{n}b^{n}}{(a-b)^2}\\
-		={}&\dfrac{a^{n-r}b^{n-r}(a^r-b^r)^2}{(a-b)^2}
+		\Fib{n}^2={}          & \dfrac{a^{2n}-2a^nb^n+b^{2n}}{(a-b)^2}                                                       \\\Fib{n-r}={}&\dfrac{1}{a-b}\left(a^{n-r}-b^{n-r}\right)\\
+		\Fib{n+r}={}          & \dfrac{1}{a-b}\left(a^{n+r}-b^{n+r}\right)                                                   \\
+		\Fib{n}^2-
+		\Fib{n-r}\Fib{n+r}={} & \dfrac{a^{n+r}b^{n-r}}{(a-b)^2}+\dfrac{a^{n-r}b^{n+r}}{(a-b)^2}-\dfrac{2a^{n}b^{n}}{(a-b)^2} \\
+		={}                   & \dfrac{a^{n-r}b^{n-r}(a^r-b^r)^2}{(a-b)^2}
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{(-1)^{n-r}(a^r-b^r)^2}{(a-b)^2}\\
-		={}&(-1)^{n-r}\Fib{r}^2\\
+		={}                   & \dfrac{(-1)^{n-r}(a^r-b^r)^2}{(a-b)^2}                                                       \\
+		={}                   & (-1)^{n-r}\Fib{r}^2                                                                          \\
 	\end{align*}
 	cvd
-	
+
 	\proofpart{Seconda dimostrazione}
 	\begin{align*}
 		\intertext{Per~\vref{thm:FibLucFormSottazione}}
-		\Fib{n-r}={}&(-1)^r\dfrac{\Fib{n}\Luc{r}-\Luc{n}\Fib{r}}{2}\\
+		\Fib{n-r}={}                                                           & (-1)^r\dfrac{\Fib{n}\Luc{r}-\Luc{n}\Fib{r}}{2}                                                        \\
 		\intertext{Per~\vref{thm:LucFibSommaprodotto}}
-		\Fib{n+r}={}&\dfrac{\Fib{n}\Luc{r}+\Luc{n}\Fib{r}}{2}\\
-\Fib{n-r}\Fib{n+r}
-={}&\dfrac{(-1)^r}{4}\left(\Fib{n}\Luc{r}-\Luc{n}\Fib{r}\right)\left(\Fib{n}\Luc{r}+\Luc{n}\Fib{r}\right)\\
-={}&\dfrac{(-1)^r}{4}\left(\Fib{n}^2\Luc{r}^2-\Luc{n}^2\Fib{r}^2\right)\\
-\intertext{Per il~\vref{cor:FibpotSomma}}
-\Fib{n}^2={}&\dfrac{\Luc{2n}-2(-1)^n}{5}\\
-\Fib{r}^2={}&\dfrac{\Luc{2r}-2(-1)^r}{5}\\
-\Luc{n}^2={}&\Luc{2n}+2(-1)^n\\
-\Luc{r}^2={}&\Luc{2r}+2(-1)^r\\
-\Fib{n}^2\Luc{r}^2={}&\dfrac{1}{5}\left(\Luc{2n}-2(-1)^n\right)\left(\Luc{2r}+2(-1)^r\right)\\
- ={}&\dfrac{1}{5}[\Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}-4(-1)^{n+r}]\\
-\Luc{n}^2\Fib{r}^2={}&\dfrac{1}{5}\left(\Luc{2n}+2(-1)^n\right)\left(\Luc{2r}-2(-1)^r
- \right)\\
- ={}&\dfrac{1}{5}[\Luc{2n}\Luc{2r}-2(-1)^r\Luc{2n}+2(-1)^n\Luc{2r}-4(-1)^{n+r}]\\
- \intertext{Quindi}
- \dfrac{(-1)^r}{4}\left(\Fib{n}^2\Luc{r}^2-\Luc{n}^2\Fib{r}^2\right)={}&\\
- ={}& 
- \dfrac{(-1)^r}{4}\dfrac{1}{5}[\Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}-4(-1)^{n+r}\\
- -&\Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}+4(-1)^{n+r}]\\
-  ={}& \dfrac{(-1)^r}{4}\dfrac{1}{5}[4(-1)^r\Luc{2n}-4(-1)^n\Luc{2r}]\\
-  ={}& \dfrac{(-1)^r}{5}[(-1)^r\Luc{2n}-(-1)^n\Luc{2r}]\\
-\intertext{Ricapitolando}
-	\Fib{n}^2-\Fib{n-r}\Fib{n+r}={}&
-	\intertext{Per il~\vref{cor:FibpotSomma}}
-={}&\dfrac{\Luc{2n}-2(-1)^n}{5}-\dfrac{(-1)^r}{5}[(-1)^r\Luc{2n}-(-1)^n\Luc{2r}]\\
-={}&\dfrac{\Luc{2n}-2(-1)^n- (-1)^{2r}\Luc{2n}+(-1)^{n+r}\Luc{2r}}{5}\\
-={}&\dfrac{-2(-1)^n+(-1)^{n+r}\Luc{2r}}{5}\\
-={}&(-1)^{n-r}\dfrac{-2(-1)^r+(-1)^{2r}\Luc{2r}}{5}\\
-={}&(-1)^{n-r}\dfrac{-2(-1)^r+\Luc{2r}}{5}\\
-	\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&(-1)^{n-r}\Fib{r}^2\\
-\end{align*}
-cvd.
+		\Fib{n+r}={}                                                           & \dfrac{\Fib{n}\Luc{r}+\Luc{n}\Fib{r}}{2}                                                              \\
+		\Fib{n-r}\Fib{n+r}
+		={}                                                                    & \dfrac{(-1)^r}{4}\left(\Fib{n}\Luc{r}-\Luc{n}\Fib{r}\right)\left(\Fib{n}\Luc{r}+\Luc{n}\Fib{r}\right) \\
+		={}                                                                    & \dfrac{(-1)^r}{4}\left(\Fib{n}^2\Luc{r}^2-\Luc{n}^2\Fib{r}^2\right)                                   \\
+		\intertext{Per il~\vref{cor:FibpotSomma}}
+		\Fib{n}^2={}                                                           & \dfrac{\Luc{2n}-2(-1)^n}{5}                                                                           \\
+		\Fib{r}^2={}                                                           & \dfrac{\Luc{2r}-2(-1)^r}{5}                                                                           \\
+		\Luc{n}^2={}                                                           & \Luc{2n}+2(-1)^n                                                                                      \\
+		\Luc{r}^2={}                                                           & \Luc{2r}+2(-1)^r                                                                                      \\
+		\Fib{n}^2\Luc{r}^2={}                                                  & \dfrac{1}{5}\left(\Luc{2n}-2(-1)^n\right)\left(\Luc{2r}+2(-1)^r\right)                                \\
+		={}                                                                    & \dfrac{1}{5}[\Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}-4(-1)^{n+r}]                            \\
+		\Luc{n}^2\Fib{r}^2={}                                                  & \dfrac{1}{5}\left(\Luc{2n}+2(-1)^n\right)\left(\Luc{2r}-2(-1)^r
+		\right)                                                                                                                                                                        \\
+		={}                                                                    & \dfrac{1}{5}[\Luc{2n}\Luc{2r}-2(-1)^r\Luc{2n}+2(-1)^n\Luc{2r}-4(-1)^{n+r}]                            \\
+		\intertext{Quindi}
+		\dfrac{(-1)^r}{4}\left(\Fib{n}^2\Luc{r}^2-\Luc{n}^2\Fib{r}^2\right)={} &                                                                                                       \\
+		={}                                                                    &
+		\dfrac{(-1)^r}{4}\dfrac{1}{5}[\Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}-4(-1)^{n+r}                                                                                     \\
+		-                                                                      & \Luc{2n}\Luc{2r}+2(-1)^r\Luc{2n}-2(-1)^n\Luc{2r}+4(-1)^{n+r}]                                         \\
+		={}                                                                    & \dfrac{(-1)^r}{4}\dfrac{1}{5}[4(-1)^r\Luc{2n}-4(-1)^n\Luc{2r}]                                        \\
+		={}                                                                    & \dfrac{(-1)^r}{5}[(-1)^r\Luc{2n}-(-1)^n\Luc{2r}]                                                      \\
+		\intertext{Ricapitolando}
+		\Fib{n}^2-\Fib{n-r}\Fib{n+r}={}                                        &
+		\intertext{Per il~\vref{cor:FibpotSomma}}
+		={}                                                                    & \dfrac{\Luc{2n}-2(-1)^n}{5}-\dfrac{(-1)^r}{5}[(-1)^r\Luc{2n}-(-1)^n\Luc{2r}]                          \\
+		={}                                                                    & \dfrac{\Luc{2n}-2(-1)^n- (-1)^{2r}\Luc{2n}+(-1)^{n+r}\Luc{2r}}{5}                                     \\
+		={}                                                                    & \dfrac{-2(-1)^n+(-1)^{n+r}\Luc{2r}}{5}                                                                \\
+		={}                                                                    & (-1)^{n-r}\dfrac{-2(-1)^r+(-1)^{2r}\Luc{2r}}{5}                                                       \\
+		={}                                                                    & (-1)^{n-r}\dfrac{-2(-1)^r+\Luc{2r}}{5}                                                                \\
+		\intertext{Per~\vref{lem:FibpropPhi}}
+		={}                                                                    & (-1)^{n-r}\Fib{r}^2                                                                                   \\
+	\end{align*}
+	cvd.
 \end{proof}
 \begin{thm}[Identità di Vajada]\label{thm:FibVajada}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}=(-1)^{n}\Fib{i}\Fib{j}
 	\end{equation}
 \end{thm}\index{Fibonacci!identità!Vajada}\index{Vajada}
 \begin{proof}
-	
+
 	\proofpart{Prima dimostrazione}
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}                               & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n+i}={}&\dfrac{1}{a-b}\left(a^{n+i}-b^{n+i}\right)\\
-		\Fib{n+j}={}&\dfrac{1}{a-b}\left(a^{n+j}-b^{n+j}\right)\\
-		\Fib{n+i+j}={}&\dfrac{1}{a-b}\left(a^{n+i+j}-b^{n+i+j}\right)\\
-		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}={}&\dfrac{a^{n}b^{n}(a^i-b^i)(a^j-b^j)}{(a-b)^2}\\
+		\Fib{n+i}={}                             & \dfrac{1}{a-b}\left(a^{n+i}-b^{n+i}\right)     \\
+		\Fib{n+j}={}                             & \dfrac{1}{a-b}\left(a^{n+j}-b^{n+j}\right)     \\
+		\Fib{n+i+j}={}                           & \dfrac{1}{a-b}\left(a^{n+i+j}-b^{n+i+j}\right) \\
+		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}={} & \dfrac{a^{n}b^{n}(a^i-b^i)(a^j-b^j)}{(a-b)^2}  \\
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{(-1)^{n}(a^i-b^i)(a^j-b^j)}{(a-b)^2}\\
-		={}&(-1)^{n}\Fib{i}\Fib{j}\\
+		={}                                      & \dfrac{(-1)^{n}(a^i-b^i)(a^j-b^j)}{(a-b)^2}    \\
+		={}                                      & (-1)^{n}\Fib{i}\Fib{j}                         \\
 	\end{align*}
 	cvd.
-	
+
 	\proofpart{Seconda dimostrazione}
 	\begin{align*}
 		\intertext{Per il~\vref{thm:FibProdSomma}}
-		\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\\
+		\Fib{m}\Fib{n}={}                        & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}                                            \\
 		\intertext{Quindi}
-		\Fib{n+i}\Fib{n+j}={}&\dfrac{\Luc{n+i+n+j}-(-1)^{n+j}\Luc{n+i-n-j}}{5}\\
-	={}&\dfrac{\Luc{2n+i+j}-(-1)^{n+j}\Luc{i-j}}{5}\\
-		\Fib{n}\Fib{n+i+j}={}&\dfrac{\Luc{n+i+n+j}-(-1)^{n+i+j}\Luc{n-n-i-j}}{5}\\
-	={}&\dfrac{\Luc{2n+i+j}-(-1)^{n+i+j}\Luc{-i-j}}{5}\\
-		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}={}&\dfrac{\Luc{2n+i+j}-(-1)^{n+j}\Luc{i-j}-\Luc{2n+i+j}+(-1)^{n+i+j}\Luc{-i-j}}{5}\\
-	={}&\dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+i+j}\Luc{-i-j}}{5}\\
+		\Fib{n+i}\Fib{n+j}={}                    & \dfrac{\Luc{n+i+n+j}-(-1)^{n+j}\Luc{n+i-n-j}}{5}                                \\
+		={}                                      & \dfrac{\Luc{2n+i+j}-(-1)^{n+j}\Luc{i-j}}{5}                                     \\
+		\Fib{n}\Fib{n+i+j}={}                    & \dfrac{\Luc{n+i+n+j}-(-1)^{n+i+j}\Luc{n-n-i-j}}{5}                              \\
+		={}                                      & \dfrac{\Luc{2n+i+j}-(-1)^{n+i+j}\Luc{-i-j}}{5}                                  \\
+		\Fib{n+i}\Fib{n+j}-\Fib{n}\Fib{n+i+j}={} & \dfrac{\Luc{2n+i+j}-(-1)^{n+j}\Luc{i-j}-\Luc{2n+i+j}+(-1)^{n+i+j}\Luc{-i-j}}{5} \\
+		={}                                      & \dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+i+j}\Luc{-i-j}}{5}                          \\
 		\intertext{Per il~\vref{thm:FibLucNeg}}
-		\Luc{-i-j}={}&(-1)^{i+j}\Luc{i+j}\\
-	={}&\dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+i+j}(-1)^{i+j}\Luc{i+j}}{5}\\
-	={}&\dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+2i+2j}\Luc{i+j}}{5}\\
-	={}&\dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n}\Luc{i+j}}{5}\\	
-	={}&(-1)^{n}\dfrac{\Luc{i+j}-(-1)^{j}\Luc{i-j}}{5}\\	
-	={}&(-1)^{n}\Fib{i}\Fib{j}\\
+		\Luc{-i-j}={}                            & (-1)^{i+j}\Luc{i+j}                                                             \\
+		={}                                      & \dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+i+j}(-1)^{i+j}\Luc{i+j}}{5}                 \\
+		={}                                      & \dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n+2i+2j}\Luc{i+j}}{5}                         \\
+		={}                                      & \dfrac{-(-1)^{n+j}\Luc{i-j}+(-1)^{n}\Luc{i+j}}{5}                               \\
+		={}                                      & (-1)^{n}\dfrac{\Luc{i+j}-(-1)^{j}\Luc{i-j}}{5}                                  \\
+		={}                                      & (-1)^{n}\Fib{i}\Fib{j}                                                          \\
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
-\begin{thm}[Identità di 
-	d'Ocagne]\label{thm:FibdOcagne}\index{Fibonacci!identità!D'Ocagne}\index{D'Ocagne}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+\begin{thm}[Identità di
+		d'Ocagne]\label{thm:FibdOcagne}\index{Fibonacci!identità!D'Ocagne}\index{D'Ocagne}
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{m}\Fib{n+1}-\Fib{n}\Fib{m+1}=(-1)^n\Fib{m-n}
 	\end{equation}\label{eqn:FibdOcagne}
 \end{thm}
 \begin{proof}
-\begin{align*}
-	\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\\
-	\intertext{Quindi}
-		\Fib{m}\Fib{n+1}={}&\dfrac{\Luc{n+m+1}-(-1)^{n+1}\Luc{m-n-1}}{5}\\
-		\Fib{n}\Fib{m+1}={}&\dfrac{\Luc{n+m+1}-(-1)^{n}\Luc{m-n+1}}{5}\\
+	\begin{align*}
+		\intertext{Per il~\vref{thm:FibProdSomma}}
+		\Fib{m}\Fib{n}={}   & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}                                                       \\
+		\intertext{Quindi}
+		\Fib{m}\Fib{n+1}={} & \dfrac{\Luc{n+m+1}-(-1)^{n+1}\Luc{m-n-1}}{5}                                               \\
+		\Fib{n}\Fib{m+1}={} & \dfrac{\Luc{n+m+1}-(-1)^{n}\Luc{m-n+1}}{5}                                                 \\
 		\Fib{m}\Fib{n+1}-\Fib{n}\Fib{m+1}
-	={}&\dfrac{1}{5}\left[\Luc{n+m+1}-(-1)^{n+1}\Luc{m-n-1}-\Luc{n+m+1}+(-1)^{n}\Luc{m-n+1}\right]\\
-={}&\dfrac{1}{5}\left[(-1)^{n}\Luc{m-n-1}+(-1)^{n}\Luc{m-n+1}\right]\\
-={}&\dfrac{(-1)^{n}}{5}\left[\Luc{m-n+1}+\Luc{m-n-1}\right]\\
-\intertext{Per l'~\vref{eqn:FibConvertiinLucas}}
-={}&(-1)^{n}\Fib{m-n}\\
-\end{align*}
-cvd.
+		={}                 & \dfrac{1}{5}\left[\Luc{n+m+1}-(-1)^{n+1}\Luc{m-n-1}-\Luc{n+m+1}+(-1)^{n}\Luc{m-n+1}\right] \\
+		={}                 & \dfrac{1}{5}\left[(-1)^{n}\Luc{m-n-1}+(-1)^{n}\Luc{m-n+1}\right]                           \\
+		={}                 & \dfrac{(-1)^{n}}{5}\left[\Luc{m-n+1}+\Luc{m-n-1}\right]                                    \\
+		\intertext{Per l'~\vref{eqn:FibConvertiinLucas}}
+		={}                 & (-1)^{n}\Fib{m-n}                                                                          \\
+	\end{align*}
+	cvd.
 \end{proof}
-\begin{thm}[Identità di 
-	Honsberger]\label{thm:FibHonsberger}\index{Fibonacci!identità!Honsberger}\index{Honsberger}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+\begin{thm}[Identità di
+		Honsberger]\label{thm:FibHonsberger}\index{Fibonacci!identità!Honsberger}\index{Honsberger}
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{k-1}\Fib{n}+\Fib{k}\Fib{n+1}=\Fib{n+k}
 	\end{equation}\label{eqn:FibHonsberger}
@@ -922,192 +916,192 @@ cvd.
 \begin{proof}
 	\begin{align*}
 		\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\\
-	\intertext{Quindi}
-	\Fib{k-1}\Fib{n}={}&\dfrac{\Luc{n+k-1}-(-1)^n\Luc{k-n-1}}{5}\\
-	\Fib{k}\Fib{n+1}={}&\dfrac{\Luc{n+k+1}-(-1)^{n+1}\Luc{k-n-1}}{5}\\
-	\Fib{k-1}\Fib{n}-\Fib{k}\Fib{n+1}=
-	&\dfrac{1}{5}\left[\Luc{n+k-1}-(-1)^n\Luc{k-n-1}+\Luc{n+k+1}-(-1)^{n+1}\Luc{k-n-1}\right]\\
-={}&\dfrac{1}{5}\left[\Luc{n+k-1}-(-1)^n\Luc{k-n-1}+\Luc{n+k+1}+(-1)^{n}\Luc{k-n-1}\right]\\
-={}&\dfrac{1}{5}\left[\Luc{n+k-1}+\Luc{n+k+1}\right]\\
-	\intertext{Per l'~\vref{eqn:FibConvertiinLucas}}
-={}&\Fib{n+k}
+		\Fib{m}\Fib{n}={}   & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}                                                     \\
+		\intertext{Quindi}
+		\Fib{k-1}\Fib{n}={} & \dfrac{\Luc{n+k-1}-(-1)^n\Luc{k-n-1}}{5}                                                 \\
+		\Fib{k}\Fib{n+1}={} & \dfrac{\Luc{n+k+1}-(-1)^{n+1}\Luc{k-n-1}}{5}                                             \\
+		\Fib{k-1}\Fib{n}-\Fib{k}\Fib{n+1}=
+		                    & \dfrac{1}{5}\left[\Luc{n+k-1}-(-1)^n\Luc{k-n-1}+\Luc{n+k+1}-(-1)^{n+1}\Luc{k-n-1}\right] \\
+		={}                 & \dfrac{1}{5}\left[\Luc{n+k-1}-(-1)^n\Luc{k-n-1}+\Luc{n+k+1}+(-1)^{n}\Luc{k-n-1}\right]   \\
+		={}                 & \dfrac{1}{5}\left[\Luc{n+k-1}+\Luc{n+k+1}\right]                                         \\
+		\intertext{Per l'~\vref{eqn:FibConvertiinLucas}}
+		={}                 & \Fib{n+k}
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
-\begin{thm}[Identità di Gelin 
-Cesàro]\label{thm:FibGelinCesaro}\index{Fibonacci!identità!Gelin 
-Cesàro}\index{Gelin Cesàro}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+\begin{thm}[Identità di Gelin
+		Cesàro]\label{thm:FibGelinCesaro}\index{Fibonacci!identità!Gelin
+		Cesàro}\index{Gelin Cesàro}
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
-	\Fib{n}^4-\Fib{n-2}\Fib{n-1}\Fib{n+1}\Fib{n+2}=1
+		\Fib{n}^4-\Fib{n-2}\Fib{n-1}\Fib{n+1}\Fib{n+2}=1
 	\end{equation}\label{eqn:FibGelinCesaro}
 \end{thm}
 \begin{proof}
-\begin{align*}
+	\begin{align*}
 		\intertext{Per il~\vref{thm:FibProdSomma}}
-	\Fib{m}\Fib{n}={}&\dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}\\
-	\intertext{Quindi}
-	\Fib{n-2}\Fib{n+2}={}&\dfrac{\Luc{n-2+n+2}-(-1)^{n-2}\Luc{n+2-n+2}}{5}\\
-={}&\dfrac{\Luc{2n}-(-1)^{n-2}\Luc{4}}{5}\\
-	\Fib{n-1}\Fib{n+1}={}&\dfrac{\Luc{n-1+n+1}-(-1)^{n-1}\Luc{n+1-n+1}}{5}\\
-={}&\dfrac{\Luc{2n}-(-1)^{n-1}\Luc{2}}{5}\\
-	\Fib{n-2}\Fib{n-1}\Fib{n+1}\Fib{n+2}
-={}&\dfrac{1}{25}\left[\Luc{2n}-(-1)^{n-1}\Luc{2}\right]\left[\Luc{2n}-(-1)^{n-2}\Luc{4}\right]\\
-={}&\dfrac{1}{25}\left[\Luc{2n}^2-(-1)^{n-2}\Luc{4}\Luc{2n}-(-1)^{n-1}\Luc{2}\Luc{2n}-(-1)^{n-1+n-2}\Luc{2}\Luc{4}\right]\\
-={}&\dfrac{1}{25}\left[\Luc{2n}^2-7(-1)^{n}\Luc{2n}+3(-1)^{n}\Luc{2n}-21\right]\\
-={}&\dfrac{1}{25}\left[\Luc{2n}^2-4(-1)^{n}\Luc{2n}-21\right]\\
-	\intertext{Per l'~\vref{eqn:FibQuartaSomma}}
-	\Fib{n}^4={}&\dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}\\
-	\intertext{Ricapitolando}
-={}&\dfrac{1}{25}\left[\Luc{4n}-4(-1)^n\Luc{2n}+6-\Luc{2n}^2+4(-1)^{n}\Luc{2n}+21\right]\\
-={}&\dfrac{1}{25}\left[\Luc{4n}-\Luc{2n}^2+27\right]\\
-	\intertext{Ma}
-	\Luc{2n}^2={}&\Luc{4n}+2\\
-={}&\dfrac{1}{25}\left[\Luc{4n}-\Luc{4n}-2+27\right]\\
-={}&\dfrac{1}{25}25=1\\
-\end{align*}
-cvd.
+		\Fib{m}\Fib{n}={}     & \dfrac{\Luc{n+m}-(-1)^n\Luc{m-n}}{5}                                                                                  \\
+		\intertext{Quindi}
+		\Fib{n-2}\Fib{n+2}={} & \dfrac{\Luc{n-2+n+2}-(-1)^{n-2}\Luc{n+2-n+2}}{5}                                                                      \\
+		={}                   & \dfrac{\Luc{2n}-(-1)^{n-2}\Luc{4}}{5}                                                                                 \\
+		\Fib{n-1}\Fib{n+1}={} & \dfrac{\Luc{n-1+n+1}-(-1)^{n-1}\Luc{n+1-n+1}}{5}                                                                      \\
+		={}                   & \dfrac{\Luc{2n}-(-1)^{n-1}\Luc{2}}{5}                                                                                 \\
+		\Fib{n-2}\Fib{n-1}\Fib{n+1}\Fib{n+2}
+		={}                   & \dfrac{1}{25}\left[\Luc{2n}-(-1)^{n-1}\Luc{2}\right]\left[\Luc{2n}-(-1)^{n-2}\Luc{4}\right]                           \\
+		={}                   & \dfrac{1}{25}\left[\Luc{2n}^2-(-1)^{n-2}\Luc{4}\Luc{2n}-(-1)^{n-1}\Luc{2}\Luc{2n}-(-1)^{n-1+n-2}\Luc{2}\Luc{4}\right] \\
+		={}                   & \dfrac{1}{25}\left[\Luc{2n}^2-7(-1)^{n}\Luc{2n}+3(-1)^{n}\Luc{2n}-21\right]                                           \\
+		={}                   & \dfrac{1}{25}\left[\Luc{2n}^2-4(-1)^{n}\Luc{2n}-21\right]                                                             \\
+		\intertext{Per l'~\vref{eqn:FibQuartaSomma}}
+		\Fib{n}^4={}          & \dfrac{\Luc{4n}-4(-1)^n\Luc{2n}+6}{25}                                                                                \\
+		\intertext{Ricapitolando}
+		={}                   & \dfrac{1}{25}\left[\Luc{4n}-4(-1)^n\Luc{2n}+6-\Luc{2n}^2+4(-1)^{n}\Luc{2n}+21\right]                                  \\
+		={}                   & \dfrac{1}{25}\left[\Luc{4n}-\Luc{2n}^2+27\right]                                                                      \\
+		\intertext{Ma}
+		\Luc{2n}^2={}         & \Luc{4n}+2                                                                                                            \\
+		={}                   & \dfrac{1}{25}\left[\Luc{4n}-\Luc{4n}-2+27\right]                                                                      \\
+		={}                   & \dfrac{1}{25}25=1                                                                                                     \\
+	\end{align*}
+	cvd.
 \end{proof}
 \section{Quadrati}
-\begin{thm}[Somma e differenza di 
-quadrati]\label{thm:Fibsommsdifferenzaquadrati}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+\begin{thm}[Somma e differenza di
+		quadrati]\label{thm:Fibsommsdifferenzaquadrati}
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\begin{cases}
-			\Fib{n+r}^2-\Fib{n}^2={}\Fib{r}\Fib{2n+r}\quad\text{$r$ pari}\\
-			\Fib{n+r}^2+\Fib{n}^2={}\Fib{r}\Fib{2n+r}\quad\text{$r$ dispari}\\
+			\Fib{n+r}^2-\Fib{n}^2={}\Fib{r}\Fib{2n+r}\quad\text{$r$ pari}    \\
+			\Fib{n+r}^2+\Fib{n}^2={}\Fib{r}\Fib{2n+r}\quad\text{$r$ dispari} \\
 		\end{cases}
 	\end{equation}
 \end{thm}
 \begin{proof}
 	\proofpart{$r$ pari}
-		Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
-		\begin{align*}
-			\Fib{n+r}^2-\Fib{n}^2-\Fib{r}\Fib{2n+r}
-			={}&\dfrac{\left(a^{n+r}-b^{n+r}\right)^2}{(a-b)^2}
-			-\dfrac{\left(a^{n}-b{n}\right)^2}{(a-b)^2}
-			-\dfrac{(a^r-b^r)\left(a^{2n+r}-b^{2n+r}\right)^2}{(a-b)^2}\\
-			={}&\dfrac{(a^n-b^n)^2\left(a^rb^r-1 \right)}{(a-b)^2}\\
-			\intertext{Per il~\vref{lem:FibpropPhi} se $r$ pari}
-			={}&0\\
-		\end{align*}
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
+	\begin{align*}
+		\Fib{n+r}^2-\Fib{n}^2-\Fib{r}\Fib{2n+r}
+		={} & \dfrac{\left(a^{n+r}-b^{n+r}\right)^2}{(a-b)^2}
+		-\dfrac{\left(a^{n}-b{n}\right)^2}{(a-b)^2}
+		-\dfrac{(a^r-b^r)\left(a^{2n+r}-b^{2n+r}\right)^2}{(a-b)^2} \\
+		={} & \dfrac{(a^n-b^n)^2\left(a^rb^r-1 \right)}{(a-b)^2}    \\
+		\intertext{Per il~\vref{lem:FibpropPhi} se $r$ pari}
+		={} & 0                                                     \\
+	\end{align*}
 	\proofpart{$r$ dispari}
 	\begin{align*}
 		\Fib{n+r}^2+\Fib{n}^2-\Fib{r}\Fib{2n+r}
-		={}&\dfrac{\left(a^{n+r}-b^{n+r}\right)^2}{(a-b)^2}
+		={} & \dfrac{\left(a^{n+r}-b^{n+r}\right)^2}{(a-b)^2}
 		+\dfrac{\left(a^{n}-b{n}\right)^2}{(a-b)^2}
-		-\dfrac{(a^r-b^r)\left(a^{2n+r}-b^{2n+r}\right)^2}{(a-b)^2}\\
-		={}&\dfrac{(a^n-b^n)^2\left(a^rb^r+1 \right)}{(a-b)^2}\\
+		-\dfrac{(a^r-b^r)\left(a^{2n+r}-b^{2n+r}\right)^2}{(a-b)^2} \\
+		={} & \dfrac{(a^n-b^n)^2\left(a^rb^r+1 \right)}{(a-b)^2}    \\
 		\intertext{Per il~\vref{lem:FibpropPhi} se $r$ dispari}
-		={}&0\\
+		={} & 0                                                     \\
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
 \begin{thm}[Somma di quadrati]\label{thm:Fibdispari}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{n}^2+\Fib{n+1}^2=\Fib{2n+1}
 	\end{equation}\label{eqn:FibDispari}
 \end{thm}
 \begin{proof}
-	
+
 	\proofpart{Prima dimostrazione}
-	
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}               & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n}^2={}&\dfrac{a^{2n}-2a^nb^n+b^{2n}}{(a-b)^2}\\
-		\Fib{n+1}^2={}&\dfrac{a^{2(n+1)}-2a^{n+1}b^{n+1}+b^{2(n+1)}}{(a-b)^2}\\
-		\Fib{n}^2+\Fib{n+1}^2={}&\dfrac{a^{2n}(a^2+1)-2a^nb^n(ab+1)+b^{2n}(b^2+1)}{(a-b)^2}
-		\intertext{Per~\vref{lem:FibpropPhi}}		
-		={}&\dfrac{a^{2n}(a-b)a+b^{2n}(b-a)b}{(a-b)^2}\\
-		={}&\dfrac{1}{a-b}\left(a^{2n+1}-b^{2n+1}\right)\\
-		={}&\Fib{2n+1}
+		\Fib{n}^2={}             & \dfrac{a^{2n}-2a^nb^n+b^{2n}}{(a-b)^2}                     \\
+		\Fib{n+1}^2={}           & \dfrac{a^{2(n+1)}-2a^{n+1}b^{n+1}+b^{2(n+1)}}{(a-b)^2}     \\
+		\Fib{n}^2+\Fib{n+1}^2={} & \dfrac{a^{2n}(a^2+1)-2a^nb^n(ab+1)+b^{2n}(b^2+1)}{(a-b)^2}
+		\intertext{Per~\vref{lem:FibpropPhi}}
+		={}                      & \dfrac{a^{2n}(a-b)a+b^{2n}(b-a)b}{(a-b)^2}                 \\
+		={}                      & \dfrac{1}{a-b}\left(a^{2n+1}-b^{2n+1}\right)               \\
+		={}                      & \Fib{2n+1}
 	\end{align*}
 	cvd.
-	
+
 	\proofpart{Seconda dimostrazione}
-	
+
 	\begin{align*}
 		\intertext{Per il~\vref{thm:FibCassini}}
-		\Fib{n}^2={}&\Fib{n-1}\Fib{n+1}-(-1)^n\\
+		\Fib{n}^2={}             & \Fib{n-1}\Fib{n+1}-(-1)^n                        \\
 		\intertext{Quindi}
-		\Fib{n}^2+\Fib{n+1}^2={}&\Fib{n-1}\Fib{n+1}-(-1)^n+\Fib{n+1}^2\\
-	={}&\Fib{n+1}\left[\Fib{n-1}+\Fib{n+1}\right]-(-1)^n\\
+		\Fib{n}^2+\Fib{n+1}^2={} & \Fib{n-1}\Fib{n+1}-(-1)^n+\Fib{n+1}^2            \\
+		={}                      & \Fib{n+1}\left[\Fib{n-1}+\Fib{n+1}\right]-(-1)^n \\
 		\intertext{ma per il~\vref{thm:LucasToFibFibToLuc}}
-			\Luc{n}={}&\Fib{n+1}+\Fib{n-1}
+		\Luc{n}={}               & \Fib{n+1}+\Fib{n-1}
 		\intertext{Quindi}
-	={}&\Fib{n+1}\Luc{n}-(-1)^n\\
+		={}                      & \Fib{n+1}\Luc{n}-(-1)^n                          \\
 		\intertext{Per il~\vref{thm:FibProdSomma}}
-		={}&\Fib{n+1+n}+(-1)^n\Fib{n+1-n}-(-1)^n\\
-			={}&\Fib{2n+1}+(-1)^n\Fib{1}-(-1)^n\\
-				={}&\Fib{2n+1}\\
+		={}                      & \Fib{n+1+n}+(-1)^n\Fib{n+1-n}-(-1)^n             \\
+		={}                      & \Fib{2n+1}+(-1)^n\Fib{1}-(-1)^n                  \\
+		={}                      & \Fib{2n+1}                                       \\
 	\end{align*}
 \end{proof}
 \begin{thm}[Differenza di quadrati]\label{thm:FibConsecutivi}
-	Se $\Fib{n}$ è la successione di Fibonacci allora 
+	Se $\Fib{n}$ è la successione di Fibonacci allora
 	\begin{equation}
 		\Fib{n+2}^2-\Fib{n+1}^2=\Fib{n}\Fib{n+3}
 	\end{equation}\label{eqn:FibConsecutivi}
 \end{thm}
 \begin{proof}
-	
+
 	\proofpart{Prima dimostrazione}
-	
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}                 & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n+2}^2-\Fib{n+1}^2={}&\dfrac{a^{2(n+2)}-2(ab)^{n+2}+b^{2(n+2)}}{(a-b)^2}-\dfrac{a^{2(n+1)}-2(ab)^{n+1}+b^{2(n+1)}}{(a-b)^2}\\
-		={}&\dfrac{a^{2(n+1)}(a^2-1)+2(ab)^{n+1}(1-ab)+b^{2(n+1)}(b^2-1)}{(a-b)^2}
+		\Fib{n+2}^2-\Fib{n+1}^2={} & \dfrac{a^{2(n+2)}-2(ab)^{n+2}+b^{2(n+2)}}{(a-b)^2}-\dfrac{a^{2(n+1)}-2(ab)^{n+1}+b^{2(n+1)}}{(a-b)^2} \\
+		={}                        & \dfrac{a^{2(n+1)}(a^2-1)+2(ab)^{n+1}(1-ab)+b^{2(n+1)}(b^2-1)}{(a-b)^2}
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{a^{2(n+1)}a+2(ab)^{n+1}2+b^{2(n+1)}b}{(a-b)^2}\\
-		={}&\dfrac{a^{2n+3}+4(ab)^{n+1}+b^{2n+3}b}{(a-b)^2}\\
-		\Fib{n}\Fib{n+3}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)\dfrac{1}{a-b}\left(a^{n+3}-b^{n+3}\right)\\
-		={}&\dfrac{(a^n-b^n)(a^{n+3}-b^{n+3})}{(a-b)^2}\\
-		={}&\dfrac{(a^n-b^n)(a^{n}a^3-b^{n}b^3)}{(a-b)^2}
+		={}                        & \dfrac{a^{2(n+1)}a+2(ab)^{n+1}2+b^{2(n+1)}b}{(a-b)^2}                                                 \\
+		={}                        & \dfrac{a^{2n+3}+4(ab)^{n+1}+b^{2n+3}b}{(a-b)^2}                                                       \\
+		\Fib{n}\Fib{n+3}={}        & \dfrac{1}{a-b}\left(a^n-b^n\right)\dfrac{1}{a-b}\left(a^{n+3}-b^{n+3}\right)                          \\
+		={}                        & \dfrac{(a^n-b^n)(a^{n+3}-b^{n+3})}{(a-b)^2}                                                           \\
+		={}                        & \dfrac{(a^n-b^n)(a^{n}a^3-b^{n}b^3)}{(a-b)^2}
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{(a^n-b^n)[a^{n}(a^2+a)-b^{n}(b^2+b)]}{(a-b)^2}\\
-		={}&\dfrac{a^{2n+1}(a+1)-(ab)^n(a^2+a+b^2+b)+b^{2n+1}(b+1)}{(a-b)^2}\\
-		={}&\dfrac{a^{2n+1}a^2-(ab)^n(a+b+2+a+b)+b^{2n+1}b^2}{(a-b)^2}\\
-		={}&\dfrac{a^{2n+3}+4ab(ab)^n+b^{2n+3}}{(a-b)^2}\\
-		={}&\dfrac{a^{2n+3}+4(ab)^{n+1}+b^{2n+3}}{(a-b)^2}\\
+		={}                        & \dfrac{(a^n-b^n)[a^{n}(a^2+a)-b^{n}(b^2+b)]}{(a-b)^2}                                                 \\
+		={}                        & \dfrac{a^{2n+1}(a+1)-(ab)^n(a^2+a+b^2+b)+b^{2n+1}(b+1)}{(a-b)^2}                                      \\
+		={}                        & \dfrac{a^{2n+1}a^2-(ab)^n(a+b+2+a+b)+b^{2n+1}b^2}{(a-b)^2}                                            \\
+		={}                        & \dfrac{a^{2n+3}+4ab(ab)^n+b^{2n+3}}{(a-b)^2}                                                          \\
+		={}                        & \dfrac{a^{2n+3}+4(ab)^{n+1}+b^{2n+3}}{(a-b)^2}                                                        \\
 	\end{align*}
 	cvd.
-	
+
 	\proofpart{Seconda dimostrazione}
 	\begin{align*}
 		\intertext{per il~\vref{cor:FibpotSomma}}
-		\Fib{n+2}^2={}&\dfrac{\Luc{2n+4}-2(-1)^{n+2}}{5}\\
-		={}&\dfrac{\Luc{2n+4}-2(-1)^{n}}{5}\\
-		\Fib{n+1}^2={}&\dfrac{\Luc{2n+2}-2(-1)^{n+1}}{5}\\
-		={}&\dfrac{\Luc{2n+2}-2(-1)^{n}}{5}\\
-			\Fib{n+2}^2-\Fib{n+1}^2
-			={}&\dfrac{\Luc{2n+4}-2(-1)^{n}-\Luc{2n+2}-2(-1)^{n}}{5}\\
-			={}&\dfrac{\Luc{2n+4}-\Luc{2n+2}-4(-1)^{n}}{5}\\
+		\Fib{n+2}^2={}      & \dfrac{\Luc{2n+4}-2(-1)^{n+2}}{5}                                                      \\
+		={}                 & \dfrac{\Luc{2n+4}-2(-1)^{n}}{5}                                                        \\
+		\Fib{n+1}^2={}      & \dfrac{\Luc{2n+2}-2(-1)^{n+1}}{5}                                                      \\
+		={}                 & \dfrac{\Luc{2n+2}-2(-1)^{n}}{5}                                                        \\
+		\Fib{n+2}^2-\Fib{n+1}^2
+		={}                 & \dfrac{\Luc{2n+4}-2(-1)^{n}-\Luc{2n+2}-2(-1)^{n}}{5}                                   \\
+		={}                 & \dfrac{\Luc{2n+4}-\Luc{2n+2}-4(-1)^{n}}{5}                                             \\
 		\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-			\Luc{2n+4}={}&\dfrac{5\Fib{4}\Fib{2n}+\Luc{4}\Luc{2n}}{2}\\
-			={}&\dfrac{15\Fib{2n}+7\Luc{2n}}{2}\\
-			\Luc{2n+2}={}&\dfrac{5\Fib{2}\Fib{2n}+\Luc{2}\Luc{2n}}{2}\\
-			={}&\dfrac{5\Fib{2n}+3\Luc{2n}}{2}\\
+		\Luc{2n+4}={}       & \dfrac{5\Fib{4}\Fib{2n}+\Luc{4}\Luc{2n}}{2}                                            \\
+		={}                 & \dfrac{15\Fib{2n}+7\Luc{2n}}{2}                                                        \\
+		\Luc{2n+2}={}       & \dfrac{5\Fib{2}\Fib{2n}+\Luc{2}\Luc{2n}}{2}                                            \\
+		={}                 & \dfrac{5\Fib{2n}+3\Luc{2n}}{2}                                                         \\
 		\intertext{Quindi}
-={}&\dfrac{1}{5}\left[\dfrac{15\Fib{2n}+7\Luc{2n}-5\Fib{2n}-3\Luc{2n}}{2}-4(-1)^{n}\right]\\
-={}&\dfrac{1}{5}\left[5\Fib{2n}+2\Luc{2n}-4(-1)^{n}\right]\\
-\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
-\Fib{n}\Fib{n+3}={}&\Fib{n}\dfrac{2\Luc{n}+4\Fib{n}}{2}\\
-={}&\dfrac{2\Fib{n}\Luc{n}+4\Fib{n}^2}{2}\\
-={}&\Fib{n}\Luc{n}+2\Fib{n}^2
-\intertext{per il~\vref{cor:FibpotSomma}}
-2\Fib{n}^2={}&\dfrac{2\Luc{2n}-4(-1)^{n}}{5}\\
-\intertext{per il~\vref{thm:FibProdSomma}}
-	\Fib{n}\Luc{n}={}&\Fib{n+n}+(-1)^n\Fib{n-n}\\
-	\Fib{n}\Luc{n}={}&\Fib{2}\\
-\intertext{Quindi}
-\Fib{n}\Fib{n+3}={}&\dfrac{1}{5}\left[5\Fib{2n}+2\Luc{2n}-4(-1)^{n}\right]\\
+		={}                 & \dfrac{1}{5}\left[\dfrac{15\Fib{2n}+7\Luc{2n}-5\Fib{2n}-3\Luc{2n}}{2}-4(-1)^{n}\right] \\
+		={}                 & \dfrac{1}{5}\left[5\Fib{2n}+2\Luc{2n}-4(-1)^{n}\right]                                 \\
+		\intertext{Per il~\vref{thm:LucFibSommaprodotto}}
+		\Fib{n}\Fib{n+3}={} & \Fib{n}\dfrac{2\Luc{n}+4\Fib{n}}{2}                                                    \\
+		={}                 & \dfrac{2\Fib{n}\Luc{n}+4\Fib{n}^2}{2}                                                  \\
+		={}                 & \Fib{n}\Luc{n}+2\Fib{n}^2
+		\intertext{per il~\vref{cor:FibpotSomma}}
+		2\Fib{n}^2={}       & \dfrac{2\Luc{2n}-4(-1)^{n}}{5}                                                         \\
+		\intertext{per il~\vref{thm:FibProdSomma}}
+		\Fib{n}\Luc{n}={}   & \Fib{n+n}+(-1)^n\Fib{n-n}                                                              \\
+		\Fib{n}\Luc{n}={}   & \Fib{2}                                                                                \\
+		\intertext{Quindi}
+		\Fib{n}\Fib{n+3}={} & \dfrac{1}{5}\left[5\Fib{2n}+2\Luc{2n}-4(-1)^{n}\right]                                 \\
 	\end{align*}
-cvd.
+	cvd.
 \end{proof}
 
 \begin{thm}[Somma di quadrati]
@@ -1117,61 +1111,61 @@ cvd.
 	\end{equation}\label{eqn:FibquadratiConsecutivi}
 \end{thm}
 \begin{proof}
-	
-		\proofpart{Prima dimostrazione}
-	
-	Riscriviamo il risultato dell'~\vref{eqn:FinBinet} 
+
+	\proofpart{Prima dimostrazione}
+
+	Riscriviamo il risultato dell'~\vref{eqn:FinBinet}
 	\begin{align*}
-		\Fib{n}={}&\dfrac{1}{a-b}\left(a^n-b^n\right)
+		\Fib{n}={}                             & \dfrac{1}{a-b}\left(a^n-b^n\right)
 		\intertext{da cui}
-		\Fib{n}^2={}&\dfrac{a^{2n}-2(ab)^n+b^{2n}}{(a-b)^2}\\
-		\Fib{n+1}^2={}&\dfrac{a^{2(n+1)}-2(ab)^{(n+1)}+b^{2(n+1)}}{(a-b)^2}\\
-		\Fib{n}^2+\Fib{n+1}^2={}&\dfrac{a^{2n}(a^2+1)-2(ab)^n(ab+1)+b^{2n}(b^2+1)}{(a-b)^2}\\
+		\Fib{n}^2={}                           & \dfrac{a^{2n}-2(ab)^n+b^{2n}}{(a-b)^2}                     \\
+		\Fib{n+1}^2={}                         & \dfrac{a^{2(n+1)}-2(ab)^{(n+1)}+b^{2(n+1)}}{(a-b)^2}       \\
+		\Fib{n}^2+\Fib{n+1}^2={}               & \dfrac{a^{2n}(a^2+1)-2(ab)^n(ab+1)+b^{2n}(b^2+1)}{(a-b)^2} \\
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{a^{2n}(a^2+1)+b^{2n}(b^2+1)}{(a-b)^2}\\
-		\Fib{n}\Fib{n+1}={}&\dfrac{(a^{n}-b^{n})((a^{n+2}-b^{n+2})}{(a-b)^2}\\
-		\Fib{n-1}\Fib{n+1}={}&\dfrac{(a^{n+1}-b^{n+1})((ba^{n}-ab^{n})}{(a-b)^2}\\
-		\Fib{n}\Fib{n+2}+\Fib{n-1}\Fib{n+1}={}&
-		\dfrac{ba^{2n+1}(a^2+1)-(ab)^n(a^2+b^2)(ab+1)+ab^{2n+1}(b^2+1)}{(a-b)^2}\\
+		={}                                    & \dfrac{a^{2n}(a^2+1)+b^{2n}(b^2+1)}{(a-b)^2}               \\
+		\Fib{n}\Fib{n+1}={}                    & \dfrac{(a^{n}-b^{n})((a^{n+2}-b^{n+2})}{(a-b)^2}           \\
+		\Fib{n-1}\Fib{n+1}={}                  & \dfrac{(a^{n+1}-b^{n+1})((ba^{n}-ab^{n})}{(a-b)^2}         \\
+		\Fib{n}\Fib{n+2}+\Fib{n-1}\Fib{n+1}={} &
+		\dfrac{ba^{2n+1}(a^2+1)-(ab)^n(a^2+b^2)(ab+1)+ab^{2n+1}(b^2+1)}{(a-b)^2}                            \\
 		\intertext{Per~\vref{lem:FibpropPhi}}
-		={}&\dfrac{a^{2n}(a^2+1)+b^{2n}(b^2+1)}{(a-b)^2}\\
+		={}                                    & \dfrac{a^{2n}(a^2+1)+b^{2n}(b^2+1)}{(a-b)^2}               \\
 	\end{align*}
 	Da cui la tesi.
-	
-		\proofpart{Seconda dimostrazione}
+
+	\proofpart{Seconda dimostrazione}
 	\begin{align*}
 		\intertext{Per il~\vref{cor:FibpotSomma}}
 		\Fib{n}^2+\Fib{n+1}^2
-		={}&\dfrac{\Luc{2n}-2(-1)^n}{5}+\dfrac{\Luc{2n+2}-2(-1)^{n+1}}{5}\\
-		={}&\dfrac{\Luc{2n}+\Luc{2n+2}}{5}\\
+		={}                   & \dfrac{\Luc{2n}-2(-1)^n}{5}+\dfrac{\Luc{2n+2}-2(-1)^{n+1}}{5} \\
+		={}                   & \dfrac{\Luc{2n}+\Luc{2n+2}}{5}                                \\
 		\intertext{Per il~\vref{thm:FibProdSomma}}
-		\Fib{n}\Fib{n+2}+	
-		\Fib{n+1}\Fib{n-1}={}&\dfrac{\Luc{n+n+2}-(-1)^n\Luc{n+2-n}}{5}
-		\dfrac{\Luc{n+1+n-1}-(-1)^{n-1}\Luc{n+1-n+1}}{5}\\
-		\Fib{n+1}\Fib{n-1}={}&\dfrac{\Luc{2n+2}+3(-1)^n}{5}
-		\dfrac{\Luc{2n}-3(-1)^{n}}{5}\\
-		={}&\dfrac{\Luc{2n+2}+\Luc{2n}}{5}\\
-	\end{align*}	
-	cvd.	
+		\Fib{n}\Fib{n+2}+
+		\Fib{n+1}\Fib{n-1}={} & \dfrac{\Luc{n+n+2}-(-1)^n\Luc{n+2-n}}{5}
+		\dfrac{\Luc{n+1+n-1}-(-1)^{n-1}\Luc{n+1-n+1}}{5}                                      \\
+		\Fib{n+1}\Fib{n-1}={} & \dfrac{\Luc{2n+2}+3(-1)^n}{5}
+		\dfrac{\Luc{2n}-3(-1)^{n}}{5}                                                         \\
+		={}                   & \dfrac{\Luc{2n+2}+\Luc{2n}}{5}                                \\
+	\end{align*}
+	cvd.
 \end{proof}
 \section{Proprietà}
 \begin{thm}[Tre numeri consecutivi]
-	Tre numeri di Fibonacci consecutivi non possono essere i lati di un 
+	Tre numeri di Fibonacci consecutivi non possono essere i lati di un
 	triangolo.
 \end{thm}\index{Fibonacci!triangolo}
 \begin{proof}
-	Supponiamo che $\Fib{n}$, $\Fib{n+1}$ e $\Fib{n+2}$ siano i lati di un 
-	triangolo. Allora per la formula di Erone avremo, indicando con $p$ 
+	Supponiamo che $\Fib{n}$, $\Fib{n+1}$ e $\Fib{n+2}$ siano i lati di un
+	triangolo. Allora per la formula di Erone avremo, indicando con $p$
 	il semiperimetro e $a$, $b$ e $c$ i lati:
 	\begin{align*}
-		S^2={}&p(p-a)(p-b)(p-c)\\
+		S^2={} & p(p-a)(p-b)(p-c)                       \\
 		\intertext{Ma}
-		p={}&\dfrac{\Fib{n}+\Fib{n+1}+\Fib{n+2}}{2}\\
-		p={}&\dfrac{\Fib{n+2}+\Fib{n+2}}{2}\\
-		p={}&\Fib{n+2}\\
-		p-c={}&\Fib{n+2}-\Fib{n+2}=0\\
+		p={}   & \dfrac{\Fib{n}+\Fib{n+1}+\Fib{n+2}}{2} \\
+		p={}   & \dfrac{\Fib{n+2}+\Fib{n+2}}{2}         \\
+		p={}   & \Fib{n+2}                              \\
+		p-c={} & \Fib{n+2}-\Fib{n+2}=0                  \\
 	\end{align*}
-	Quindi il triangolo ha area zero, assurdo. 
+	Quindi il triangolo ha area zero, assurdo.
 \end{proof}
 \begin{thm}[Somme di numeri di Fibonacci]
 	Se $\Fib{n}$ è la successione di Fibonacci allora:
@@ -1182,10 +1176,10 @@ cvd.
 \begin{proof}
 	\begin{align*}
 		\intertext{Per induzione su $n$}
-		\Fib{1}={}&\Fib{1+2}-1=1\\
+		\Fib{1}={}                         & \Fib{1+2}-1=1       \\
 		\intertext{Supponiamola vera per $n-1$ proviamola per $n$}
-		\sum_{k=1}^{n-1}\Fib{k}+\Fib{n}={}&\Fib{n+1}+\Fib{n}-1\\
-		\sum_{k=1}^{n}\Fib{k}={}&\Fib{n+2}-1\\
+		\sum_{k=1}^{n-1}\Fib{k}+\Fib{n}={} & \Fib{n+1}+\Fib{n}-1 \\
+		\sum_{k=1}^{n}\Fib{k}={}           & \Fib{n+2}-1         \\
 	\end{align*}
 	cvd.
 \end{proof}
@@ -1194,32 +1188,32 @@ cvd.
 	$\Fib{3n}$ è pari qualunque $n\geq1$\label{eqn:Fib3npari}
 \end{thm}\index{Fibonacci!Valori pari}
 \begin{proof}
-	Per induzione su $n$. Per $n=1$ $\Fib{3}=2$ quindi è vero. Supponiamolo 
+	Per induzione su $n$. Per $n=1$ $\Fib{3}=2$ quindi è vero. Supponiamolo
 	vero per $n$ proviamolo per $n+1$
-\begin{align*}
-	\Fib{3(n+1)}={}&\Fib{3n+3}\\
-	={}&\Fib{3n+2}+\Fib{3n+1}\\
-	={}&\Fib{3n+1}+\Fib{3n}+\Fib{3n+1}\\
-	={}&2\Fib{3n+1}+\Fib{3n}\\
-\end{align*}
-Dato che $\Fib{3n}$ è pari per ipotesi induttiva $\Fib{3n+3}$ è pari.
+	\begin{align*}
+		\Fib{3(n+1)}={} & \Fib{3n+3}                     \\
+		={}             & \Fib{3n+2}+\Fib{3n+1}          \\
+		={}             & \Fib{3n+1}+\Fib{3n}+\Fib{3n+1} \\
+		={}             & 2\Fib{3n+1}+\Fib{3n}           \\
+	\end{align*}
+	Dato che $\Fib{3n}$ è pari per ipotesi induttiva $\Fib{3n+3}$ è pari.
 \end{proof}
 \begin{thm}[$\Fib{4n}$ è multiplo di tre]
 	Se $\Fib{n}$ è la successione di Fibonacci allora:
 	$\Fib{4n}$ è multiplo $3$\label{eqn:Fib4multiploditre}
 \end{thm}\index{Fibonacci!Valori multipli di tre}
 \begin{proof}
-	Per induzione su $n$. Per $n=1$ $\Fib{4}=3$ quindi è vero. Supponiamolo 
+	Per induzione su $n$. Per $n=1$ $\Fib{4}=3$ quindi è vero. Supponiamolo
 	vero per $n$ proviamolo per $n+1$
 	\begin{align*}
-		\Fib{4(n+1)}={}&\Fib{4n+4}\\
-		={}&\Fib{4n+3}+\Fib{4n+2}\\
-		={}&\Fib{4n+2}+\Fib{4n+1}+\Fib{4n+2}\\
-		={}&2\Fib{4n+2}+\Fib{4n+1}\\
-		={}&2(\Fib{4n+1}+\Fib{4n})+\Fib{4n+1}\\
-		={}&3\Fib{4n+1}+2\Fib{4n}\\
+		\Fib{4(n+1)}={} & \Fib{4n+4}                        \\
+		={}             & \Fib{4n+3}+\Fib{4n+2}             \\
+		={}             & \Fib{4n+2}+\Fib{4n+1}+\Fib{4n+2}  \\
+		={}             & 2\Fib{4n+2}+\Fib{4n+1}            \\
+		={}             & 2(\Fib{4n+1}+\Fib{4n})+\Fib{4n+1} \\
+		={}             & 3\Fib{4n+1}+2\Fib{4n}             \\
 	\end{align*}
-	Dato che $\Fib{4n}$ è multiplo di tre per ipotesi induttiva $\Fib{4n+4}$ è  
+	Dato che $\Fib{4n}$ è multiplo di tre per ipotesi induttiva $\Fib{4n+4}$ è
 	multiplo di tre.
 \end{proof}
 \begin{thm}[$\Fib{6n\pm 1}$ è della forma $4k+1$]
@@ -1231,25 +1225,25 @@ Dato che $\Fib{3n}$ è pari per ipotesi induttiva $\Fib{3n+3}$ è pari.
 	$\Fib{n}$ e $\Fib{n+1}$ sono coprimi.
 \end{thm}\index{Fibonacci!Coprimi}\index{Coprimi}\cite{Gregorio2022}
 \begin{proof}
-Abbiamo
-\begin{align*}
-	\Fib{0}={}&0\\
-	\Fib{1}={}&1\\
-	\Fib{n+2}={}&\Fib{n+1}+\Fib{n}\\ 
-	\intertext{Poniamo che $\Fib{n+1}$ e $\Fib{n}$ siano coprimi e che $n$ sia 
-	il valore minimo. Abbiamo che}
-	n>&1\\
-	\intertext{Perché $\Fib{0}$ e $\Fib{1}$ sono coprimi fra di loro come anche 
-	$\Fib{1}$ e $\Fib{2}$ }
-\intertext{Per ipotesi quindi}
-\Fib{n+1}={}&ad\\
-\Fib{n}&=bd
-\intertext{con $a,b,d$ interi e $d>1$}
-\Fib{n-1}={}&\Fib{n+1}-\Fib{n}\\
-={}&ad-bd\\
-={}&(a-b)d\\
-\intertext{Quindi $\Fib{n-1}$ e $\Fib{n}$ non sono coprimi m $n$ era il valore 
-minimo per cui $\Fib{n+1}$ e $\Fib{n}$ erano coprimi.}
-\end{align*}
-Cvd.
+	Abbiamo
+	\begin{align*}
+		\Fib{0}={}   & 0                 \\
+		\Fib{1}={}   & 1                 \\
+		\Fib{n+2}={} & \Fib{n+1}+\Fib{n} \\
+		\intertext{Poniamo che $\Fib{n+1}$ e $\Fib{n}$ siano coprimi e che $n$ sia
+			il valore minimo. Abbiamo che}
+		n>           & 1                 \\
+		\intertext{Perché $\Fib{0}$ e $\Fib{1}$ sono coprimi fra di loro come anche
+			$\Fib{1}$ e $\Fib{2}$ }
+		\intertext{Per ipotesi quindi}
+		\Fib{n+1}={} & ad                \\
+		\Fib{n}      & =bd
+		\intertext{con $a,b,d$ interi e $d>1$}
+		\Fib{n-1}={} & \Fib{n+1}-\Fib{n} \\
+		={}          & ad-bd             \\
+		={}          & (a-b)d            \\
+		\intertext{Quindi $\Fib{n-1}$ e $\Fib{n}$ non sono coprimi m $n$ era il valore
+			minimo per cui $\Fib{n+1}$ e $\Fib{n}$ erano coprimi.}
+	\end{align*}
+	Cvd.
 \end{proof}

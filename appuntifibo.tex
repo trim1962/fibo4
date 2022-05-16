@@ -105,28 +105,20 @@
 \usepackage{indice}
 \usepackage{date}
 \usepackage{unita_misura}
-
-
 \usepackage{imakeidx}
 \makeindex[options=-s ../Mod_base/oldclaudio.sti]
-
 \usepackage{diagbox}
-%\include{simboli_operatori}
-
 \usepackage{stand_class}
-
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-
  \makeatletter
  \renewcommand\frontmatter{%
- 	\cleardoublepage
- 	\@mainmatterfalse
+ 	\cleardoublepage%
+ 	\@mainmatterfalse%
  	%\pagenumbering{roman}
  }
  \renewcommand\mainmatter{%
- 	\cleardoublepage
- 	\@mainmattertrue
+ 	\cleardoublepage%
+ 	\@mainmattertrue%
  	%\pagenumbering{arabic}
  }
  \makeatother
@@ -223,50 +215,50 @@ baseurl={http://breviariomatematico.altervista.org}
 	\addvspace{\medskipamount}%
 	\stepcounter{proofpart}%
 	\noindent\emph{Parte  \theproofpart: #1}\par\nobreak\smallskip
-	\@afterheading
+	\@afterheading%
 }
 \makeatother
 \usepackage{CDloghi}
 \listfiles
 \begin{document}
 \begin{titlepage}
-\begin{center}	
-	\Lgrandedue\\[1cm]    
-	\textsc{\LARGE Claudio Duchi}\\[1.4cm]
-	\HRule \\[0.4cm]
-{ \huge \bfseries FIBONACCI}\\[0.4cm]
-{ \large \bfseries fritto}\\[0.4cm]
-{ \huge \bfseries misto}\\[0.4cm]
-\HRule \\
-\vfill
-	% Bottom of the page
-	\polylogo[5.5]{13}		
-		{\large $-$\DTMnow$-$}	
-\end{center}
-{\centering
-Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\ 
-\gitCommitterDate \\
-}
-\end{titlepage}	
-	\hypersetup{pageanchor=true}
-		\CDcopyright
-		\tableofcontents
-		\chapter*{Lista dei teoremi}
-		\theoremlisttype{allname}
-		\listtheorems{thm,defn,cor,comm,lem,prob}
-	\addcontentsline{toc}{chapter}{\listfigurename}%
-		\listoffigures
+	\begin{center}
+		\Lgrandedue\\[1cm]%
+		\textsc{\LARGE Claudio Duchi}\\[1.4cm]
+		\HRule\\[0.4cm]%
+		{\huge\bfseries FIBONACCI}\\[0.4cm]
+		{\large \bfseries fritto}\\[0.4cm]
+		{\huge \bfseries misto}\\[0.4cm]
+		\HRule\\
+		\vfill
+		% Bottom of the page
+		\polylogo[5.5]{13}
+		{\large $-$\DTMnow$-$}
+	\end{center}
+	{\centering
+	Release:\gitReln\ (\gitAbbrevHash)\ Autore:\gitAuthorName\
+	\gitCommitterDate\\%
+	}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\CDcopyright%
+\tableofcontents
+\chapter*{Lista dei teoremi}
+\theoremlisttype{allname}
+\listtheorems{thm,defn,cor,comm,lem,prob}
+\addcontentsline{toc}{chapter}{\listfigurename}%
+\listoffigures
 %	\addcontentsline{toc}{chapter}{\listtablename}%
 %			\listoftables
-			\mainmatter
-\input{compilaTexStudioDue}			
+\mainmatter%
+\input{compilaTexStudioDue}
 
 \nocite{*}
- \addcontentsline{toc}{chapter}{\bibname}
-\printbibliography
- \addcontentsline{toc}{chapter}{\indexname}
- \printindex
- \appendix
- \chapter{Mezzi usati}
- \CDMezziUsati
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography%
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+\appendix
+\chapter{Mezzi usati}
+\CDMezziUsati%
 \end{document}

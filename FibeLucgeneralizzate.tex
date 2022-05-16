@@ -101,16 +101,17 @@ generalizzata}\index{Formula!Binet!Lucas generalizzata}\cite{Yalciner2013}
 		\end{cases}
 	\end{equation}
 \end{defn}\cite{Rabinowitz_1996}
-\begin{lem}[Proprietà]
+\begin{lem}[Proprietà]\label{lem:FibonacciGenLemma}
 	Se $r_{1}$ e $r_{2}$ sono le soluzioni dell'equazione \begin{equation}
 		x^2-Px+Q=0
 	\end{equation} allora:
 	\begin{align*}
 		r_{1}r_{2}=&{}Q\\
 		r_{1}+r_{2}=&{}P\\
-		r_{1}-r_{2}=&{}\sqrt{P^2-4Q}\\
-		P-2r_{2}=&{}\sqrt{P^2-4Q}\\
-		2r_{1}-P=&{}\sqrt{P^2-4Q}\\
+		P^2-4Q=&{}D\\
+		r_{1}-r_{2}=&{}\sqrt{D}\\
+		P-2r_{2}=&{}\sqrt{D}\\
+		2r_{1}-P=&{}\sqrt{D}\\
 	\end{align*}
 \end{lem}  
 \begin{thm}[Formula di Binet 
@@ -153,9 +154,9 @@ generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
 		\end{align*}
 		quindi
 		\begin{equation}
-			\Fg{n}=\dfrac{1}{\sqrt{P^2-4Q}}
-			\left[\left(\dfrac{P+\sqrt{P^2-4Q}}{2}\right)^n
-			-\left(\dfrac{p-\sqrt{P^2-4Q}}{2}\right)^n\right]
+			\Fg{n}=\dfrac{1}{\sqrt{D}}
+			\left[\left(\dfrac{P+\sqrt{D}}{2}\right)^n
+			-\left(\dfrac{p-\sqrt{D}}{2}\right)^n\right]
 		\end{equation}
 			\proofpart{Seconda dimostrazione}
 				\begin{align*}
@@ -182,8 +183,8 @@ generalizzata]\label{thm:FormulaBinetgeneralizzatarr}
 		quindi
 		\begin{equation}
 			\Lg{n}=
-		\left(\dfrac{P+\sqrt{P^2-4Q}}{2}\right)^n
-			+\left(\dfrac{P-\sqrt{P^2-4Q}}{2}\right)^n
+		\left(\dfrac{P+\sqrt{D}}{2}\right)^n
+			+\left(\dfrac{P-\sqrt{D}}{2}\right)^n
 		\end{equation}
 	\end{proof}
 \begin{thm}[Algoritmo per rimuovere $r_1$ e 
@@ -191,8 +192,8 @@ $r_2$]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuovirr}
 	Se $\Fg{n}$ è la successione di Fibonacci e  $\Lg{n}$ è quella di Lucas 
 	allora:\begin{equation}
 		\left\{\begin{aligned}
-			r_1^n={}&\dfrac{\Lg{n}+(\sqrt{P^2-4Q})\Fg{n}}{2}\\
-			r_2^n={}&\dfrac{\Lg{n}-(\sqrt{P^2-4Q})\Fg{n}}{2}\\
+			r_1^n={}&\dfrac{\Lg{n}+(\sqrt{D})\Fg{n}}{2}\\
+			r_2^n={}&\dfrac{\Lg{n}-(\sqrt{D})\Fg{n}}{2}\\
 		\end{aligned}
 		\right.
 	\end{equation}
@@ -235,7 +236,7 @@ $r_2$]~\cite{Rabinowitz_1996}\label{thm:FibLucRimuovirr}
 da cui la tesi. La seconda è analoga.
 \end{proof}
 \begin{thm}[Successioni indici 
-negativi]\label{thm:FormulaBinetgeneralizzatavalneg}
+negativi]\label{thm:FormulaBinetgeneralizzatavalneg}~\cite{Rabinowitz_1996}
 	Se $\Fg{n}$ è la successione di Fibonacci e  $\Lg{n}$ è quella di Lucas 
 	allora : \begin{equation}
 		\Fg{-n}=-\dfrac{1}{Q^n}	\Fg{n}
@@ -244,3 +245,50 @@ negativi]\label{thm:FormulaBinetgeneralizzatavalneg}
 		\Lg{-n}=\dfrac{1}{Q^n}	\Lg{n}
 	\end{equation}
 \end{thm}
+\begin{proof}
+		\proofpart{Prima parte}
+	Dal~\vref{thm:FormulaBinetgeneralizzatarr} abbiamo
+	\begin{align*}
+		\Fg{-n}=&{}\dfrac{r_{1}^{-n}-r_{2}^{-n}}{r_{1}-r_{2}}\\
+		=&{}\dfrac{(r_1r_2)^{-n}(r_{1}^{n}-r_{2}^{n})}{r_{2}-r_{1}}\\
+		=&{}-Q^{-n}\Fg{n}\\
+		=&{}-\dfrac{\Fg{n}}{Q^{n}}  \\
+	\end{align*}
+\proofpart{Seconda parte}
+	Dal~\vref{thm:FormulaBinetgeneralizzatarr} abbiamo
+\begin{align*}
+	\Lg{-n}=&{}r_{1}^{-n}+r_{2}^{-n}\\
+	=&{}(r_1r_2)^{-n}(r_{1}^{n}+r_{2}^{n})\\
+	=&{}(Q)^{-n}\Lg{n}\\
+	=&{}\dfrac{\Lg{n}}{Q^n}
+\end{align*}
+\end{proof}
+\section{Formule di addizione e sottrazione}
+\begin{thm}[Formule di 
+addizione]~\cite{Rabinowitz_1996}\label{thm:LucFibSommaG}
+	Se $\Fg{n}$ è la successione di Fibonacci e  $\Lg{n}$ è quella di Lucas 
+	allora:
+	\begin{align}
+		\Fg{n+m}={}&\dfrac{\Fg{m}\Lg{n}+\Lg{m}\Fg{n}}{2}\label{eqn:FibLucSommaprodotto}\\
+		\Lg{n+m}={}&\dfrac{5\Fg{m}\Fg{n}+\Lg{m}\Lg{n}}{2}\label{eqn:LucFibSommaprodotto}
+	\end{align}
+\end{thm}
+\begin{proof}
+	\proofpart{Fibonacci}
+	\begin{align*}
+		\Fg{m}\Lg{n}+\Lg{m}\Fg{n}={}&\dfrac{1}{a-b}[r_1^m-r_2^m][r_1^n+r_2^n]+[r_1^m+r_2^m]\dfrac{1}{r_1-r_2}[r_1^n-r_2^n]\\
+		={}&\dfrac{2}{r_1-r_2}[r_1^{n+m}-r_2^{n+m}]\\
+		={}&2\Fg{m+n}\\
+	\end{align*}
+	\proofpart{Lucas}
+	\begin{align*}
+		D\Fg{m}\Fg{n}+\Lg{m}\Lg{n}=
+		&\dfrac{r_1^{n+m}[(r_1-r_2)^2+D]}{(r_1-r_2)^2}+\dfrac{r_1^{m}r_2^{n}[(r_1-r_2)^2-D]}{(r_1-r_2)^2}\\
+		+&\dfrac{r_1^{n}r_2^{m}[(r_1-r_2)^2-D]}{(r_1-r_2)^2}+\dfrac{r_2^{n+m}[(r_1-r_2)^2+D]}{(r_1-r_2)^2}
+		\intertext{Per il~\vref{lem:FibonacciGenLemma}}
+		={}&\dfrac{r_1^{n+m}[D+D]}{D}+\dfrac{r_2^{n+m}[D+D]}{D}\\
+		={}&2(r_1^{n+m}+r_2^{n+m})\\
+		={}&2\Lg{n+m}\\ 
+	\end{align*}
+	cvd.
+\end{proof}
